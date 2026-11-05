@@ -148,7 +148,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Features",
-    title: "War Thunder cheats features by tier: ESP, aimbot, ballistic assist & skins",
+    title: "War Thunder cheats features guide by tier 2026: ESP, aimbot, ballistic assist & skins",
     slug: "features",
     seoTitle: "War Thunder Cheats Features by Tier Guide for 2026",
     image: "/images/blog/wt-esp-radar.png",
@@ -365,7 +365,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Setup",
-    title: "Buy War Thunder aimbot & ballistic assist cheats: Pro tier combat tools",
+    title: "Buy War Thunder aimbot Soft Aim ballistic assist cheats guide: Pro tools",
     slug: "aimbot",
     seoTitle: "Aimbot Soft Aim Pro Combat Guide | War Thunder Cheats",
     image: "/images/blog/wt-aimbot-fov.png",
@@ -578,7 +578,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Guides",
-    title: "Buy War Thunder HWID Spoofer cheats after a ban",
+    title: "Buy War Thunder HWID Spoofer cheats after a hardware ban",
     slug: "hwid",
     seoTitle: "HWID Spoofer After Hardware Ban | War Thunder Cheats",
     image: "/images/blog/wt-ground-esp.png",
@@ -618,6 +618,7 @@ export const blogPosts: BlogPostFull[] = [
     tag: "Guides",
     title: "Checkout buy guide: War Thunder cheats Lite, Pro & Elite (2026)",
     slug: "buy-guide",
+    seoTitle: "Checkout Buy Guide Lite Pro Elite | War Thunder Cheats",
     image: "/images/blog/wt-esp-radar.png",
     imageAlt: "War Thunder naval ESP with purple ship chams, green target box, IJN Mutsu name tag and 1.40 km distance through arctic islands",
     desc: "Step-by-step buy guide: choose Lite, Pro or Elite, pay at secure checkout and unlock your portal. The 2026 walkthrough from tier pick to first launch.",
@@ -659,9 +660,10 @@ export const blogPosts: BlogPostFull[] = [
     tag: "Setup",
     title: "Buy Pro War Thunder cheats aimbot bone select & weapon profiles",
     slug: "bones",
+    seoTitle: "Bones Aim Select Profiles Guide | War Thunder Cheats",
     image: "/images/blog/wt-aimbot-fov.png",
     imageAlt: "War Thunder tank gunner sight with green 3D ESP boxes around M2A4 Tetrarch Pz.II and Chi-Ha tanks plus meter distances on a tropical map",
-    desc: "Buy Pro for aimbot bone select and per-vehicle ballistic profiles on tanks, fighters and SPAA. See example profiles and get access.",
+    desc: "Buy Pro for bones aim select and per-vehicle ballistic profiles on tanks, fighters and SPAA. See example profiles and get access.",
     date: "Aug 12, 2026",
     readTime: "6 min read",
     body: [
@@ -699,7 +701,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Guides",
-    title: "Gaijin anti-cheat errors vs War Thunder cheats UGC recovery / HWID help",
+    title: "Gaijin anti-cheat errors guide vs War Thunder cheats UGC recovery / HWID help",
     slug: "eac-error",
     seoTitle: "Gaijin Anti-Cheat Errors Guide | War Thunder Cheats",
     image: "/images/blog/wt-combat-overlay.png",

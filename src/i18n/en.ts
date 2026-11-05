@@ -24,7 +24,7 @@ export const en: Translations = {
   hero: {
     status: 'War Thunder — Gaijin build online',
     eyebrow: 'Undetected War Thunder Cheats',
-    title: 'War Thunder Cheats — Undetected ESP, Aimbot & Wallhacks for PC 2026',
+    title: 'War Thunder Cheats — Undetected ESP Soft Aimbot & Wallhacks for PC 2026',
     subtitle:
       'Buy undetected War Thunder cheats for Steam PC—player ESP, vehicle ESP, soft aim and ballistic assist. Compare Lite, Pro and Elite, then checkout for instant loader access.',
     ctaPrimary: 'Get access',
@@ -292,7 +292,7 @@ export const en: Translations = {
     eyebrow: 'Blog',
     title: 'War Thunder Cheat Buy Guides',
     subtitle: 'Tier comparison guides, ESP and aimbot module explainers, and checkout walkthroughs—pick a plan with confidence.',
-    latestTitle: 'Buy Guides & Checkout Tips for Lite, Pro, Elite Steam PC',
+    latestTitle: 'Buy War Thunder Cheats Guides & Checkout Tips for Lite Pro Elite Aimbot Modules',
     latestSubtitle: 'Transactional guides to help you choose a tier and complete secure checkout for ESP, aimbot and utilities.',
     filterAll: 'All articles',
     sortLabel: 'Sort by',
@@ -624,7 +624,7 @@ export const en: Translations = {
   },
   legalPages: {
     about: {
-      title: 'About Our War Thunder Cheats Store Tools',
+      title: 'About Our War Thunder Cheats Store Tools Online Support',
       description:
         'Meet the team behind warthunder-cheats.com—the cheats store for undetected ESP, aimbot and Windows utilities, with patch-day updates and Discord help after checkout.',
       sections: [
