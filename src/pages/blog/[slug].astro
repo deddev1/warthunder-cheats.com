@@ -38,7 +38,7 @@ if (!post) {
 const postPath = `/blog/${post.slug}/`;
 const breadcrumbs = [
   { name: 'Home', path: '/' },
-  { name: 'Blog', path: '/blog/' },
+  { name: 'Blog guides', path: '/blog/' },
   { name: post.title, path: postPath },
 ];
 
@@ -210,7 +210,7 @@ const published = parseBlogDate(post.date);
               Browse all product tiers
             </Button>
             <Button as="a" href={ROUTES.blog} variant="outline">
-              Read more buy guides
+              Browse more cheat guides
               <Icon name="arrowRight" size={17} />
             </Button>
           </nav>

@@ -147,7 +147,7 @@ const tagIcon: IconName = blogTagIcons[post.tag] ?? 'tag';
         <span>{post.readTime}</span>
       </p>
       <Button as="a" href={href} variant="outline" size="sm" class="blog-card__read shrink-0">
-        {t.blog.read}
+        {`Read ${post.slug} guide`}
         <Icon name="arrowRight" size={16} />
       </Button>
     </CardFooter>

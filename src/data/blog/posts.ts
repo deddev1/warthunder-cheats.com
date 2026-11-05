@@ -194,7 +194,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: 'p', text: "Vehicle ESP marks enemy and friendly tanks, aircraft, ships and SPAA, plus AI columns and capture objectives. Filter by vehicle type and distance so you see threats, not clutter." },
       { type: 'h2', text: "Aimbot, Soft Aim and Bone Select (Pro and Elite)" },
       { type: 'p', text: "Aimbot locks inside an FOV circle; Soft Aim applies smoothed pulls that read more like a human. Bone Select targets head, chest or body. Start with a small FOV and high smoothing." },
-      { type: 'h3', text: "Trigger Bot and target selector" },
+      { type: 'h2', text: "Trigger Bot and target selector" },
       { type: 'p', text: "Trigger Bot fires when your crosshair is on a valid target, with a delay you control. Always add a reaction delay." },
       { type: 'h2', text: "Ballistic assist and Spread (Pro and Elite)" },
       { type: 'p', text: "Weapon-specific compensation for tanks, fighters, SPAA and naval guns. Keep it below 100 percent for natural variation. See the [aimbot and recoil guide](/blog/aimbot/) and [bone select guide](/blog/bones/)." },

@@ -42,14 +42,26 @@ const { title, description, breadcrumbLabel, sections } = Astro.props;
       ))}
     </Prose>
 
-    <SeoRelatedLinks />
+    <SeoRelatedLinks
+      title="More War Thunder Cheats pages"
+      links={[
+        { href: '/products/warthunder-cheats/', label: 'Browse Lite Pro Elite catalog' },
+        { href: '/blog/', label: 'Open buy guides archive' },
+        { href: '/faq/', label: 'Read pre-purchase FAQ answers' },
+        { href: '/reviews/', label: 'Check verified review scores' },
+        { href: '/forum/', label: 'Visit buyer forum discussions' },
+        { href: '/support/', label: 'Start a Discord help ticket' },
+        { href: '/privacy/', label: 'View privacy policy details' },
+        { href: '/terms/', label: 'View terms and conditions' },
+      ]}
+    />
 
     <div class="mt-12 flex flex-wrap justify-center gap-3 border-t border-border pt-8">
       <Button as="a" href={ROUTES.support} variant="primary" size="sm">
-        Contact support
+        Open Discord support desk
         <Icon name="mail" size={16} />
       </Button>
-      <Button as="a" href={ROUTES.home} variant="outline" size="sm">Back to home</Button>
+      <Button as="a" href={ROUTES.home} variant="outline" size="sm">Return to store homepage</Button>
     </div>
   </div>
 </article>
