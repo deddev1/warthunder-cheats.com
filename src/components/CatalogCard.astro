@@ -104,14 +104,29 @@ const statusBadgeIcon = (text: string): IconName => {
       {more > 0 && <li class="text-xs text-muted-foreground">+{more} more features</li>}
     </ul>
   </CardContent>
-  <CardFooter class="flex flex-col gap-2 sm:flex-row">
-    <Button as="a" href={buyUrl} variant="primary" size="sm" class="w-full sm:flex-1" {...buyLink}>
-      {buyLabel}
-      <Icon name="arrowRight" size={17} />
+  <CardFooter class="mt-auto !flex !flex-col !items-stretch gap-2">
+    <Button
+      as="a"
+      href={buyUrl}
+      variant="primary"
+      size="sm"
+      class="w-full min-w-0 justify-center overflow-hidden"
+      aria-label={buyLabel}
+      {...buyLink}
+    >
+      <span class="min-w-0 flex-1 truncate text-left">{buyLabel}</span>
+      <Icon name="arrowRight" size={17} class="shrink-0" />
     </Button>
-    <Button as="a" href={href} variant="outline" size="sm" class="w-full sm:flex-1">
-      {viewLabel}
-      <Icon name="arrowRight" size={17} />
+    <Button
+      as="a"
+      href={href}
+      variant="outline"
+      size="sm"
+      class="w-full min-w-0 justify-center overflow-hidden"
+      aria-label={viewLabel}
+    >
+      <span class="min-w-0 flex-1 truncate text-left">{viewLabel}</span>
+      <Icon name="arrowRight" size={17} class="shrink-0" />
     </Button>
   </CardFooter>
 </Card>

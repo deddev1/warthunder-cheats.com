@@ -31,6 +31,14 @@ function cardLabel(product: (typeof productPages)[number]) {
   }
   return product.category ?? 'Utility';
 }
+
+function actionName(product: (typeof productPages)[number]) {
+  if (product.kind === 'tier') return product.name;
+  if (product.slug === 'hwid-spoofer') return 'HWID';
+  if (product.slug === 'ugc') return 'UGC';
+  if (product.slug === 'unlock-all') return 'Unlock All';
+  return product.category ?? product.slug;
+}
 ---
 
 <BaseLayout
@@ -88,8 +96,8 @@ function cardLabel(product: (typeof productPages)[number]) {
             icon={cardIcon(product)}
             badge={product.badge}
             variant={product.variant}
-            buyLabel={`Checkout ${product.title}`}
-            viewLabel={`Details: ${product.title}`}
+            buyLabel={`Checkout ${actionName(product)}`}
+            viewLabel={`View ${actionName(product)}`}
           />
         ))}
       </div>

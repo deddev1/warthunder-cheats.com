@@ -157,7 +157,16 @@
 }
 
 .catalog-card--carousel [data-slot='card-footer'] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   padding-top: 0.75rem;
+  min-width: 0;
+}
+
+.catalog-card--carousel [data-slot='card-footer'] a {
+  max-width: 100%;
+  min-width: 0;
 }
 
 /* Product detail — centered layout at all breakpoints */
