@@ -39,7 +39,6 @@
   border-radius: 1.5rem;
   background:
     linear-gradient(145deg, color-mix(in oklch, var(--primary) 12%, var(--background)), var(--background) 55%);
-  box-shadow: 0 18px 40px -28px color-mix(in oklch, var(--primary) 55%, transparent);
 }
 
 .reviews-score__top {
