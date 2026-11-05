@@ -1,20 +1,42 @@
 import sharp from 'sharp';
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync, unlinkSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-/** Keep the original white sticker background — do not punch transparency. */
+/** Official War Thunder badge — keep black canvas as-is (no BG punch-out). */
 const src =
-  'C:/Users/3Tee System/.cursor/projects/c-Users-3Tee-System-Downloads-warthunder-cheats-com-main/assets/images-f6ca1037-0801-4610-acda-965f18bd0dfe.jpg';
+  'C:/Users/3Tee System/.cursor/projects/c-Users-3Tee-System-Downloads-warthunder-cheats-com-main/assets/27bcb226-c1eb-479c-940f-f25b75a92aad-8aefe2aa-3f94-4667-8cb3-56527d23bf2b.png';
 const publicDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public');
 mkdirSync(path.join(publicDir, 'images'), { recursive: true });
 const outPath = (name) => path.join(publicDir, name);
 
-const white = { r: 255, g: 255, b: 255, alpha: 1 };
-const contain = { fit: 'contain', background: white };
+const black = { r: 0, g: 0, b: 0, alpha: 1 };
+const contain = { fit: 'contain', background: black };
 
-const master = await sharp(src).ensureAlpha().resize(512, 512, contain).png().toBuffer();
-await sharp(master).png().toFile(outPath('images/favicon-source.png'));
+/** Flatten any source transparency onto solid black, then size. */
+async function sized(size, format = 'png') {
+  const pipeline = sharp(src)
+    .flatten({ background: black })
+    .resize(size, size, contain);
+  if (format === 'jpg') return pipeline.jpeg({ quality: 92 }).toBuffer();
+  return pipeline.png().toBuffer();
+}
+
+// Wipe leftover / obsolete favicon assets before writing the new set
+const obsolete = [
+  'favicon.ico.png',
+  'rust-icon.jpg',
+  'images/favicon-source.png',
+];
+for (const rel of obsolete) {
+  const p = outPath(rel);
+  if (existsSync(p)) {
+    unlinkSync(p);
+    console.log('deleted', rel);
+  }
+}
+
+await sharp(await sized(512)).toFile(outPath('images/favicon-source.png'));
 
 const sizes = [
   ['favicon-16.png', 16],
@@ -26,10 +48,12 @@ const sizes = [
   ['android-chrome-192.png', 192],
   ['android-chrome-512.png', 512],
   ['logo.png', 128],
+  ['warthunder-icon.jpg', 256],
 ];
 
 for (const [name, size] of sizes) {
-  await sharp(src).resize(size, size, contain).png().toFile(outPath(name));
+  const format = name.endsWith('.jpg') ? 'jpg' : 'png';
+  writeFileSync(outPath(name), await sized(size, format));
   console.log('wrote', name);
 }
 
@@ -57,19 +81,21 @@ function pngToIco(pngBuffers) {
   return Buffer.concat([header, ...entries, ...pngBuffers]);
 }
 
-const p16 = await sharp(src).resize(16, 16, contain).png().toBuffer();
-const p32 = await sharp(src).resize(32, 32, contain).png().toBuffer();
-const p48 = await sharp(src).resize(48, 48, contain).png().toBuffer();
+const p16 = await sized(16);
+const p32 = await sized(32);
+const p48 = await sized(48);
 writeFileSync(outPath('favicon.ico'), pngToIco([p16, p32, p48]));
+console.log('wrote favicon.ico');
 
-const png64 = (await sharp(src).resize(128, 128, contain).png().toBuffer()).toString('base64');
+const png64 = (await sized(128)).toString('base64');
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="War Thunder Cheats">
   <image href="data:image/png;base64,${png64}" width="128" height="128"/>
 </svg>
 `;
 writeFileSync(outPath('favicon.svg'), svg);
 writeFileSync(outPath('logo.svg'), svg);
+console.log('wrote favicon.svg, logo.svg');
 
 const corner = await sharp(outPath('favicon-32.png')).ensureAlpha().raw().toBuffer();
 console.log('corner rgba', [...corner.slice(0, 4)]);
-console.log('done — white background kept');
+console.log('done');
