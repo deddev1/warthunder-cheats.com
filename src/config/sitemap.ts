@@ -2,8 +2,6 @@ import type { SitemapItem } from '@astrojs/sitemap';
 import { blogPosts } from '../data/blog';
 import { parseBlogDate } from '../utils/schema';
 
-const buildDate = new Date().toISOString().slice(0, 10);
-
 const blogLastmod = new Map(
   blogPosts.map((post) => [`/blog/${post.slug}/`, parseBlogDate(post.date)] as const),
 );
@@ -26,7 +24,8 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
   }
   item.url = canonical.href;
 
-  item.lastmod = buildDate;
+  // Only stamp lastmod when we have a real content date — never the build day.
+  delete item.lastmod;
 
   if (path === '/') {
     item.priority = 1;
@@ -42,20 +41,21 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
 
   if (path === '/forum/') {
     item.priority = 0.8;
-    item.changefreq = 'daily';
+    item.changefreq = 'weekly';
     return item;
   }
 
   if (path.startsWith('/forum/')) {
     item.priority = 0.6;
-    item.changefreq = 'weekly';
+    item.changefreq = 'monthly';
     return item;
   }
 
   if (path.startsWith('/blog/')) {
     item.priority = 0.7;
     item.changefreq = 'monthly';
-    item.lastmod = blogLastmod.get(path) ?? buildDate;
+    const lastmod = blogLastmod.get(path);
+    if (lastmod) item.lastmod = lastmod;
     return item;
   }
 

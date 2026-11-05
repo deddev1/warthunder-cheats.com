@@ -120,8 +120,6 @@ export function discussionForumPostingSchema(input: {
   name: string;
   text: string;
   url: string;
-  author: string;
-  comments: number;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -129,9 +127,15 @@ export function discussionForumPostingSchema(input: {
     headline: input.name,
     articleBody: input.text,
     url: canonicalUrl(input.url),
-    author: { '@type': 'Person', name: input.author },
-    commentCount: input.comments,
-    isPartOf: { '@type': 'CollectionPage', name: 'War Thunder Cheats Community Forum', url: canonicalUrl('/forum/') },
+    author: {
+      '@type': 'Organization',
+      name: 'War Thunder Cheats',
+    },
+    isPartOf: {
+      '@type': 'CollectionPage',
+      name: 'War Thunder Cheats Community Forum',
+      url: canonicalUrl('/forum/'),
+    },
   };
 }
 
@@ -159,10 +163,10 @@ export function productSchema(input: {
       name: 'War Thunder Cheats',
     },
     ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
+    // Offer URL only — never invent price/plan; checkout decides what is sold.
     offers: {
       '@type': 'Offer',
       url: offerUrl(input.offerUrl),
-      priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',

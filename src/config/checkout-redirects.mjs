@@ -6,10 +6,12 @@ export const CHECKOUT_URLS = {
   ugc: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fugc',
 };
 
-/** Checkout paths → external product URLs (used by Node serve + Astro middleware). */
+/** Checkout paths → external product URLs (Node serve, CF _redirects, Astro middleware). */
 export const CHECKOUT_PATH_REDIRECTS = new Map([
   ['/go/warthunder', CHECKOUT_URLS.warthunder],
   ['/go/warthunder/', CHECKOUT_URLS.warthunder],
+  ['/go/rust', CHECKOUT_URLS.warthunder],
+  ['/go/rust/', CHECKOUT_URLS.warthunder],
   ['/go/skin-changer', CHECKOUT_URLS.skinChanger],
   ['/go/skin-changer/', CHECKOUT_URLS.skinChanger],
   ['/go/hwid-spoofer', CHECKOUT_URLS.hwidSpoofer],

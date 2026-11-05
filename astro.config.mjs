@@ -3,23 +3,13 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import { sitemapSerialize } from './src/config/sitemap.ts';
 
+// Path + checkout redirects live in one map (scripts/redirects.mjs +
+// src/config/checkout-redirects.mjs) and are emitted to public/_redirects
+// via scripts/write-redirects.mjs. Node serve.mjs and Astro middleware use
+// the same maps for real 301/302 responses.
 export default defineConfig({
   site: 'https://warthunder-cheats.com',
   trailingSlash: 'always',
-  redirects: {
-    '/cheats/': '/products/warthunder-cheats/',
-    '/cheats/lite/': '/products/warthunder-cheats/',
-    '/cheats/pro/': '/products/warthunder-cheats/',
-    '/cheats/elite/': '/products/warthunder-cheats/elite/',
-    '/cheats/compare/': '/blog/lite-vs-pro/',
-    '/contact/': '/support/',
-    '/products/rust-cheats/': '/products/warthunder-cheats/',
-    '/products/rust-cheats/elite/': '/products/warthunder-cheats/elite/',
-    '/products/rust-cheats/utilities/': '/products/warthunder-cheats/utilities/',
-    '/products/dota-2-cheats/': '/products/warthunder-cheats/',
-    '/products/dota-2-cheats/elite/': '/products/warthunder-cheats/elite/',
-    '/products/dota-2-cheats/utilities/': '/products/warthunder-cheats/utilities/',
-  },
   compressHTML: true,
   prefetch: {
     prefetchAll: false,

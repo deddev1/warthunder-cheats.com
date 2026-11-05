@@ -114,7 +114,19 @@ if (fs.existsSync(redirectsFile)) {
   const r = read(redirectsFile);
   if (!r.includes('%2Fproducts%2Fwar-thunder')) fail('Store/affiliate links', '_redirects missing war-thunder');
   else if (!r.includes('%2Fproducts%2Fhwid-spoofer')) fail('Store/affiliate links', '_redirects missing hwid');
-  else ok('public/_redirects affiliate destinations OK');
+  else if (!r.includes('/cheats/lite/ /products/warthunder-cheats/lite/ 301')) {
+    fail('Store/affiliate links', '_redirects lite must 301 to tier page');
+  } else if (!r.includes('/cheats/pro/ /products/warthunder-cheats/pro/ 301')) {
+    fail('Store/affiliate links', '_redirects pro must 301 to tier page');
+  } else if (!r.includes('/go/warthunder/ ') || !r.includes(' 302')) {
+    fail('Store/affiliate links', '_redirects /go/ must be 302-only (no HTML bridge)');
+  } else ok('public/_redirects affiliate + tier + /go/ 302 OK');
+}
+const goBridge = path.join(dist, 'go');
+if (fs.existsSync(goBridge)) {
+  fail('Store/affiliate links', 'dist/go HTML bridge present — /go must be 302-only');
+} else {
+  ok('/go has no HTML bridge in dist (302-only)');
 }
 
 // 4) Original copy / no leftover games in user-facing src

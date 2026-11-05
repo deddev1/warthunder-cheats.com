@@ -19,6 +19,16 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
     description:
       'Products hub for War Thunder on Steam or Gaijin Launcher—compare Lite, Pro and Elite plus HWID, UGC and utilities. Module lists, buy guides and checkout.',
   },
+  '/products/warthunder-cheats/lite/': {
+    title: 'War Thunder Lite Cheats | ESP, Radar & FOV',
+    description:
+      'Buy Lite tier: player ESP, vehicle tags, capture markers, radar and FOV changer for Arcade, Realistic and Simulator—awareness without aimbot.',
+  },
+  '/products/warthunder-cheats/pro/': {
+    title: 'War Thunder Pro Cheats | Aimbot & Soft Aim',
+    description:
+      'Buy Pro tier: aimbot, Soft Aim, ballistic assist and vehicle profiles plus every Lite ESP and radar module for Windows Steam PC.',
+  },
   '/products/warthunder-cheats/elite/': {
     title: 'War Thunder Elite Cheats | ESP, Aimbot, SL Helpers',
     description:

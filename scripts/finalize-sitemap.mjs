@@ -122,7 +122,8 @@ const indexLastmod = entries
   .map((e) => e.lastmod)
   .filter(Boolean)
   .sort()
-  .at(-1) ?? new Date().toISOString().slice(0, 10);
+  .at(-1);
+const indexLastmodXml = indexLastmod ? `\n    <lastmod>${indexLastmod}</lastmod>` : '';
 
 writeUrlset(path.join(dist, 'sitemap-pages.xml'), pageEntries);
 writeUrlset(path.join(dist, 'sitemap-blog.xml'), blogEntries);
@@ -131,16 +132,13 @@ writeUrlset(path.join(dist, 'sitemap-forum.xml'), forumEntries);
 const indexXml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="${URLSET_NS}">
   <sitemap>
-    <loc>${siteOrigin}/sitemap-pages.xml</loc>
-    <lastmod>${indexLastmod}</lastmod>
+    <loc>${siteOrigin}/sitemap-pages.xml</loc>${indexLastmodXml}
   </sitemap>
   <sitemap>
-    <loc>${siteOrigin}/sitemap-blog.xml</loc>
-    <lastmod>${indexLastmod}</lastmod>
+    <loc>${siteOrigin}/sitemap-blog.xml</loc>${indexLastmodXml}
   </sitemap>
   <sitemap>
-    <loc>${siteOrigin}/sitemap-forum.xml</loc>
-    <lastmod>${indexLastmod}</lastmod>
+    <loc>${siteOrigin}/sitemap-forum.xml</loc>${indexLastmodXml}
   </sitemap>
 </sitemapindex>
 `;

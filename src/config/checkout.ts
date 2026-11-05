@@ -22,12 +22,12 @@ export function checkoutPath(product: CheckoutProduct = 'warthunder'): string {
   return CHECKOUT[product];
 }
 
-/** Internal /go/* path (blog links, bookmarks); 302 to Zadeyo via public/_redirects. */
+/** Internal /go/* path (blog links, bookmarks); real 302 to Zadeyo via _redirects / serve / middleware. */
 export function checkoutRedirectPath(product: CheckoutProduct = 'warthunder'): string {
   return `/go/${CHECKOUT_SLUGS[product]}/`;
 }
 
-/** Alias used by /go/[slug] static redirect pages. */
+/** External Zadeyo affiliate URL (302 target for /go/*). */
 export function checkoutExternalUrl(product: CheckoutProduct = 'warthunder'): string {
   return CHECKOUT[product];
 }

@@ -309,7 +309,7 @@ export const siteFaqs: SiteFaqItem[] = [
     scopes: ['lite'],
   },
   {
-    id: 'loot-esp',
+    id: 'vehicle-esp',
     topic: 'esp',
     icon: 'faqWhatIsEsp',
     q: 'What does Vehicle & player ESP highlight?',
@@ -321,7 +321,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'scripts',
     icon: 'faqAutoFarm',
     q: 'Which tier includes SL/RP farm helpers?',
-    a: `SL/RP farm helpers for resource and loot routes are ${elite} only. ${pro} covers aim assist without farm automation.`,
+    a: `SL/RP farm helpers for Silver Lions and Research Points grind routes are ${elite} only. ${pro} covers aim assist without farm automation.`,
     scopes: ['elite'],
   },
   {
