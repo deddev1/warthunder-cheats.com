@@ -12,5 +12,7 @@ export interface BlogPostFull extends BlogPost {
   author?: string;
   /** Accessible alt text for the cover / hero image. */
   imageAlt?: string;
+  /** Full document title (≤60 chars). When set, used instead of pageTitle(title). */
+  seoTitle?: string;
   body: BlogBlock[];
 }

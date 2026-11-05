@@ -148,11 +148,12 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Features",
-    title: "Cheat features by tier: ESP, aimbot, ballistic assist & skins",
+    title: "War Thunder cheats features by tier: ESP, aimbot, ballistic assist & skins",
     slug: "features",
+    seoTitle: "War Thunder Cheats Features by Tier Guide for 2026",
     image: "/images/blog/wt-esp-radar.png",
     imageAlt: "War Thunder naval ESP with purple ship chams, green target box, IJN Mutsu name tag and 1.40 km distance through arctic islands",
-    desc: "Feature guide: Player ESP, Vehicle ESP, Aimbot, Ballistic assist, FOV hack and Camouflage unlock by Lite, Pro and Elite tier—compare modules before checkout.",
+    desc: "Features guide: Player ESP, Vehicle ESP, Aimbot, Ballistic assist, FOV hack and Camouflage unlock by Lite, Pro and Elite tier—compare modules before.",
     date: "Aug 18, 2026",
     readTime: "12 min read",
     featured: true,
@@ -364,11 +365,12 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Setup",
-    title: "Buy War Thunder aimbot & ballistic assist: Pro tier combat tools",
+    title: "Buy War Thunder aimbot & ballistic assist cheats: Pro tier combat tools",
     slug: "aimbot",
+    seoTitle: "Aimbot Soft Aim Pro Combat Guide | War Thunder Cheats",
     image: "/images/blog/wt-aimbot-fov.png",
     imageAlt: "War Thunder tank gunner sight with green 3D ESP boxes around M2A4 Tetrarch Pz.II and Chi-Ha tanks plus meter distances on a tropical map",
-    desc: "Buy War Thunder aimbot and ballistic assist with Pro tier. See what Aimbot, Soft Aim, Bone Select and Ballistic assist do, then compare tiers and get access.",
+    desc: "Buy War Thunder aimbot and ballistic assist with Pro tier. See what Aimbot, Soft Aim, Bone Select and Ballistic assist do, then compare tiers and get.",
     date: "Aug 15, 2026",
     readTime: "6 min read",
     body: [
@@ -576,11 +578,12 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Guides",
-    title: "Buy War Thunder HWID Spoofer after a ban",
+    title: "Buy War Thunder HWID Spoofer cheats after a ban",
     slug: "hwid",
+    seoTitle: "HWID Spoofer After Hardware Ban | War Thunder Cheats",
     image: "/images/blog/wt-ground-esp.png",
     imageAlt: "War Thunder ground battle cheat gameplay with vehicle ESP overlays marking enemy tanks and distances across the map",
-    desc: "Hardware flagged after a Gaijin ban? Buy War Thunder HWID Spoofer, compare it to a new account, and see when UGC appeal help fits. Checkout at warthunder-cheats.com.",
+    desc: "Hardware flagged after a Gaijin ban? Buy War Thunder HWID Spoofer, compare it to a new account, and see when UGC appeal help fits.",
     date: "Aug 13, 2026",
     readTime: "7 min read",
     body: [
@@ -613,7 +616,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Guides",
-    title: "Checkout buy guide: Lite, Pro & Elite (2026)",
+    title: "Checkout buy guide: War Thunder cheats Lite, Pro & Elite (2026)",
     slug: "buy-guide",
     image: "/images/blog/wt-esp-radar.png",
     imageAlt: "War Thunder naval ESP with purple ship chams, green target box, IJN Mutsu name tag and 1.40 km distance through arctic islands",
@@ -654,7 +657,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Setup",
-    title: "Buy Pro aimbot bone select & weapon profiles",
+    title: "Buy Pro War Thunder cheats aimbot bone select & weapon profiles",
     slug: "bones",
     image: "/images/blog/wt-aimbot-fov.png",
     imageAlt: "War Thunder tank gunner sight with green 3D ESP boxes around M2A4 Tetrarch Pz.II and Chi-Ha tanks plus meter distances on a tropical map",
@@ -696,11 +699,12 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Guides",
-    title: "Gaijin anti-cheat errors vs buying UGC recovery / HWID help",
+    title: "Gaijin anti-cheat errors vs War Thunder cheats UGC recovery / HWID help",
     slug: "eac-error",
+    seoTitle: "Gaijin Anti-Cheat Errors Guide | War Thunder Cheats",
     image: "/images/blog/wt-combat-overlay.png",
     imageAlt: "War Thunder cheat gameplay combat overlay highlighting enemy vehicles with ESP boxes and distance tags during a live battle",
-    desc: "Gaijin launcher failed to initialize is usually not a ban. Quick checks first, then when to buy UGC appeal workflows or HWID Spoofer. Then get access to War Thunder cheats.",
+    desc: "Errors: Gaijin launcher failed to initialize is usually not a ban. Quick checks first, then when to buy UGC appeal workflows or HWID Spoofer.",
     date: "Aug 11, 2026",
     readTime: "6 min read",
     body: [

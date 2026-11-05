@@ -10,9 +10,9 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Buy War Thunder Cheats 2026 | ESP & Aimbot',
+    title: 'ESP Aimbot Soft Aim for War Thunder PC Cheats 2026',
     description:
-      'Shop undetected War Thunder cheats for Windows—vehicle ESP, player ESP, aimbot, radar and stream-proof overlays. Compare Lite, Pro and Elite at warthunder-cheats.com.',
+      'Shop undetected War Thunder cheats with ESP aimbot, vehicle ESP, radar and stream-proof overlays on Windows. Compare Lite, Pro, Elite.',
   },
   '/products/warthunder-cheats/': {
     title: 'All War Thunder Cheat Products | Lite, Pro, Elite',
@@ -45,7 +45,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Utility comparison for War Thunder—HWID Spoofer vs UGC recovery use cases, feature lists and product pages. Camouflage unlock details on Unlock All.',
   },
   '/blog/': {
-    title: 'Buy Guides & Checkout Tips | Lite, Pro, Elite',
+    title: 'Checkout – ESP and aimbot modules | War Thunder Cheats',
     description:
       'Step-by-step buy guides and checkout tips—tier picks, ESP and aimbot modules, HWID recovery after bans, and secure payment at warthunder-cheats.com.',
   },
@@ -70,9 +70,9 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Legal terms for purchasing War Thunder cheat licenses on warthunder-cheats.com—delivery, personal-use limits, refunds, ban risk and acceptable use.',
   },
   '/about/': {
-    title: 'About Our Cheats Store | War Thunder PC Tools',
+    title: 'Cheats Store for War Thunder PC Tools and Online Support',
     description:
-      'Meet the warthunder-cheats.com team—tiers, utilities, patch-day loader updates and Discord help after checkout on Windows 10/11.',
+      'Cheats Store: Meet the warthunder-cheats.com team—tiers, utilities, patch-day loader updates and Discord help after checkout on Windows 10/11.',
   },
   '/support/': {
     title: 'War Thunder Cheats Support — Discord, Loader & HWID Help',
