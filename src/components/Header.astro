@@ -86,9 +86,11 @@ const purchaseLink = externalLinkProps(purchaseUrl);
                 href={link.href}
                 class="nav-link flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-primary"
                 data-nav-link
+                aria-label={`Mobile ${link.label}`}
                 {...(link.scrollTarget ? { 'data-scroll-target': link.scrollTarget } : {})}
               >
                 <Icon name={navIcons[link.label] ?? 'navFeatures'} size={16} />
+                <span class="sr-only">Mobile </span>
                 {link.label}
               </a>
             ))}

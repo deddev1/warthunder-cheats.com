@@ -158,7 +158,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqRankTiers',
     q: 'How do you rank Lite vs Pro vs Elite?',
-    a: `ESP and radar only → ${lite}. Gunfights with aim assist → ${pro}. Full suite, farm helpers and priority patches → ${elite}. Compare on the ${proPage}, in the ${guideLiteVsPro}, or in the ${faqPage}.`,
+    a: `ESP and radar only → ${lite}. Gunfights with aim assist → ${pro}. Full suite, farm helpers and priority patches → ${elite}. Compare on the ${proPage} or in the ${guideLiteVsPro}.`,
   },
   {
     id: 'elite-slots',
@@ -246,7 +246,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqComparePlans',
     q: 'Where do I compare plans side by side?',
-    a: `Each cheat tier page includes a compare table. The ${faqPageAlt} collects product, cheat and blog answers in one place, and the ${guideFeatures} maps every module to a tier.`,
+    a: `Each cheat tier page includes a compare table. This FAQ page collects product, cheat and blog answers in one place, and the ${guideFeatures} maps every module to a tier.`,
   },
   {
     id: 'who-lite',
