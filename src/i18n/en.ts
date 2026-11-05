@@ -24,7 +24,7 @@ export const en: Translations = {
   hero: {
     status: 'War Thunder — Gaijin build online',
     eyebrow: 'Undetected War Thunder Cheats',
-    title: 'War Thunder Cheats — Undetected ESP Soft Aimbot & Wallhacks for PC 2026',
+    title: 'War Thunder Cheats — Undetected ESP Aimbot Soft Aim & Wallhacks for PC 2026',
     subtitle:
       'Buy undetected War Thunder cheats for Steam PC—player ESP, vehicle ESP, soft aim and ballistic assist. Compare Lite, Pro and Elite, then checkout for instant loader access.',
     ctaPrimary: 'Get access',

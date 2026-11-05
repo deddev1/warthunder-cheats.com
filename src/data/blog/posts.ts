@@ -159,7 +159,7 @@ export const blogPosts: BlogPostFull[] = [
     featured: true,
     author: "War Thunder Cheats Editorial",
     body: [
-      { type: 'p', text: "This features guide maps every module in our external suite for Steam PC to the tier that includes it—ESP, aimbot, ballistic assist, utilities—so you can decide what to buy before checkout. Admin console commands are a different thing—they do not equal live-server loaders. To run ESP and aimbot on Arcade, Realistic and Simulator battles, [compare tiers](/products/warthunder-cheats/) and get access." },
+      { type: 'p', text: "This features guide maps every module in our external suite for Steam PC to the tier that includes it—ESP, aimbot, ballistic assist, utilities—so you can decide what to buy before checkout. Admin console commands are a different thing—they do not equal live-server loaders. To run ESP and aimbot on Arcade, Realistic and Simulator battles, [map modules on the products hub](/products/warthunder-cheats/) before you buy." },
       { type: 'image', src: "/images/blog/wt-esp-radar.png", alt: "War Thunder naval ESP with purple ship chams, green target box, IJN Mutsu name tag and 1.40 km distance through arctic islands", caption: "Naval ESP with ship chams and distance tags" },
       { type: 'image', src: "/images/blog/wt-aimbot-fov.png", alt: "War Thunder tank gunner sight with green 3D ESP boxes around M2A4 Tetrarch Pz.II and Chi-Ha tanks plus meter distances on a tropical map", caption: "Tank ESP boxes through the gunner sight" },
       { type: 'image', src: "/images/blog/wt-air-esp.png", alt: "War Thunder modern fighter with orange ballistic prediction lines, missile speed tags and ESP labels for distant Gepard and ADATS targets", caption: "Jet ballistic prediction and long-range ESP" },
@@ -365,7 +365,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Setup",
-    title: "Buy War Thunder aimbot Soft Aim ballistic assist cheats guide: Pro tools",
+    title: "Buy War Thunder aimbot Soft Aim ballistic assist cheats combat guide: Pro tools",
     slug: "aimbot",
     seoTitle: "Aimbot Soft Aim Pro Combat Guide | War Thunder Cheats",
     image: "/images/blog/wt-aimbot-fov.png",
@@ -406,7 +406,7 @@ export const blogPosts: BlogPostFull[] = [
         text: "Aimbot, Soft Aim and Ballistic assist for live PvP—secure checkout at warthunder-cheats.com.",
         href: "/go/warthunder/",
       },
-      { type: 'p', text: "[Compare tiers](/products/warthunder-cheats/) → [Get access](/go/warthunder/). No setting is ban-proof; humanized values reduce reports." },
+      { type: 'p', text: "[See Pro vs Elite modules](/products/warthunder-cheats/) → [Checkout for Pro aim assist](/go/warthunder/). No setting is ban-proof; humanized values reduce reports." },
     ],
   },
   {
@@ -604,7 +604,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: 'h2', text: "UGC for appeals" },
       { type: 'p', text: "UGC is a workspace for appeals and case tracking. It does not guarantee an unban; read the product page for realistic outcomes." },
       { type: 'h2', text: "After recovery" },
-      { type: 'p', text: "Return with a conservative preset and run the [Gaijin patch day checklist](/blog/eac-patch/). Pick a tier at [War Thunder Cheats](/products/warthunder-cheats/) and [get access](/go/warthunder/). Startup errors are covered in the [Gaijin anti-cheat errors guide](/blog/eac-error/)." },
+      { type: 'p', text: "Return with a conservative preset and run the [Gaijin patch day checklist](/blog/eac-patch/). Pick a tier at [the War Thunder products hub](/products/warthunder-cheats/) and [resume with a fresh checkout](/go/warthunder/). Startup errors are covered in the [Gaijin anti-cheat errors guide](/blog/eac-error/)." },
       {
         type: 'cta',
         title: "Buy HWID Spoofer",
@@ -653,12 +653,12 @@ export const blogPosts: BlogPostFull[] = [
         text: "Lite, Pro and Elite ship through secure checkout at warthunder-cheats.com.",
         href: "/go/warthunder/",
       },
-      { type: 'p', text: "[Compare tiers](/products/warthunder-cheats/) → [Get access](/go/warthunder/). Software for War Thunder carries ban risk; read the terms and live status before you buy." },
+      { type: 'p', text: "[Open the tier comparison hub](/products/warthunder-cheats/) → [Start Lite Pro or Elite checkout](/go/warthunder/). Software for War Thunder carries ban risk; read the terms and live status before you buy." },
     ],
   },
   {
     tag: "Setup",
-    title: "Buy Pro War Thunder cheats aimbot bone select & weapon profiles",
+    title: "Buy Pro War Thunder cheats aimbot bones select guide & weapon profiles",
     slug: "bones",
     seoTitle: "Bones Aim Select Profiles Guide | War Thunder Cheats",
     image: "/images/blog/wt-aimbot-fov.png",
@@ -696,7 +696,7 @@ export const blogPosts: BlogPostFull[] = [
         text: "Aimbot, Bone Select and Ballistic assist profiles—secure checkout at warthunder-cheats.com.",
         href: "/go/warthunder/",
       },
-      { type: 'p', text: "[Compare tiers](/products/warthunder-cheats/) → [Get access](/go/warthunder/). Treat every value as a starting point; aim assist carries ban risk." },
+      { type: 'p', text: "[Browse combat tier options](/products/warthunder-cheats/) → [Buy Pro for bone profiles](/go/warthunder/). Treat every value as a starting point; aim assist carries ban risk." },
     ],
   },
   {
@@ -729,7 +729,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: 'h2', text: "Returning with War Thunder cheats" },
       { type: 'p', text: "Once War Thunder starts with no cheat software running, follow the portal launch order and check the status banner. Read the [Gaijin patch day checklist](/blog/eac-patch/) and the [external cheat guide](/blog/external/)." },
       { type: 'h2', text: "Pick a tier" },
-      { type: 'p', text: "[Compare tiers](/products/warthunder-cheats/) and [get access](/go/warthunder/) when you are ready to return." },
+      { type: 'p', text: "[Return via the products hub](/products/warthunder-cheats/) and [unlock loader access after payment](/go/warthunder/) when you are ready to return." },
       {
         type: 'cta',
         title: "Need an appeal workspace?",

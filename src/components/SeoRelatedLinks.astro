@@ -15,12 +15,12 @@ interface Props {
 }
 
 const defaultLinks: LinkItem[] = [
-  { href: ROUTES.products, label: 'Shop War Thunder cheat products' },
-  { href: '/products/warthunder-cheats/elite/', label: 'Buy Elite ESP & aimbot' },
-  { href: '/products/warthunder-cheats/utilities/', label: 'Compare utilities' },
-  { href: ROUTES.blog, label: 'Buy guides & tier tips' },
-  { href: ROUTES.faq, label: 'Pre-purchase FAQ' },
-  { href: ROUTES.reviews, label: 'Buyer reviews' },
+  { href: ROUTES.products, label: 'Open products hub for all tiers' },
+  { href: '/products/warthunder-cheats/elite/', label: 'Purchase Elite combat suite' },
+  { href: '/products/warthunder-cheats/utilities/', label: 'HWID UGC unlock utility table' },
+  { href: ROUTES.blog, label: 'Read checkout and tier guides' },
+  { href: ROUTES.faq, label: 'Open buying FAQ answers' },
+  { href: ROUTES.reviews, label: 'See product review scores' },
 ];
 
 const { title = 'Shop War Thunder cheats & guides', links = defaultLinks } = Astro.props;
@@ -38,6 +38,6 @@ const checkoutAttrs = externalLinkProps(checkout);
     ))}
   </ul>
   <div class="mt-6">
-    <Button as="a" href={checkout} variant="primary" size="sm" {...checkoutAttrs}>Get access</Button>
+    <Button as="a" href={checkout} variant="primary" size="sm" {...checkoutAttrs}>Go to secure checkout</Button>
   </div>
 </aside>
