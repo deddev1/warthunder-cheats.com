@@ -16,6 +16,8 @@ interface Props {
   /** Full /faq/ experience — all topics chip bar */
   variant?: 'full' | 'contextual';
   filterTopics?: FaqTopic[];
+  contentAlign?: 'left' | 'center';
+  centered?: boolean;
 }
 
 const {
@@ -25,6 +27,8 @@ const {
   class: className,
   variant = 'contextual',
   filterTopics: filterTopicsProp,
+  contentAlign = variant === 'full' ? 'left' : 'center',
+  centered = false,
 } = Astro.props;
 
 const copy = variant === 'full' ? SITE_FAQ_SECTION_COPY : CONTEXTUAL_FAQ_SECTION_COPY;
@@ -42,5 +46,7 @@ const showFilters = filterTopics.length > 1;
   titleId={titleId}
   showFilters={showFilters}
   filterTopics={filterTopics}
+  contentAlign={contentAlign}
+  centered={centered}
   class={className}
 />

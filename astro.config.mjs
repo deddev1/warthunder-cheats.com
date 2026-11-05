@@ -4,18 +4,21 @@ import sitemap from '@astrojs/sitemap';
 import { sitemapSerialize } from './src/config/sitemap.ts';
 
 export default defineConfig({
-  site: 'https://rust-cheats.net',
+  site: 'https://warthunder-cheats.com',
   trailingSlash: 'always',
   redirects: {
-    '/cheats/': '/products/rust-cheats/',
-    '/cheats/lite/': '/products/rust-cheats/',
-    '/cheats/pro/': '/products/rust-cheats/',
-    '/cheats/elite/': '/products/rust-cheats/elite/',
+    '/cheats/': '/products/warthunder-cheats/',
+    '/cheats/lite/': '/products/warthunder-cheats/',
+    '/cheats/pro/': '/products/warthunder-cheats/',
+    '/cheats/elite/': '/products/warthunder-cheats/elite/',
     '/cheats/compare/': '/blog/lite-vs-pro/',
     '/contact/': '/support/',
-    '/products/dota-2-cheats/': '/products/rust-cheats/',
-    '/products/dota-2-cheats/elite/': '/products/rust-cheats/elite/',
-    '/products/dota-2-cheats/utilities/': '/products/rust-cheats/utilities/',
+    '/products/rust-cheats/': '/products/warthunder-cheats/',
+    '/products/rust-cheats/elite/': '/products/warthunder-cheats/elite/',
+    '/products/rust-cheats/utilities/': '/products/warthunder-cheats/utilities/',
+    '/products/dota-2-cheats/': '/products/warthunder-cheats/',
+    '/products/dota-2-cheats/elite/': '/products/warthunder-cheats/elite/',
+    '/products/dota-2-cheats/utilities/': '/products/warthunder-cheats/utilities/',
   },
   compressHTML: true,
   prefetch: {

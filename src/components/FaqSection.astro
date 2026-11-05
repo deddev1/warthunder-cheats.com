@@ -58,8 +58,7 @@ const filters = filterTopics ?? (['all', 'plans', 'esp', 'scripts', 'safety', 'p
   aria-labelledby={titleId}
   data-faq-section={showFilters ? '' : undefined}
 >
-  <div class="mx-auto max-w-6xl px-5">
-    <div class:list={[contentAlign === 'center' && 'mx-auto max-w-3xl', contentAlign === 'left' && 'product-detail__narrow max-w-3xl']}>
+  <div class="mx-auto max-w-3xl px-5">
     <SectionHeader
       eyebrow={eyebrow}
       title={title}
@@ -111,6 +110,5 @@ const filters = filterTopics ?? (['all', 'plans', 'esp', 'scripts', 'safety', 'p
         </div>
       ))}
     </Accordion>
-    </div>
   </div>
 </section>

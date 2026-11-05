@@ -1,5 +1,5 @@
 {
-  "name": "rust-cheats",
+  "name": "warthunder-cheats",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -11,7 +11,9 @@
     "preview": "astro preview --host 0.0.0.0",
     "start": "node scripts/serve.mjs",
     "astro": "astro",
-    "optimize:images": "node scripts/optimize-images.mjs"
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "qa": "node scripts/qa-checklist.mjs",
+    "qa:full": "npm run build && node scripts/qa-checklist.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

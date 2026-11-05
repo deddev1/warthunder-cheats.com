@@ -50,10 +50,10 @@ function linkify(text: string): string {
       const normalized = normalizeInternalPath(href);
       return `<a href="${normalized}">${label}</a>`;
     })
-    .replace(/(https:\/\/(?:rust-cheats\.net|dotacheats\.com)[^\s.,;)]*)/g, (_match, url: string) => {
-      const path = url.replace(/^https:\/\/(?:rust-cheats\.net|dotacheats\.com)/, '');
+    .replace(/(https:\/\/(?:warthunder-cheats\.com|rust-cheats\.net)[^\s.,;)]*)/g, (_match, url: string) => {
+      const path = url.replace(/^https:\/\/(?:warthunder-cheats\.com|rust-cheats\.net)/, '');
       const normalized = normalizeInternalPath(path);
-      const href = normalized.startsWith('http') ? normalized : `https://rust-cheats.net${normalized}`;
+      const href = normalized.startsWith('http') ? normalized : `https://warthunder-cheats.com${normalized}`;
       return `<a href="${href}">${url}</a>`;
     });
 }
@@ -99,7 +99,7 @@ const published = parseBlogDate(post.date);
           <figure class="blog-article__hero">
             <ResponsiveImage
               src={post.image}
-              alt={`${post.title} — buy undetected Rust cheats with ESP, aimbot and wallhack gameplay`}
+              alt={post.imageAlt ?? `${post.title} — War Thunder cheats ESP and aimbot gameplay screenshot`}
               width={960}
               height={540}
               loading="eager"
@@ -108,7 +108,7 @@ const published = parseBlogDate(post.date);
               class="w-full object-cover"
             />
             <figcaption class="sr-only">
-              Rust cheats gameplay screenshot for {post.title}. Shop Lite, Pro or Elite at rust-cheats.net.
+              {post.imageAlt ?? `War Thunder cheats gameplay screenshot for ${post.title}. Shop Lite, Pro or Elite at warthunder-cheats.com.`}
             </figcaption>
           </figure>
 
@@ -177,12 +177,32 @@ const published = parseBlogDate(post.date);
                   />
                 );
               }
+              if (block.type === 'image') {
+                return (
+                  <figure class="blog-article__inline-shot not-prose my-6 overflow-hidden rounded-xl border border-border">
+                    <ResponsiveImage
+                      src={block.src}
+                      alt={block.alt}
+                      width={960}
+                      height={540}
+                      loading="lazy"
+                      sizes="(min-width: 768px) 720px, 100vw"
+                      class="w-full object-cover"
+                    />
+                    {block.caption ? (
+                      <figcaption class="px-3 py-2 text-sm text-muted-foreground">{block.caption}</figcaption>
+                    ) : (
+                      <figcaption class="sr-only">{block.alt}</figcaption>
+                    )}
+                  </figure>
+                );
+              }
               return <p set:html={linkify(block.text)} />;
             })}
           </Prose>
 
           <nav class="blog-article__actions" aria-label="Continue reading">
-            <Button as="a" href={checkoutPath('rust')} variant="primary" aria-label={t.ui.checkoutAria}>
+            <Button as="a" href={checkoutPath('warthunder')} variant="primary" aria-label={t.ui.checkoutAria}>
               Get access
               <Icon name="arrowRight" size={17} />
             </Button>

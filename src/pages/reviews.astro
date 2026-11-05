@@ -30,9 +30,9 @@ const initials = (name: string) =>
 const reviewSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: 'Rust Cheats',
+  name: 'War Thunder Cheats',
   description: seo.description,
-  brand: { '@type': 'Brand', name: 'Rust Cheats' },
+  brand: { '@type': 'Brand', name: 'War Thunder Cheats' },
   url: canonicalUrl('/reviews/'),
   aggregateRating: {
     '@type': 'AggregateRating',
@@ -62,7 +62,7 @@ const reviewSchema = {
   description={seo.description}
   jsonLd={[
     collectionPageSchema({
-      name: 'Rust Cheats Customer Reviews',
+      name: 'War Thunder Cheats Customer Reviews',
       description: seo.description,
       url: '/reviews/',
     }),
@@ -78,10 +78,10 @@ const reviewSchema = {
           <div class="reviews-hero__copy">
             <p class="section-header__eyebrow">Verified buyer signal</p>
             <h1 id="reviews-page-title" class="section-header__title">
-              Rust Cheats Reviews — ESP, Aimbot & Spoofer
+              War Thunder Cheats Reviews — ESP, Aimbot & Spoofer
             </h1>
             <p class="section-header__subtitle mt-3 max-w-xl">
-              Real purchase feedback on Elite combat tools, HWID Spoofer, UGC recovery and Skin Changer—before you checkout.
+              Real purchase feedback on Elite combat tools, HWID Spoofer, UGC recovery and camouflage unlock—before you checkout.
             </p>
 
             <div class="reviews-filters" role="group" aria-label="Filter reviews by product">
@@ -100,6 +100,25 @@ const reviewSchema = {
                   </button>
                 ))
               }
+            </div>
+
+            <div class="reviews-rating-filter">
+              <p class="reviews-rating-filter__label" id="reviews-rating-label">Filter by star rating</p>
+              <div class="rating" role="radiogroup" aria-labelledby="reviews-rating-label" data-rating-filter>
+                <input type="radio" name="review-rating" id="star5" value="5" />
+                <label for="star5" title="5 stars"></label>
+                <input type="radio" name="review-rating" id="star4" value="4" />
+                <label for="star4" title="4 stars"></label>
+                <input type="radio" name="review-rating" id="star3" value="3" />
+                <label for="star3" title="3 stars"></label>
+                <input type="radio" name="review-rating" id="star2" value="2" />
+                <label for="star2" title="2 stars"></label>
+                <input type="radio" name="review-rating" id="star1" value="1" />
+                <label for="star1" title="1 star"></label>
+              </div>
+              <button type="button" class="reviews-rating-clear" data-rating-clear hidden>
+                Show all ratings
+              </button>
             </div>
           </div>
 
@@ -149,6 +168,7 @@ const reviewSchema = {
                 class="reviews-featured"
                 data-review-card
                 data-review-product={featured.product}
+                data-review-rating={featured.rating}
               >
                 <span class="reviews-featured__mark" aria-hidden="true">“</span>
                 <p class="text-xs font-semibold uppercase tracking-wider text-primary">Featured review</p>
@@ -156,7 +176,7 @@ const reviewSchema = {
                 <p class="reviews-featured__body">{featured.body}</p>
                 <div class="reviews-featured__meta">
                   <span class="reviews-avatar">{initials(featured.name)}</span>
-                  <div>
+                  <div class="reviews-item__identity">
                     <p class="reviews-item__name">{featured.name}</p>
                     <p class="reviews-item__handle">@{featured.handle}</p>
                   </div>
@@ -175,10 +195,10 @@ const reviewSchema = {
           <ol class="reviews-feed">
             {
               feed.map((review) => (
-                <li class="reviews-item" data-review-card data-review-product={review.product}>
-                  <div class="reviews-item__aside">
+                <li class="reviews-item" data-review-card data-review-product={review.product} data-review-rating={review.rating}>
+                  <div class="reviews-item__head">
                     <span class="reviews-avatar">{initials(review.name)}</span>
-                    <div>
+                    <div class="reviews-item__identity">
                       <p class="reviews-item__name">{review.name}</p>
                       <p class="reviews-item__handle">@{review.handle}</p>
                     </div>
@@ -188,25 +208,23 @@ const reviewSchema = {
                       ))}
                     </div>
                   </div>
-                  <div>
-                    <h3 class="reviews-item__title">{review.title}</h3>
-                    <p class="reviews-item__body">{review.body}</p>
-                    <div class="reviews-item__foot">
-                      {review.verified ? (
-                        <span class="reviews-pill">
-                          <Icon name="shieldCheck" size={12} class="icon-app--primary" />
-                          Verified buy
-                        </span>
-                      ) : null}
-                      <a class="reviews-pill" href={review.productHref}>{review.product}</a>
-                      <time class="reviews-pill reviews-pill--muted" datetime={review.date}>{review.date}</time>
-                    </div>
+                  <h3 class="reviews-item__title">{review.title}</h3>
+                  <p class="reviews-item__body">{review.body}</p>
+                  <div class="reviews-item__foot">
+                    {review.verified ? (
+                      <span class="reviews-pill">
+                        <Icon name="shieldCheck" size={12} class="icon-app--primary" />
+                        Verified buy
+                      </span>
+                    ) : null}
+                    <a class="reviews-pill" href={review.productHref}>{review.product}</a>
+                    <time class="reviews-pill reviews-pill--muted" datetime={review.date}>{review.date}</time>
                   </div>
                 </li>
               ))
             }
           </ol>
-          <p class="reviews-empty" data-reviews-empty>No reviews match this product filter.</p>
+          <p class="reviews-empty" data-reviews-empty>No reviews match these filters.</p>
         </div>
 
         <aside class="reviews-side">
@@ -241,24 +259,52 @@ const reviewSchema = {
     const filters = [...document.querySelectorAll<HTMLButtonElement>('[data-review-filter]')];
     const cards = [...document.querySelectorAll<HTMLElement>('[data-review-card]')];
     const empty = document.querySelector<HTMLElement>('[data-reviews-empty]');
+    const ratingInputs = [...document.querySelectorAll<HTMLInputElement>('[data-rating-filter] input[type="radio"]')];
+    const ratingClear = document.querySelector<HTMLButtonElement>('[data-rating-clear]');
 
-    const applyFilter = (value: string) => {
+    let productFilter = 'all';
+    let ratingFilter = 'all';
+
+    const applyFilters = () => {
       let visible = 0;
       cards.forEach((card) => {
-        const match = value === 'all' || card.dataset.reviewProduct === value;
+        const productMatch = productFilter === 'all' || card.dataset.reviewProduct === productFilter;
+        const ratingMatch = ratingFilter === 'all' || card.dataset.reviewRating === ratingFilter;
+        const match = productMatch && ratingMatch;
         card.hidden = !match;
         if (match) visible += 1;
       });
       empty?.classList.toggle('is-visible', visible === 0);
       filters.forEach((btn) => {
-        const active = btn.dataset.reviewFilter === value;
+        const active = btn.dataset.reviewFilter === productFilter;
         btn.classList.toggle('is-active', active);
         btn.setAttribute('aria-pressed', active ? 'true' : 'false');
       });
+      if (ratingClear) ratingClear.hidden = ratingFilter === 'all';
     };
 
     filters.forEach((btn) => {
-      btn.addEventListener('click', () => applyFilter(btn.dataset.reviewFilter || 'all'));
+      btn.addEventListener('click', () => {
+        productFilter = btn.dataset.reviewFilter || 'all';
+        applyFilters();
+      });
+    });
+
+    ratingInputs.forEach((input) => {
+      input.addEventListener('change', () => {
+        if (input.checked) {
+          ratingFilter = input.value;
+          applyFilters();
+        }
+      });
+    });
+
+    ratingClear?.addEventListener('click', () => {
+      ratingFilter = 'all';
+      ratingInputs.forEach((input) => {
+        input.checked = false;
+      });
+      applyFilters();
     });
   </script>
 </BaseLayout>

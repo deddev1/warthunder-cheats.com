@@ -1,8 +1,8 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
 Disallow: /go/
 
-Sitemap: https://rust-cheats.net/sitemap-index.xml
+Sitemap: https://warthunder-cheats.com/sitemap-index.xml
 
-# RSS: https://rust-cheats.net/rss.xml
+# RSS: https://warthunder-cheats.com/rss.xml

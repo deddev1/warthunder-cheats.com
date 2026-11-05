@@ -1,12 +1,13 @@
 ---
+import '../styles/support-guide.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { t } from '../i18n';
 import { resolvePageSeo } from '../config/seo';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ContactSupportSection from '../components/ContactSupportSection.astro';
-import { breadcrumbSchema, faqPageSchema, organizationSchema, webPageSchema } from '../utils/schema';
-import { Prose } from '@/components/starwind/prose';
 import SeoRelatedLinks from '../components/SeoRelatedLinks.astro';
+import { breadcrumbSchema, faqPageSchema, organizationSchema, webPageSchema } from '../utils/schema';
+import { ROUTES } from '../utils/path';
 
 const seo = resolvePageSeo('/support/');
 const supportCopy = t.legalPages.support;
@@ -14,17 +15,51 @@ const supportCopy = t.legalPages.support;
 const supportFaqs = [
   {
     q: 'What should I include in a Discord support ticket?',
-    a: 'Your checkout order ID, Windows version, Rust server type, product tier or utility name, and a screenshot of the loader or EAC error. Download files only from your portal—not from DMs.',
+    a: 'Your checkout order ID, Windows version, War Thunder battle type, product tier or utility name, and a screenshot of the loader or Gaijin launcher error. Download files only from your portal—not from DMs.',
   },
   {
     q: 'Why does the homepage status banner matter?',
-    a: 'It shows whether cheat modules are online after Rust or EAC patches. Do not launch while status is offline; wait for the updated loader from your portal.',
+    a: 'It shows whether cheat modules are online after War Thunder or Gaijin anti-cheat patches. Do not launch while status is offline; wait for the updated loader from your portal.',
   },
   {
     q: 'Where do I get help choosing Lite, Pro, or Elite?',
     a: 'Use the products hub, Lite vs Pro guide, features guide, FAQ, and buyer reviews before purchase. Open a ticket only if you still cannot match a tier to your playstyle.',
   },
 ];
+
+const guideSections = supportCopy.sections.map((section, index) => ({
+  ...section,
+  id: `guide-${section.heading
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')}`,
+  num: String(index + 1).padStart(2, '0'),
+}));
+
+/** Light link pass — keeps original wording, adds destinations shoppers need. */
+function linkifySupport(text: string): string {
+  const rules: [RegExp, string][] = [
+    [/Terms of Sale/g, `<a href="${ROUTES.terms}">Terms of Sale</a>`],
+    [/products hub/g, `<a href="${ROUTES.products}">products hub</a>`],
+    [/Lite vs Pro/g, `<a href="/blog/lite-vs-pro/">Lite vs Pro</a>`],
+    [/features guide/g, `<a href="/blog/features/">features guide</a>`],
+    [/the FAQ/g, `<a href="${ROUTES.faq}">the FAQ</a>`],
+    [/Reviews on \/reviews\//g, `Reviews on <a href="${ROUTES.reviews}">/reviews/</a>`],
+    [/utilities comparison table/g, `<a href="${ROUTES.productsUtilities}">utilities comparison table</a>`],
+    [
+      /Gaijin anti-cheat errors guide on the blog/g,
+      `<a href="/blog/eac-error/">Gaijin anti-cheat errors guide</a> on the blog`,
+    ],
+    [/spoofer guide/g, `<a href="/blog/hwid/">spoofer guide</a>`],
+    [/warthunder-cheats\.com/g, `<a href="${ROUTES.home}">warthunder-cheats.com</a>`],
+  ];
+
+  let out = text;
+  for (const [pattern, replacement] of rules) {
+    out = out.replace(pattern, replacement);
+  }
+  return out;
+}
 ---
 
 <BaseLayout
@@ -59,17 +94,55 @@ const supportFaqs = [
     />
   </div>
   <ContactSupportSection titleId="support-page-title" showTicketTips />
-  <div class="mx-auto max-w-3xl px-5 pb-16">
-    <Prose class="max-w-none">
-      {supportCopy.sections.map((section) => (
-        <section class="mt-8">
-          <h2>{section.heading}</h2>
-          {section.paragraphs.map((paragraph) => (
-            <p>{paragraph}</p>
-          ))}
-        </section>
-      ))}
-    </Prose>
-    <SeoRelatedLinks />
-  </div>
+
+  <section class="support-guide" aria-labelledby="support-guide-title">
+    <div class="support-guide__inner">
+      <header class="section-header support-guide__intro">
+        <p class="section-header__eyebrow">Ticket playbook</p>
+        <h2 id="support-guide-title" class="section-header__title">
+          What to check before Discord
+        </h2>
+        <p class="section-header__subtitle">
+          Same rules staff follow—status, loader, utilities, checkout, and buying help—so tickets stay short.
+        </p>
+      </header>
+
+      <ul class="support-guide__nav" aria-label="Jump to support topic">
+        {
+          guideSections.map((section) => (
+            <li>
+              <a href={`#${section.id}`}>{section.heading}</a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="support-guide__stack">
+        {
+          guideSections.map((section) => (
+            <article class="support-guide__block" id={section.id}>
+              <h3 class="support-guide__heading">
+                <span class="support-guide__num" aria-hidden="true">
+                  {section.num}
+                </span>
+                <span>{section.heading}</span>
+              </h3>
+              <ol class="support-guide__steps">
+                {section.paragraphs.map((paragraph) => (
+                  <li class="support-guide__step" set:html={linkifySupport(paragraph)} />
+                ))}
+              </ol>
+            </article>
+          ))
+        }
+      </div>
+
+      <p class="support-guide__note">
+        <strong>Still stuck?</strong> Join Discord from the cards above, open one ticket for the issue, and include
+        order ID, Windows version, War Thunder build, and a redacted error screenshot.
+      </p>
+
+      <SeoRelatedLinks />
+    </div>
+  </section>
 </BaseLayout>

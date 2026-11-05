@@ -30,24 +30,21 @@ const faqs = getAllFaqs();
   ]}
 >
   <section class="border-b border-border bg-muted/10 py-8 md:py-12">
-    <div class="mx-auto max-w-6xl px-5">
+    <div class="mx-auto max-w-3xl px-5">
       <Breadcrumbs items={breadcrumbs} />
       <div class="mt-6">
         <SectionHeader
-          eyebrow="Rust help center"
-          title="Buying FAQ — Tiers, Checkout & EAC Risk"
-          desc="This FAQ answers common pre-purchase questions—tiers, checkout, ban risk, Windows/Steam setup and HWID tools—in one place."
+          eyebrow="War Thunder help center"
+          title="Buying FAQ — Tiers, Checkout & Ban Risk"
+          desc="This FAQ answers common pre-purchase questions—tiers, checkout, ban risk, Windows setup and HWID tools—in one place."
           titleId="faq-page-title"
         />
       </div>
+      <p class="mt-5 text-sm leading-relaxed text-muted-foreground">
+        Use this FAQ before checkout: each answer below covers delivery, supported platforms, tier differences and Gaijin ban risk in plain language.
+      </p>
     </div>
   </section>
 
-  <div class="mx-auto max-w-3xl px-5 pb-4">
-    <p class="text-sm leading-relaxed text-muted-foreground">
-      Use this FAQ before checkout: each answer below covers delivery, supported platforms, tier differences and EAC risk in plain language.
-    </p>
-  </div>
-
-  <SiteFaqSection items={faqs} variant="full" titleId="faq-page-list" />
+  <SiteFaqSection items={faqs} variant="full" titleId="faq-page-list" contentAlign="left" />
 </BaseLayout>

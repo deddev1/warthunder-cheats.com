@@ -9,11 +9,8 @@ import { t } from '../i18n';
 import { resolvePageSeo } from '../config/seo';
 import { faqPageSchema, organizationSchema, websiteSchema } from '../utils/schema';
 import { getLandingFaqs } from '../data/faq';
-import { webpSrc } from '../utils/responsiveImage';
-
 const seo = resolvePageSeo('/');
 const homeFaqs = getLandingFaqs();
-const heroLcpImage = webpSrc('/images/gameplay/rust-map-hack.png', 512);
 ---
 
 <BaseLayout
@@ -25,9 +22,8 @@ const heroLcpImage = webpSrc('/images/gameplay/rust-map-hack.png', 512);
     slot="head"
     rel="preload"
     as="image"
-    href={heroLcpImage}
-    type="image/webp"
-    media="(min-width: 1024px)"
+    href="/videos/war-thunder-hero-poster.jpg"
+    type="image/jpeg"
     fetchpriority="high"
   />
   <HeroSection />

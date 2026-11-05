@@ -1,7 +1,7 @@
 {
-  "name": "Rust Cheats",
-  "short_name": "Rust Cheats",
-  "description": "Rust cheats with player ESP, loot ESP, aimbot, no recoil and stream-proof overlays for PC.",
+  "name": "War Thunder Cheats",
+  "short_name": "War Thunder Cheats",
+  "description": "War Thunder cheats with vehicle ESP, player ESP, aimbot, radar and stream-proof overlays for Windows.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

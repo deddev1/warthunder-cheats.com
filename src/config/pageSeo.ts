@@ -1,5 +1,5 @@
 /**
- * Unique titles/descriptions per route — all Rust-focused, no duplicate SERP copy.
+ * Unique titles/descriptions per route — all War Thunder–focused, no duplicate SERP copy.
  * Titles ~50–60 chars; descriptions ~140–155 chars.
  */
 
@@ -10,79 +10,79 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Buy Rust Cheats 2026 | Undetected ESP & Aimbot',
+    title: 'Buy War Thunder Cheats 2026 | ESP & Aimbot',
     description:
-      'Shop undetected Rust cheats for Steam PC—player ESP, loot ESP, soft aim, no recoil and stream-proof overlays. Compare Lite, Pro and Elite at rust-cheats.net.',
+      'Shop undetected War Thunder cheats for Windows—vehicle ESP, player ESP, aimbot, radar and stream-proof overlays. Compare Lite, Pro and Elite at warthunder-cheats.com.',
   },
-  '/products/rust-cheats/': {
-    title: 'All Rust Cheat Products | Lite, Pro, Elite Hub',
+  '/products/warthunder-cheats/': {
+    title: 'All War Thunder Cheat Products | Lite, Pro, Elite',
     description:
-      'Products hub for undetected rust cheats on Steam PC—compare Lite, Pro and Elite tiers plus HWID, UGC and utilities. Module lists, buy guides and checkout.',
+      'Products hub for War Thunder on Steam or Gaijin Launcher—compare Lite, Pro and Elite plus HWID, UGC and utilities. Module lists, buy guides and checkout.',
   },
-  '/products/rust-cheats/elite/': {
-    title: 'Rust Elite Cheats for Sale | ESP, Aimbot, Farm Bot',
+  '/products/warthunder-cheats/elite/': {
+    title: 'War Thunder Elite Cheats | ESP, Aimbot, SL Helpers',
     description:
-      'Purchase Elite tier: skeleton ESP, aimbot, no recoil, auto farm helpers, Skin Changer and priority EAC patch queue for Official and Community servers.',
+      'Purchase Elite tier: vehicle ESP, player ESP, aimbot, ballistic prediction, SL/RP farm helpers, camouflage unlock and priority Gaijin patch queue.',
   },
-  '/products/rust-cheats/hwid-spoofer/': {
-    title: 'Rust HWID Spoofer for Sale | Reset After EAC Ban',
+  '/products/warthunder-cheats/hwid-spoofer/': {
+    title: 'War Thunder HWID Spoofer | Reset After Ban',
     description:
-      'Buy a Rust HWID spoofer to rotate disk, MAC and GPU IDs after an Easy Anti-Cheat hardware flag. Portal setup guide and Discord support included.',
+      'Buy a War Thunder HWID spoofer to rotate disk, MAC and GPU IDs after Gaijin account protection flags your hardware. Portal setup and Discord support included.',
   },
-  '/products/rust-cheats/ugc/': {
-    title: 'Rust UGC Recovery Tool | Steam & Ban Appeals',
+  '/products/warthunder-cheats/ugc/': {
+    title: 'War Thunder UGC Recovery | Account Appeals',
     description:
-      'UGC appeal workspace for Steam holds, EAC bans and server restrictions—document cases, track status and rebuild account access with structured workflows.',
+      'UGC appeal workspace for Gaijin holds, bans and restrictions—document cases, track status and rebuild account access with structured workflows.',
   },
-  '/products/rust-cheats/unlock-all/': {
-    title: 'Unlock All & Skin Changer | Local Cosmetics',
+  '/products/warthunder-cheats/unlock-all/': {
+    title: 'Unlock All Camouflages | Local Preview',
     description:
-      'Unlock All and Skin Changer for local weapon and clothing previews on Steam PC—client-side cosmetics without market purchases; standalone or with Elite tier.',
+      'Unlock All camouflage preview for tanks, aircraft and ships on your client—local cosmetics without market purchases; standalone or bundled with Elite.',
   },
-  '/products/rust-cheats/utilities/': {
+  '/products/warthunder-cheats/utilities/': {
     title: 'Compare Cheat Utilities | HWID Spoofer & UGC',
     description:
-      'Cheat utility comparison for Steam PC—HWID Spoofer vs UGC recovery use cases, feature lists and product pages. Skin Changer details live on Unlock All.',
+      'Utility comparison for War Thunder—HWID Spoofer vs UGC recovery use cases, feature lists and product pages. Camouflage unlock details on Unlock All.',
   },
   '/blog/': {
     title: 'Buy Guides & Checkout Tips | Lite, Pro, Elite',
     description:
-      'Step-by-step buy guides and checkout tips—tier picks, ESP and aimbot modules, HWID recovery after bans, and secure payment flow at rust-cheats.net.',
+      'Step-by-step buy guides and checkout tips—tier picks, ESP and aimbot modules, HWID recovery after bans, and secure payment at warthunder-cheats.com.',
   },
   '/forum/': {
     title: 'Buyer Forum Q&A | ESP, Radar & Spoofer Help',
     description:
-      'Rust buyer forum: ESP and radar setup Q&A from our guides—overlay tuning, HWID tools, wipe readiness and tier picks before checkout.',
+      'War Thunder buyer forum: ESP and radar setup Q&A from our guides—overlay tuning, HWID tools, patch readiness and tier picks before checkout.',
   },
   '/reviews/': {
-    title: 'Rust Cheats Reviews | Buyer Ratings & Feedback',
+    title: 'War Thunder Cheats Reviews | Buyer Feedback',
     description:
-      'Read verified Rust Cheats reviews for Elite ESP and aimbot, HWID Spoofer, UGC recovery and Skin Changer—real buyer ratings before you checkout.',
+      'Read verified War Thunder Cheats reviews for Elite ESP and aimbot, HWID Spoofer, UGC recovery and camouflage unlock—real ratings before checkout.',
   },
   '/faq/': {
-    title: 'Buying FAQ | Rust Tiers, Checkout & EAC Risk',
+    title: 'Buying FAQ | Tiers, Checkout & Ban Risk',
     description:
-      'FAQ before you buy: Windows and Steam setup, Lite vs Pro vs Elite, ban risk, checkout delivery and HWID resets—clear answers on rust-cheats.net.',
+      'FAQ before you buy: Windows, Steam or Gaijin Launcher setup, Lite vs Pro vs Elite, ban risk, checkout delivery and HWID resets on warthunder-cheats.com.',
   },
   '/terms/': {
-    title: 'Rust Cheats Terms of Sale | License & Refunds',
+    title: 'War Thunder Cheats Terms of Sale | License & Refunds',
     description:
-      'Legal terms for purchasing Rust cheat licenses on rust-cheats.net—delivery, personal-use limits, refunds, EAC risk and acceptable product use.',
+      'Legal terms for purchasing War Thunder cheat licenses on warthunder-cheats.com—delivery, personal-use limits, refunds, ban risk and acceptable use.',
   },
   '/about/': {
-    title: 'About Our Cheats Store | Steam PC Tools',
+    title: 'About Our Cheats Store | War Thunder PC Tools',
     description:
-      'Meet the rust-cheats.net cheats store team—tiers, utilities, wipe-day loader updates and Discord help after checkout on Steam PC.',
+      'Meet the warthunder-cheats.com team—tiers, utilities, patch-day loader updates and Discord help after checkout on Windows 10/11.',
   },
   '/support/': {
-    title: 'Rust Cheats Discord Support | Loader Help Tickets',
+    title: 'War Thunder Cheats Support — Discord, Loader & HWID Help',
     description:
-      'Discord support for loader errors, HWID Spoofer setup and checkout—open a ticket with your order ID, issue type and screenshots for fast help.',
+      'Discord support for War Thunder loader errors, HWID Spoofer setup and checkout help. Open a ticket with your order ID, issue type and screenshots.',
   },
   '/privacy/': {
     title: 'Privacy Policy | Data, Cookies & Your Rights',
     description:
-      'Privacy policy for rust-cheats.net—cookies, analytics, Discord ticket data, checkout partners, retention and your rights when browsing or purchasing.',
+      'Privacy policy for warthunder-cheats.com—cookies, analytics, Discord ticket data, checkout partners, retention and your rights when browsing or purchasing.',
   },
 };
 

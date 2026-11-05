@@ -24,11 +24,11 @@ export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Rust Cheats',
+    name: 'War Thunder Cheats',
     url: `${SITE_ORIGIN}/`,
     inLanguage: 'en-US',
     description:
-      'Shop undetected Rust cheats for Steam PC—player ESP, loot ESP, soft aim, no recoil and stream-proof overlays at rust-cheats.net.',
+      'Shop undetected War Thunder cheats for Windows—vehicle ESP, player ESP, aimbot, radar and stream-proof overlays at warthunder-cheats.com.',
   };
 }
 
@@ -38,7 +38,7 @@ export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Rust Cheats',
+    name: 'War Thunder Cheats',
     url: `${SITE_ORIGIN}/`,
     logo: `${SITE_ORIGIN}/logo.svg`,
     email: SUPPORT_EMAIL,
@@ -66,7 +66,7 @@ export function collectionPageSchema(input: { name: string; description: string;
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Rust Cheats',
+      name: 'War Thunder Cheats',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -82,7 +82,7 @@ export function webPageSchema(input: { name: string; description: string; url: s
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Rust Cheats',
+      name: 'War Thunder Cheats',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -131,7 +131,7 @@ export function discussionForumPostingSchema(input: {
     url: canonicalUrl(input.url),
     author: { '@type': 'Person', name: input.author },
     commentCount: input.comments,
-    isPartOf: { '@type': 'CollectionPage', name: 'Rust Cheats Community Forum', url: canonicalUrl('/forum/') },
+    isPartOf: { '@type': 'CollectionPage', name: 'War Thunder Cheats Community Forum', url: canonicalUrl('/forum/') },
   };
 }
 
@@ -156,7 +156,7 @@ export function productSchema(input: {
     sku: input.sku ?? input.url.replace(/\//g, '-'),
     brand: {
       '@type': 'Brand',
-      name: 'Rust Cheats',
+      name: 'War Thunder Cheats',
     },
     ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
     offers: {
@@ -166,7 +166,7 @@ export function productSchema(input: {
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
-        name: 'Rust Cheats',
+        name: 'War Thunder Cheats',
       },
     },
   };
@@ -209,11 +209,11 @@ export function articleSchema(input: {
     inLanguage: 'en-US',
     author: {
       '@type': 'Organization',
-      name: 'Rust Cheats',
+      name: 'War Thunder Cheats',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Rust Cheats',
+      name: 'War Thunder Cheats',
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_ORIGIN}/logo.svg`,

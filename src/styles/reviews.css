@@ -141,6 +141,68 @@
   color: var(--primary);
 }
 
+/* Star rating filter — adapted from Uiverse.io by PriyanshuGupta28 */
+.reviews-rating-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-top: 1.25rem;
+}
+
+.reviews-rating-filter__label {
+  margin: 0;
+  width: 100%;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.rating {
+  display: inline-block;
+  line-height: 1;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  float: right;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.rating label:before {
+  content: '\2605';
+  font-size: 30px;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #6f00ff;
+  transition: color 0.3s;
+}
+
+.reviews-rating-clear {
+  border: 0;
+  background: transparent;
+  color: var(--primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.reviews-rating-clear:hover {
+  color: color-mix(in oklch, var(--primary) 80%, white);
+}
+
 .reviews-layout {
   display: grid;
   gap: 2rem;
@@ -206,7 +268,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.75rem 1.25rem;
+  gap: 0.5rem 0.85rem;
   margin-top: 1.35rem;
   padding-top: 1.1rem;
   border-top: 1px solid color-mix(in oklch, var(--border) 85%, transparent);
@@ -223,7 +285,7 @@
 
 .reviews-item {
   display: grid;
-  gap: 1rem;
+  gap: 0.55rem;
   padding: 1.35rem 0;
   border-bottom: 1px solid var(--border);
   transition: background-color 0.2s ease;
@@ -231,9 +293,8 @@
 
 @media (min-width: 720px) {
   .reviews-item {
-    grid-template-columns: 11rem minmax(0, 1fr);
-    gap: 1.5rem;
-    padding: 1.6rem 0.35rem 1.6rem 0;
+    gap: 0.65rem;
+    padding: 1.6rem 0.25rem 1.6rem 0;
   }
 }
 
@@ -241,14 +302,23 @@
   background: color-mix(in oklch, var(--muted) 28%, transparent);
 }
 
-.reviews-item__aside {
+.reviews-item__head {
   display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+.reviews-item__identity {
+  display: grid;
+  gap: 0.1rem;
+  min-width: 0;
 }
 
 .reviews-avatar {
   display: inline-flex;
+  flex-shrink: 0;
   width: 2.75rem;
   height: 2.75rem;
   align-items: center;
@@ -263,21 +333,34 @@
 }
 
 .reviews-item__name {
+  margin: 0;
   font-weight: 650;
   line-height: 1.2;
 }
 
 .reviews-item__handle {
+  margin: 0;
   font-size: 0.8125rem;
+  line-height: 1.2;
   color: var(--muted-foreground);
 }
 
 .reviews-item__stars {
-  display: flex;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
   gap: 0.15rem;
+  margin-left: 0;
   color: var(--primary);
   font-size: 0.95rem;
   line-height: 1;
+}
+
+@media (min-width: 480px) {
+  .reviews-item__stars,
+  .reviews-featured__meta .reviews-item__stars {
+    margin-left: 0.25rem;
+  }
 }
 
 .reviews-item__stars .is-empty {
@@ -285,13 +368,14 @@
 }
 
 .reviews-item__title {
+  margin: 0;
   font-size: 1.05rem;
   font-weight: 650;
   line-height: 1.3;
 }
 
 .reviews-item__body {
-  margin-top: 0.45rem;
+  margin: 0;
   font-size: 0.9375rem;
   line-height: 1.65;
   color: var(--muted-foreground);
@@ -302,7 +386,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem 0.85rem;
-  margin-top: 0.95rem;
+  margin-top: 0.4rem;
 }
 
 .reviews-pill {

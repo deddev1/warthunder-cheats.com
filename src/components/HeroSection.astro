@@ -1,11 +1,13 @@
 ---
 import { t } from '../i18n';
-import { heroSlides } from '../data/products';
 import { compatibilityIcons, heroStatIcons, heroStatusPills } from '../data/sectionIcons';
-import ImageSlider from './ImageSlider.astro';
+import HeroVideoPlayer from './HeroVideoPlayer.astro';
 import Icon from './icons/Icon.astro';
 import SlideRevealButton from './SlideRevealButton.astro';
 import { Badge } from '@/components/starwind/badge';
+
+const heroVideoAlt =
+  'War Thunder gameplay video showing vehicle ESP overlays, aim assist, and radar tools for Arcade and Realistic battles on PC.';
 
 const h = t.hero;
 
@@ -51,7 +53,13 @@ const heroMarqueePills = [
       </div>
 
       <div class="mx-auto flex w-full max-w-xl flex-col items-center gap-5 lg:mx-0 lg:max-w-none lg:items-end">
-        <ImageSlider images={heroSlides} id="hero-slider" variant="hero" desktopOnly />
+        <div class="w-full rounded-xl border border-border bg-card p-2 shadow-sm">
+          <HeroVideoPlayer
+            src="/videos/war-thunder-hero.mp4"
+            poster="/videos/war-thunder-hero-poster.jpg"
+            alt={heroVideoAlt}
+          />
+        </div>
         <div class="grid w-full grid-cols-2 gap-2.5 sm:gap-3 md:grid-cols-4 lg:grid-cols-2">
           {h.metrics.map((m, i) => (
             <div class="flex min-w-0 items-center gap-3 rounded-xl border border-border/80 bg-card/70 px-3 py-3 shadow-sm shadow-black/10 transition-colors hover:border-primary/40">
