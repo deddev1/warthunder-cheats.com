@@ -306,7 +306,7 @@ export const en: Translations = {
     items: [
       {
         tag: 'Guides',
-        title: 'War Thunder cheats: admin console codes only work where you host',
+        title: 'Live: War Thunder cheats: admin console codes only work where you host',
         slug: 'cheat-codes',
         image: '/images/blog/wt-hack-results.png',
         desc: 'Admin console codes only work where you are admin. See what works on live Arcade and Realistic battles and when a private loader with ESP and aimbot is.',

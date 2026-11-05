@@ -3,7 +3,7 @@ import type { BlogPostFull } from './types';
 export const blogPosts: BlogPostFull[] = [
   {
     tag: "Guides",
-    title: "War Thunder cheats: admin console codes only work where you host",
+    title: "Live: War Thunder cheats: admin console codes only work where you host",
     slug: "cheat-codes",
     seoTitle: "Live – Admin console codes only work where you are",
     image: "/images/blog/wt-hack-results.png",
