@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 /** Official War Thunder badge — keep black canvas as-is (no BG punch-out). */
 const src =
-  'C:/Users/3Tee System/.cursor/projects/c-Users-3Tee-System-Downloads-warthunder-cheats-com-main/assets/27bcb226-c1eb-479c-940f-f25b75a92aad-8aefe2aa-3f94-4667-8cb3-56527d23bf2b.png';
+  'C:/Users/3Tee System/.cursor/projects/c-Users-3Tee-System-Downloads-warthunder-cheats-com-main/assets/fa62dadb-ff18-4ec5-be9c-f031e228709a-e90f6e40-cbb9-4a0b-a5ce-ca8cd31edcf2.png';
 const publicDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public');
 mkdirSync(path.join(publicDir, 'images'), { recursive: true });
 const outPath = (name) => path.join(publicDir, name);
