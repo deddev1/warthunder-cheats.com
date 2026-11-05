@@ -112,7 +112,12 @@ if (fs.existsSync(checkoutFile)) {
 }
 if (fs.existsSync(redirectsFile)) {
   const r = read(redirectsFile);
-  if (!r.includes('%2Fproducts%2Fwar-thunder')) fail('Store/affiliate links', '_redirects missing war-thunder');
+  const ruleLines = r.split(/\r?\n/).filter((line) => /^\S+\s+\S+\s+(301|302)\s*$/.test(line));
+  if (/^https?:\/\//m.test(r.replace(/^#.*$/gm, ''))) {
+    fail('Store/affiliate links', '_redirects must not use absolute source URLs (CF Workers)');
+  } else if (ruleLines.length > 100) {
+    fail('Store/affiliate links', `_redirects has ${ruleLines.length} rules (CF max 100)`);
+  } else if (!r.includes('%2Fproducts%2Fwar-thunder')) fail('Store/affiliate links', '_redirects missing war-thunder');
   else if (!r.includes('%2Fproducts%2Fhwid-spoofer')) fail('Store/affiliate links', '_redirects missing hwid');
   else if (!r.includes('/cheats/lite/ /products/warthunder-cheats/lite/ 301')) {
     fail('Store/affiliate links', '_redirects lite must 301 to tier page');
@@ -120,7 +125,7 @@ if (fs.existsSync(redirectsFile)) {
     fail('Store/affiliate links', '_redirects pro must 301 to tier page');
   } else if (!r.includes('/go/warthunder/ ') || !r.includes(' 302')) {
     fail('Store/affiliate links', '_redirects /go/ must be 302-only (no HTML bridge)');
-  } else ok('public/_redirects affiliate + tier + /go/ 302 OK');
+  } else ok(`public/_redirects OK (${ruleLines.length} rules, relative sources)`);
 }
 const goBridge = path.join(dist, 'go');
 if (fs.existsSync(goBridge)) {
