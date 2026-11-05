@@ -3,11 +3,12 @@ import type { BlogPostFull } from './types';
 export const blogPosts: BlogPostFull[] = [
   {
     tag: "Guides",
-    title: "War Thunder dev commands vs live-server loaders: what works",
+    title: "War Thunder cheats: dev commands vs live-server loaders",
     slug: "cheat-codes",
+    seoTitle: "Live – Admin console codes only work where you are admin",
     image: "/images/blog/wt-hack-results.png",
     imageAlt: "War Thunder biplane over snow with red ESP name tags, aircraft models, kilometer distances and a circular lead/radar assist overlay",
-    desc: "Admin console codes only work where you are admin. See what works on live Arcade and Realistic battles and when a private loader with ESP and aimbot is the right buy.",
+    desc: "Admin console codes only work where you are admin. See what works on live Arcade and Realistic battles and when a private loader with ESP and aimbot is.",
     date: "Aug 20, 2026",
     readTime: "10 min read",
     body: [
@@ -31,7 +32,7 @@ export const blogPosts: BlogPostFull[] = [
         ],
       },
       { type: 'h2', text: "Which tier to buy" },
-      { type: 'p', text: "Lite is the entry tier: Player ESP, Vehicle ESP, radar and FOV hack. Pro adds Aimbot, Soft Aim, Bone Select, Ballistic assist and Trigger Bot. Elite adds SL/RP farm helpers, the full radar suite, Camouflage unlock and priority patches. Not sure? Read [Lite vs Pro](/blog/lite-vs-pro/) and then [compare tiers](/products/warthunder-cheats/) on the product page." },
+      { type: 'p', text: "Lite is the entry tier: Player ESP, Vehicle ESP, radar and FOV hack. Pro adds Aimbot, Soft Aim, Bone Select, Ballistic assist and Trigger Bot. Elite adds SL/RP farm helpers, the full radar suite, Camouflage unlock and priority patches. Not sure? Read [Lite vs Pro](/blog/lite-vs-pro/) and then [open the live products hub](/products/warthunder-cheats/) on the product page." },
       { type: 'h2', text: "Checkout in four steps" },
       {
         type: 'ul',
@@ -51,16 +52,17 @@ export const blogPosts: BlogPostFull[] = [
         text: "Compare Lite, Pro and Elite, then check out securely to run ESP and aimbot on live servers.",
         href: "/go/warthunder/",
       },
-      { type: 'p', text: "Next: [compare tiers](/products/warthunder-cheats/) and [get access](/go/warthunder/), or read the [features guide](/blog/features/) first." },
+      { type: 'p', text: "Next: [review Lite Pro Elite pages](/products/warthunder-cheats/) and [start live-server checkout](/go/warthunder/), or read the [features guide](/blog/features/) first." },
     ],
   },
   {
     tag: "Guides",
-    title: "From practice commands to live War Thunder ESP & aimbot",
+    title: "From practice commands to live War Thunder cheats ESP & aimbot",
     slug: "console-tips",
+    seoTitle: "Practice Commands to Live ESP Aimbot Guide | Cheats",
     image: "/images/blog/wt-vehicle-esp.png",
     imageAlt: "War Thunder air ESP showing biplane third-person view with green and red aircraft boxes, player names and distance labels over a tropical coastline",
-    desc: "Outgrown private-server practice? Compare undetected ESP and aimbot tiers for live PvP—Lite, Pro and Elite with secure checkout.",
+    desc: "Commands: Outgrown private-server practice? Compare undetected ESP and aimbot tiers for live PvP—Lite, Pro and Elite with secure checkout.",
     date: "Aug 19, 2026",
     readTime: "6 min read",
     body: [
@@ -91,7 +93,7 @@ export const blogPosts: BlogPostFull[] = [
         ],
       },
       { type: 'h2', text: "Compare tiers, then buy" },
-      { type: 'p', text: "Read [Lite vs Pro](/blog/lite-vs-pro/) for the closest decision, the [Elite tier guide](/blog/elite/) for the full suite, and the [features guide](/blog/features/) for every module. Then [compare tiers](/products/warthunder-cheats/) and [get access](/go/warthunder/)." },
+      { type: 'p', text: "Read [Lite vs Pro](/blog/lite-vs-pro/) for the closest decision, the [Elite tier guide](/blog/elite/) for the full suite, and the [features guide](/blog/features/) for every module. Then [choose a live battle tier](/products/warthunder-cheats/) and [complete practice-to-live checkout](/go/warthunder/)." },
       {
         type: 'cta',
         title: "Upgrade to live-server tools",
@@ -251,7 +253,7 @@ export const blogPosts: BlogPostFull[] = [
       ] },
       { type: 'p', text: "Side-by-side: [Lite vs Pro](/blog/lite-vs-pro/). Full feature list: [features guide](/blog/features/)." },
       { type: 'h2', text: "Get access" },
-      { type: 'p', text: "[Compare tiers](/products/warthunder-cheats/), choose one and [get access](/go/warthunder/). Your operator portal unlocks right after checkout." },
+      { type: 'p', text: "[Open the private loader catalog](/products/warthunder-cheats/), choose one and [unlock portal after payment](/go/warthunder/). Your operator portal unlocks right after checkout." },
       {
         type: 'cta',
         title: "Buy the loader, skip the console",
@@ -306,7 +308,7 @@ export const blogPosts: BlogPostFull[] = [
         text: "Choose your tier and get access through secure checkout at warthunder-cheats.com.",
         href: "/go/warthunder/",
       },
-      { type: 'p', text: "Next: [compare tiers](/products/warthunder-cheats/) → [get access](/go/warthunder/). Or review all modules in the [features guide](/blog/features/)." },
+      { type: 'p', text: "Next: [side-by-side Lite and Pro pricing](/products/warthunder-cheats/) → [pay for Lite or Pro now](/go/warthunder/). Or review all modules in the [features guide](/blog/features/)." },
     ],
   },
   {
@@ -360,7 +362,7 @@ export const blogPosts: BlogPostFull[] = [
         text: "Full suite, farm helpers and priority patches through secure checkout.",
         href: "/go/warthunder/",
       },
-      { type: 'p', text: "Still deciding? [Compare tiers](/products/warthunder-cheats/) and [get access](/go/warthunder/). Every tier carries ban risk; follow the [Gaijin patch day checklist](/blog/eac-patch/)." },
+      { type: 'p', text: "Still deciding? [Review Elite slot availability](/products/warthunder-cheats/) and [upgrade through Elite checkout](/go/warthunder/). Every tier carries ban risk; follow the [Gaijin patch day checklist](/blog/eac-patch/)." },
     ],
   },
   {
@@ -453,7 +455,7 @@ export const blogPosts: BlogPostFull[] = [
         text: "Lite includes player ESP, vehicle ESP, radar and FOV—secure checkout at warthunder-cheats.com.",
         href: "/go/warthunder/",
       },
-      { type: 'p', text: "[Compare tiers](/products/warthunder-cheats/) → [Get access](/go/warthunder/). Overlays are third-party software; follow the [Gaijin patch day checklist](/blog/eac-patch/) after updates." },
+      { type: 'p', text: "[Browse Lite ESP radar packages](/products/warthunder-cheats/) → [Checkout for Lite ESP tools](/go/warthunder/). Overlays are third-party software; follow the [Gaijin patch day checklist](/blog/eac-patch/) after updates." },
     ],
   },
   {
@@ -486,7 +488,7 @@ export const blogPosts: BlogPostFull[] = [
         ["Pro","Yes","Everything in Lite plus Aimbot and Ballistic assist"],
         ["Elite","Yes","Everything in Pro plus farm helpers and Camouflage unlock"],
       ] },
-      { type: 'p', text: "See the full [features guide](/blog/features/) or [compare tiers](/products/warthunder-cheats/)." },
+      { type: 'p', text: "See the full [features guide](/blog/features/) or [pick a FOV-ready tier](/products/warthunder-cheats/)." },
       {
         type: 'cta',
         title: "Get Lite with FOV hack",
@@ -529,7 +531,7 @@ export const blogPosts: BlogPostFull[] = [
         text: "Preview vehicle camouflages, decals and premium cosmetics locally—secure checkout at warthunder-cheats.com.",
         href: "/go/skin-changer/",
       },
-      { type: 'p', text: "Want the full suite instead? [Compare tiers](/products/warthunder-cheats/) and [get access](/go/warthunder/). Camouflage unlock is third-party software and carries ban risk; check the status banner first." },
+      { type: 'p', text: "Want the full suite instead? [See Elite combat plus cosmetics](/products/warthunder-cheats/) and [buy Elite after skins review](/go/warthunder/). Camouflage unlock is third-party software and carries ban risk; check the status banner first." },
     ],
   },
   {
@@ -566,7 +568,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: 'h2', text: "Error vs ban" },
       { type: 'p', text: "A startup message is usually a file or service problem; see [Gaijin anti-cheat errors vs recovery help](/blog/eac-error/). If you are actually banned, read about [HWID Spoofer](/blog/hwid/)." },
       { type: 'h2', text: "Compare and buy" },
-      { type: 'p', text: "[Compare tiers](/products/warthunder-cheats/) when status is green and [get access](/go/warthunder/) through secure checkout. The [buying guide](/blog/buy-guide/) walks through each step." },
+      { type: 'p', text: "[Confirm green-status tier options](/products/warthunder-cheats/) when status is green and [checkout after patch verification](/go/warthunder/) through secure checkout. The [buying guide](/blog/buy-guide/) walks through each step." },
       {
         type: 'cta',
         title: "Status green? Get access",
@@ -593,7 +595,7 @@ export const blogPosts: BlogPostFull[] = [
         ["New account blocked on your PC but fine elsewhere","HWID Spoofer","[Buy HWID Spoofer](/go/hwid-spoofer/)"],
         ["Only your old account is banned","New Steam account","Steam"],
         ["Ban seems wrongful or you want case tracking","UGC appeal workspace","[Get UGC](/go/ugc/)"],
-        ["Ready to return with cheats","Lite, Pro or Elite","[Get access](/go/warthunder/)"],
+        ["Ready to return with cheats","Lite, Pro or Elite","[Return via combat checkout](/go/warthunder/)"],
       ] },
       { type: 'h2', text: "Account ban vs hardware flag" },
       { type: 'p', text: "An account ban blocks one Steam account. A hardware flag blocks new accounts on the same PC. If a fresh account works on another computer but fails on yours, hardware is the likely cause." },
@@ -779,7 +781,7 @@ export const blogPosts: BlogPostFull[] = [
         text: "Private external War Thunder cheats with cloud config sync—secure checkout at warthunder-cheats.com.",
         href: "/go/warthunder/",
       },
-      { type: 'p', text: "See the [features guide](/blog/features/), then [compare tiers](/products/warthunder-cheats/) and [get access](/go/warthunder/). No architecture eliminates ban risk." },
+      { type: 'p', text: "See the [features guide](/blog/features/), then [inspect external loader tiers](/products/warthunder-cheats/) and [buy the external suite](/go/warthunder/). No architecture eliminates ban risk." },
     ],
   },
   {
@@ -820,7 +822,7 @@ export const blogPosts: BlogPostFull[] = [
         text: "Stream Proof overlay on every tier—secure checkout at warthunder-cheats.com.",
         href: "/go/warthunder/",
       },
-      { type: 'p', text: "[Compare tiers](/products/warthunder-cheats/) → [Get access](/go/warthunder/). Streaming with cheats still carries ban risk, since viewers can report what they see." },
+      { type: 'p', text: "[Creator-ready tier overview](/products/warthunder-cheats/) → [Stream-proof suite checkout](/go/warthunder/). Streaming with cheats still carries ban risk, since viewers can report what they see." },
     ],
   },
 ];

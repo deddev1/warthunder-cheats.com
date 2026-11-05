@@ -60,7 +60,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Read verified War Thunder Cheats reviews for Elite ESP and aimbot, HWID Spoofer, UGC recovery and camouflage unlock—real ratings before checkout.',
   },
   '/faq/': {
-    title: 'Buying FAQ | Tiers, Checkout & Ban Risk',
+    title: 'Faq – Tiers, Checkout & Ban Risk | War Thunder Cheats',
     description:
       'FAQ before you buy: Windows, Steam or Gaijin Launcher setup, Lite vs Pro vs Elite, ban risk, checkout delivery and HWID resets on warthunder-cheats.com.',
   },
