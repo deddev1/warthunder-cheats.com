@@ -1,7 +1,10 @@
-# Deploy the static Astro output from `npm run build`.
-# Do not use @astrojs/cloudflare here — CI already builds `dist/` before `wrangler deploy`.
+# Static Astro site → Cloudflare Workers assets.
+# [build] runs before deploy so `dist/` exists when CI only runs `wrangler deploy`.
 name = "warthunder-cheats-com"
 compatibility_date = "2026-10-26"
+
+[build]
+command = "npm run build"
 
 [assets]
 directory = "./dist"
