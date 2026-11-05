@@ -21,6 +21,10 @@ const defaultLinks: LinkItem[] = [
   { href: ROUTES.blog, label: 'Read checkout and tier guides' },
   { href: ROUTES.faq, label: 'Open buying FAQ answers' },
   { href: ROUTES.reviews, label: 'See product review scores' },
+  { href: '/about/', label: 'About the War Thunder Cheats store' },
+  { href: '/forum/', label: 'Browse buyer forum threads' },
+  { href: '/support/', label: 'Open Discord support tickets' },
+  { href: '/privacy/', label: 'Read the privacy policy' },
 ];
 
 const { title = 'Shop War Thunder cheats & guides', links = defaultLinks } = Astro.props;
@@ -29,7 +33,7 @@ const checkoutAttrs = externalLinkProps(checkout);
 ---
 
 <aside class="mt-12 rounded-xl border border-border bg-muted/20 p-6" aria-labelledby="seo-related-links-title">
-  <h2 id="seo-related-links-title" class="text-lg font-semibold normal-case text-foreground">{title}</h2>
+  <p id="seo-related-links-title" class="text-lg font-semibold normal-case text-foreground">{title}</p>
   <ul class="mt-4 grid gap-2 sm:grid-cols-2">
     {links.map((item) => (
       <li>

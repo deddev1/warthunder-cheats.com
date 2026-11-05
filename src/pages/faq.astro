@@ -6,6 +6,7 @@ import { breadcrumbSchema, faqPageSchema, webPageSchema } from '../utils/schema'
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import SiteFaqSection from '../components/SiteFaqSection.astro';
 import SectionHeader from '../components/SectionHeader.astro';
+import SeoRelatedLinks from '../components/SeoRelatedLinks.astro';
 
 const seo = resolvePageSeo('/faq/');
 const breadcrumbs = [
@@ -35,7 +36,7 @@ const faqs = getAllFaqs();
       <div class="mt-6">
         <SectionHeader
           eyebrow="War Thunder help center"
-          title="Buying FAQ — Tiers, Checkout & Ban Risk"
+          title="Buying FAQ — War Thunder Cheats tiers, checkout & ban risk"
           desc="This FAQ answers common pre-purchase questions—tiers, checkout, ban risk, Windows setup and HWID tools—in one place."
           titleId="faq-page-title"
         />
@@ -47,4 +48,7 @@ const faqs = getAllFaqs();
   </section>
 
   <SiteFaqSection items={faqs} variant="full" titleId="faq-page-list" contentAlign="left" />
+  <div class="mx-auto max-w-3xl px-5 pb-16">
+    <SeoRelatedLinks title="Related War Thunder cheat pages" />
+  </div>
 </BaseLayout>

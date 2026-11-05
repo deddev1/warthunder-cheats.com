@@ -29,15 +29,26 @@ function link(text: string, href: string): string {
   return `<a href="${normalizeInternalPath(href)}">${text}</a>`;
 }
 
-const elite = link('War Thunder Elite', productPath('elite'));
-const lite = link('Lite tier (ESP & radar)', ROUTES.products);
-const pro = link('Pro tier (aimbot & ballistic assist)', ROUTES.products);
-const productsHub = link('War Thunder cheat products', ROUTES.products);
-const hwid = link('HWID Spoofer', productPath('hwid-spoofer'));
-const ugc = link('UGC', productPath('ugc'));
-const skin = link('Camouflage unlock', productPath('unlock-all'));
-const faqPage = link('full FAQ', ROUTES.faq);
-const blog = link('blog guides', ROUTES.blog);
+/** Plain tier names — avoid repeating the same anchor text across many FAQ answers. */
+const elite = 'Elite';
+const lite = 'Lite';
+const pro = 'Pro';
+const productsHub = link('War Thunder cheat products hub', ROUTES.products);
+const productsHubAlt = link('main War Thunder products catalog', ROUTES.products);
+const productsHubGuides = link('tier pages on the products hub', ROUTES.products);
+const hwid = link('HWID Spoofer utility page', productPath('hwid-spoofer'));
+const hwidAlt = link('hardware ID spoofer listing', productPath('hwid-spoofer'));
+const ugc = link('UGC appeal workspace', productPath('ugc'));
+const ugcAlt = link('UGC ban-appeal tool page', productPath('ugc'));
+const ugcInit = link('UGC recovery options', productPath('ugc'));
+const skin = link('Camouflage unlock product', productPath('unlock-all'));
+const skinAlt = link('standalone Camouflage unlock page', productPath('unlock-all'));
+const faqPage = link('pre-purchase FAQ hub', ROUTES.faq);
+const faqPageAlt = link('complete buying FAQ index', ROUTES.faq);
+const blog = link('War Thunder buy guides archive', ROUTES.blog);
+const litePage = link('Lite ESP and radar tier page', ROUTES.products);
+const proPage = link('Pro aimbot tier page', ROUTES.products);
+const elitePage = link('Elite full-suite product page', productPath('elite'));
 
 const guideFeatures = link('War Thunder cheats features guide', blogPostPath('features'));
 const guideLiteVsPro = link('Lite vs Pro guide', blogPostPath('lite-vs-pro'));
@@ -93,14 +104,14 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqProductsPage',
     q: 'Where are products and utilities listed?',
-    a: `${productsHub} lists cheat tiers, ${hwid}, ${ugc}, and ${skin} with feature lists and checkout via our partner.`,
+    a: `${productsHub} lists cheat tiers, ${link('HWID Spoofer in the catalog', productPath('hwid-spoofer'))}, ${link('UGC in the catalog', productPath('ugc'))}, and ${link('Camouflage unlock in the catalog', productPath('unlock-all'))} with feature lists and checkout via our partner.`,
   },
   {
     id: 'what-is-esp',
     topic: 'esp',
     icon: 'faqWhatIsEsp',
     q: 'What is War Thunder ESP and what does it show?',
-    a: `Player ESP draws boxes, names, health, distance and skeletons through walls and terrain. Vehicle ESP marks vehicles, capture points, airfields, AI columns and ground targets. ${lite} covers the full awareness overlay. ${pro} and ${elite} add aim assist on top. Setup details are in the ${guideEsp}.`,
+    a: `Player ESP draws boxes, names, health, distance and skeletons through walls and terrain. Vehicle ESP marks vehicles, capture points, airfields, AI columns and ground targets. ${lite} covers the full awareness overlay. ${pro} and ${elite} add aim assist on top. Setup details are in the ${guideEsp}. Browse the ${litePage} for module lists.`,
     scopes: ['lite', 'pro', 'elite'],
   },
   {
@@ -147,7 +158,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqRankTiers',
     q: 'How do you rank Lite vs Pro vs Elite?',
-    a: `ESP and radar only → ${lite}. Gunfights with aim assist → ${pro}. Full suite, farm helpers and priority patches → ${elite}. Compare on each cheat page, in the ${guideLiteVsPro}, or in the ${faqPage}.`,
+    a: `ESP and radar only → ${lite}. Gunfights with aim assist → ${pro}. Full suite, farm helpers and priority patches → ${elite}. Compare on the ${proPage}, in the ${guideLiteVsPro}, or in the ${faqPage}.`,
   },
   {
     id: 'elite-slots',
@@ -183,7 +194,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqHwidWhen',
     q: 'When do I need the HWID Spoofer?',
-    a: `Use ${hwid} when a fresh Steam account gets blocked instantly on one PC but works on another—a hardware-level restriction. It is not for account-only bans; see ${ugc} for appeal workflows instead.`,
+    a: `Use ${hwid} when a fresh Steam account gets blocked instantly on one PC but works on another—a hardware-level restriction. It is not for account-only bans; see ${ugcAlt} for appeal workflows instead.`,
     scopes: ['hwid-spoofer'],
   },
   {
@@ -191,7 +202,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'safety',
     icon: 'faqHwidWhen',
     q: 'Do I need a new account and a spoofer after a Gaijin ban?',
-    a: `Usually both: a new Steam account with War Thunder, plus ${hwid} if the ban is tied to your hardware. Read the ${guideHwid} before buying anything, and never reuse the banned account on your main PC.`,
+    a: `Usually both: a new Steam account with War Thunder, plus ${hwidAlt} if the ban is tied to your hardware. Read the ${guideHwid} before buying anything, and never reuse the banned account on your main PC.`,
   },
   {
     id: 'ugc-what',
@@ -214,28 +225,28 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqExternalLoader',
     q: 'Is the loader injected into the War Thunder install?',
-    a: `War Thunder Cheats runs external with cloud config sync—no files are written into the War Thunder install directory. Gaijin anti-cheat risk still applies. See the ${guideExternal} and ${productsHub}.`,
+    a: `War Thunder Cheats runs external with cloud config sync—no files are written into the War Thunder install directory. Gaijin anti-cheat risk still applies. See the ${guideExternal} and ${productsHubAlt}.`,
   },
   {
     id: 'blog-vs-cheats',
     topic: 'blog',
     icon: 'faqBlogVsCheats',
     q: 'Are test flight commands the same as War Thunder cheats?',
-    a: `No. F1 console commands like test flight, invulnerability and give only work for admins on servers you own or moderate. Paid War Thunder cheats are separate products for live servers—see ${lite}, ${pro} and ${elite}, and the ${guideAdmin}.`,
+    a: `No. F1 console commands like test flight, invulnerability and give only work for admins on servers you own or moderate. Paid War Thunder cheats are separate products for live servers—see the ${elitePage} and the ${guideAdmin}.`,
   },
   {
     id: 'blog-setup',
     topic: 'blog',
     icon: 'faqBlogSetup',
     q: 'Where do blog setup guides point for purchase?',
-    a: `Guides link to tier pages and ${productsHub}. Checkout runs through our secure partner—never paste loader files from random Discord DMs. Walkthrough: ${guideBuy}.`,
+    a: `Guides link to tier pages and ${productsHubGuides}. Checkout runs through our secure partner—never paste loader files from random Discord DMs. Walkthrough: ${guideBuy}.`,
   },
   {
     id: 'compare-plans',
     topic: 'plans',
     icon: 'faqComparePlans',
     q: 'Where do I compare plans side by side?',
-    a: `Each cheat tier page includes a compare table. The ${faqPage} collects product, cheat and blog answers in one place, and the ${guideFeatures} maps every module to a tier.`,
+    a: `Each cheat tier page includes a compare table. The ${faqPageAlt} collects product, cheat and blog answers in one place, and the ${guideFeatures} maps every module to a tier.`,
   },
   {
     id: 'who-lite',
@@ -273,7 +284,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'setup',
     icon: 'faqEacUpdate',
     q: 'Gaijin anti-cheat says it failed to initialize—is that a ban?',
-    a: `Usually not. It is most often a broken Gaijin anti-cheat install, a service conflict or a blocked driver. Verify War Thunder files in Steam or Gaijin Launcher, reinstall Gaijin anti-cheat from the War Thunder install and restart before assuming a ban. See the ${guideEacInit}; if it is a real ban, check ${ugc}.`,
+    a: `Usually not. It is most often a broken Gaijin anti-cheat install, a service conflict or a blocked driver. Verify War Thunder files in Steam or Gaijin Launcher, reinstall Gaijin anti-cheat from the War Thunder install and restart before assuming a ban. See the ${guideEacInit}; if it is a real ban, check ${ugcInit}.`,
   },
   {
     id: 'discord-help',
@@ -302,7 +313,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'esp',
     icon: 'faqWhatIsEsp',
     q: 'What does Vehicle & player ESP highlight?',
-    a: `Enemy and friendly vehicles, capture points, airfields, AI columns and bonus objectives—filtered by type and distance. All tiers include it, and the ${guideEsp} explains how to keep the screen readable.`,
+    a: `Enemy and friendly vehicles, capture points, airfields, AI columns and bonus objectives—filtered by type and distance. All tiers include it, and the ${link('readable ESP layout tips', blogPostPath('esp'))} explains how to keep the screen readable.`,
     scopes: ['lite', 'pro', 'elite'],
   },
   {
@@ -481,7 +492,7 @@ const defaultBlogFaqs: SiteFaqItem[] = [
     topic: 'blog',
     icon: 'faqBlogDefault1',
     q: 'Are blog guides official product documentation?',
-    a: `Articles explain workflows and link to ${lite}, ${pro}, ${elite} and ${productsHub}. Feature lists on product pages are authoritative for checkout.`,
+    a: `Articles explain workflows and link to Lite, Pro, Elite and the ${link('checkout-ready products overview', ROUTES.products)}. Feature lists on product pages are authoritative for checkout.`,
   },
   {
     id: 'blog-default-2',
@@ -527,7 +538,7 @@ export function getBlogFaqs(tag: string, slug: string): SiteFaqItem[] {
       topic: 'products',
       icon: 'faqBlogSlugHwid',
       q: 'Does this article replace HWID or UGC products?',
-      a: `Recovery and Gaijin anti-cheat guides complement ${hwid} and ${ugc}—read product pages for workflow scope and realistic outcomes.`,
+      a: `Recovery and Gaijin anti-cheat guides complement ${link('HWID recovery product details', productPath('hwid-spoofer'))} and ${link('UGC case-tracking page', productPath('ugc'))}—read product pages for workflow scope and realistic outcomes.`,
     });
   }
   if (slug.includes('stream')) {
@@ -545,7 +556,7 @@ export function getBlogFaqs(tag: string, slug: string): SiteFaqItem[] {
       topic: 'products',
       icon: 'faqSkinChanger',
       q: 'Do other players see my changed skins?',
-      a: `No. ${skin} is a local preview on your client; other players see your real inventory.`,
+      a: `No. ${skinAlt} is a local preview on your client; other players see your real inventory.`,
     });
   }
 

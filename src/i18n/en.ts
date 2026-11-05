@@ -306,7 +306,7 @@ export const en: Translations = {
     items: [
       {
         tag: 'Guides',
-        title: 'War Thunder dev commands vs live-server loaders',
+        title: 'War Thunder cheats: admin console codes only work where you host',
         slug: 'cheat-codes',
         image: '/images/blog/wt-hack-results.png',
         desc: 'Admin console codes only work where you are admin. See what works on live Arcade and Realistic battles and when a private loader with ESP and aimbot is.',
@@ -315,7 +315,7 @@ export const en: Translations = {
       },
       {
         tag: 'Guides',
-        title: 'From practice commands to live War Thunder ESP & aimbot',
+        title: 'From practice commands to live War Thunder cheats ESP & aimbot guide',
         slug: 'console-tips',
         image: '/images/blog/wt-vehicle-esp.png',
         desc: 'Commands: Outgrown private-server practice? Compare undetected ESP and aimbot tiers for live PvP—Lite, Pro and Elite with secure checkout.',

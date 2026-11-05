@@ -3,16 +3,16 @@ import type { BlogPostFull } from './types';
 export const blogPosts: BlogPostFull[] = [
   {
     tag: "Guides",
-    title: "War Thunder cheats: dev commands vs live-server loaders",
+    title: "War Thunder cheats: admin console codes only work where you host",
     slug: "cheat-codes",
-    seoTitle: "Live – Admin console codes only work where you are admin",
+    seoTitle: "Live – Admin console codes only work where you are",
     image: "/images/blog/wt-hack-results.png",
     imageAlt: "War Thunder biplane over snow with red ESP name tags, aircraft models, kilometer distances and a circular lead/radar assist overlay",
     desc: "Admin console codes only work where you are admin. See what works on live Arcade and Realistic battles and when a private loader with ESP and aimbot is.",
     date: "Aug 20, 2026",
     readTime: "10 min read",
     body: [
-      { type: 'p', text: "Searching for \"War Thunder cheat codes\" usually ends in one of two places: a list of F1 admin commands, or a storefront that sells software for live servers. They are not the same product. Admin commands only run on a server where you hold owner or moderator rights. If you want ESP, aimbot and radar on Arcade, Realistic or Simulator battles, you need a private loader from the [products hub](/products/warthunder-cheats/)—not a console code list." },
+      { type: 'p', text: "Searching for \"War Thunder cheat codes\" usually ends in one of two places: a list of F1 admin commands, or a storefront that sells software for live servers. They are not the same product. Admin commands only run on a server where you hold owner or moderator rights. If you want ESP, aimbot and radar on Arcade, Realistic or Simulator battles, you need a private loader from the [live-server products catalog](/products/warthunder-cheats/)—not a console code list." },
       { type: 'image', src: "/images/blog/wt-hack-results.png", alt: "War Thunder biplane over snow with red ESP name tags, aircraft models, kilometer distances and a circular lead/radar assist overlay", caption: "Air ESP name tags and lead assist" },
       { type: 'image', src: "/images/blog/wt-vehicle-esp.png", alt: "War Thunder air ESP showing biplane third-person view with green and red aircraft boxes, player names and distance labels over a tropical coastline", caption: "Air ESP boxes with name and range labels" },
       { type: 'h2', text: "Admin commands do not equal live-server cheats" },
@@ -57,7 +57,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Guides",
-    title: "From practice commands to live War Thunder cheats ESP & aimbot",
+    title: "From practice commands to live War Thunder cheats ESP & aimbot guide",
     slug: "console-tips",
     seoTitle: "Practice Commands to Live ESP Aimbot Guide | Cheats",
     image: "/images/blog/wt-vehicle-esp.png",
@@ -66,7 +66,7 @@ export const blogPosts: BlogPostFull[] = [
     date: "Aug 19, 2026",
     readTime: "6 min read",
     body: [
-      { type: 'p', text: "Practice commands in an Arcade test battle or custom battle are a fine warm-up, but they stop helping the moment you queue live Arcade, Realistic or Simulator battles. If your goal is better fights on those modes, the upgrade path is simple: pick a tier at the [products hub](/products/warthunder-cheats/), check out and run the loader. This guide shows how to decide which tier fits your War Thunder ESP and aimbot goals." },
+      { type: 'p', text: "Practice commands in an Arcade test battle or custom battle are a fine warm-up, but they stop helping the moment you queue live Arcade, Realistic or Simulator battles. If your goal is better fights on those modes, the upgrade path is simple: pick a tier at the [practice-to-live products hub](/products/warthunder-cheats/), check out and run the loader. This guide shows how to decide which tier fits your War Thunder ESP and aimbot goals." },
       { type: 'h2', text: "Admin commands are a warm-up, not a product" },
       { type: 'p', text: "Admin commands do not work on servers where you lack admin rights, and they give no ESP, no radar and no aim assist. Treat them as contrast: admin commands do not equal live-server cheats. To play with information and aim support, buy our loader for Arcade, Realistic and Simulator battles." },
       { type: 'h2', text: "Pick the upgrade that fits your problem" },
@@ -199,7 +199,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: 'h2', text: "Ballistic assist and Spread (Pro and Elite)" },
       { type: 'p', text: "Weapon-specific compensation for tanks, fighters, SPAA and naval guns. Keep it below 100 percent for natural variation. See the [aimbot and recoil guide](/blog/aimbot/) and [bone select guide](/blog/bones/)." },
       { type: 'h2', text: "FOV hack, Camouflage unlock and Stream Proof" },
-      { type: 'p', text: "[FOV hack](/blog/fov/) widens your view; [Camouflage unlock](/blog/skins/) previews cosmetics locally and ships in Elite (or standalone as [Unlock All](/products/warthunder-cheats/unlock-all/)); [Stream Proof](/blog/stream-proof/) hides the overlay from capture software." },
+      { type: 'p', text: "[FOV hack](/blog/fov/) widens your view; [Camouflage unlock guide](/blog/skins/) previews cosmetics locally and ships in Elite (or standalone as [Unlock All utility page](/products/warthunder-cheats/unlock-all/)); [Stream Proof](/blog/stream-proof/) hides the overlay from capture software." },
       { type: 'h2', text: "Elite extras" },
       { type: 'p', text: "SL/RP farm helpers, the full radar suite, Camouflage unlock, cloud config bundles and priority patches. See the [Elite tier guide](/blog/elite/)." },
       { type: 'h2', text: "Buy steps" },
@@ -376,7 +376,7 @@ export const blogPosts: BlogPostFull[] = [
     date: "Aug 15, 2026",
     readTime: "6 min read",
     body: [
-      { type: 'p', text: "If you want to win more gunfights, [Pro tier](/products/warthunder-cheats/) is the purchase. It bundles Aimbot, Soft Aim, Bone Select, Trigger Bot and Ballistic assist on top of every Lite module. This page explains what you get and how buyers configure it so it looks human." },
+      { type: 'p', text: "If you want to win more gunfights, [Pro aim assist package](/products/warthunder-cheats/) is the purchase. It bundles Aimbot, Soft Aim, Bone Select, Trigger Bot and Ballistic assist on top of every Lite module. This page explains what you get and how buyers configure it so it looks human." },
       { type: 'image', src: "/images/blog/wt-aimbot-fov.png", alt: "War Thunder tank gunner sight with green 3D ESP boxes around M2A4 Tetrarch Pz.II and Chi-Ha tanks plus meter distances on a tropical map", caption: "Tank ESP boxes through the gunner sight" },
       { type: 'image', src: "/images/blog/wt-air-esp.png", alt: "War Thunder modern fighter with orange ballistic prediction lines, missile speed tags and ESP labels for distant Gepard and ADATS targets", caption: "Jet ballistic prediction and long-range ESP" },
       { type: 'image', src: "/images/blog/wt-menu-aimbot.png", alt: "War Thunder cheats Aimbot menu with enable on, RMB and Mouse 4 binds, prediction on, FOV size 12 degrees and smoothness 48", caption: "Aimbot menu — FOV and smoothing" },
@@ -669,7 +669,7 @@ export const blogPosts: BlogPostFull[] = [
     date: "Aug 12, 2026",
     readTime: "6 min read",
     body: [
-      { type: 'p', text: "Weapon-specific settings are one of the best reasons to buy [Pro tier](/products/warthunder-cheats/). You save a profile per weapon, each with its own bone, smoothing and recoil values. Here are example profiles so you know what you will configure after checkout." },
+      { type: 'p', text: "Weapon-specific settings are one of the best reasons to buy [Pro bone-profile tier](/products/warthunder-cheats/). You save a profile per weapon, each with its own bone, smoothing and recoil values. Here are example profiles so you know what you will configure after checkout." },
       { type: 'image', src: "/images/blog/wt-menu-aimbot.png", alt: "War Thunder cheats Aimbot menu with enable on, RMB and Mouse 4 binds, prediction on, FOV size 12 degrees and smoothness 48", caption: "Aimbot menu — FOV and smoothing" },
       { type: 'h2', text: "Example profiles" },
       {

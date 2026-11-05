@@ -5,6 +5,7 @@ import FeaturesSection from '../components/FeaturesSection.astro';
 import WhySetupSection from '../components/WhySetupSection.astro';
 import ProductsSection from '../components/ProductsSection.astro';
 import ContentSections from '../components/ContentSections.astro';
+import SeoRelatedLinks from '../components/SeoRelatedLinks.astro';
 import { t } from '../i18n';
 import { resolvePageSeo } from '../config/seo';
 import { faqPageSchema, organizationSchema, websiteSchema } from '../utils/schema';
@@ -31,4 +32,7 @@ const homeFaqs = getLandingFaqs();
   <ProductsSection />
   <WhySetupSection />
   <ContentSections />
+  <div class="mx-auto max-w-6xl px-5 pb-16">
+    <SeoRelatedLinks title="Explore War Thunder Cheats pages" />
+  </div>
 </BaseLayout>

@@ -17,6 +17,7 @@ import Icon from '../../components/icons/Icon.astro';
 import { blogTagIcons } from '../../data/sectionIcons';
 import type { IconName } from '../../components/icons/types';
 import { Button } from '@/components/starwind/button';
+import SeoRelatedLinks from '../../components/SeoRelatedLinks.astro';
 import { ROUTES } from '../../utils/path';
 
 const seo = resolvePageSeo('/blog/');
@@ -121,6 +122,10 @@ const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
           <Icon name="chevronLeft" size={16} />
           Back to home
         </Button>
+      </div>
+
+      <div class="mt-12">
+        <SeoRelatedLinks title="Shop tiers and related War Thunder pages" />
       </div>
     </div>
   </section>
