@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 
 Disallow: /go/
+Disallow: /forum/
 
 Sitemap: https://warthunder-cheats.com/sitemap-index.xml
 

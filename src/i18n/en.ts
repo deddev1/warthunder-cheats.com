@@ -24,7 +24,7 @@ export const en: Translations = {
   hero: {
     status: 'War Thunder — Gaijin build online',
     eyebrow: 'Undetected War Thunder Cheats',
-    title: 'War Thunder Cheats — Undetected ESP Aimbot Soft Aim & Wallhacks for PC 2026',
+    title: 'War Thunder Cheats for Steam PC',
     subtitle:
       'Buy undetected War Thunder cheats for Steam PC—player ESP, vehicle ESP, soft aim and ballistic assist. Compare Lite, Pro and Elite, then checkout for instant loader access.',
     ctaPrimary: 'Get access',
@@ -271,7 +271,7 @@ export const en: Translations = {
   },
   products: {
     eyebrow: 'Products',
-    title: 'All War Thunder Cheat Products & Utilities',
+    title: 'War Thunder Cheats — Compare Lite, Pro, Elite',
     subtitle:
       'Products hub for Windows 10/11—browse Lite, Pro and Elite tiers plus HWID Spoofer, UGC and Unlock All utilities with module lists and secure checkout.',
     viewAll: 'Shop all products',
@@ -314,8 +314,8 @@ export const en: Translations = {
     eyebrow: 'Blog',
     title: 'War Thunder Cheat Buy Guides',
     subtitle: 'Tier comparison guides, ESP and aimbot module explainers, and checkout walkthroughs—pick a plan with confidence.',
-    latestTitle: 'Buy War Thunder Cheats Guides & Checkout Tips for Lite Pro Elite Aimbot Modules',
-    latestSubtitle: 'Transactional guides to help you choose a tier and complete secure checkout for ESP, aimbot and utilities.',
+    latestTitle: 'ESP, Aimbot & Tier Setup Guides',
+    latestSubtitle: 'Module explainers and tier comparisons to help you pick Lite, Pro or Elite and set up ESP, aimbot and utilities.',
     filterAll: 'All articles',
     sortLabel: 'Sort by',
     sortNewest: 'Newest first',
@@ -428,7 +428,7 @@ export const en: Translations = {
       {
         tag: 'Guides',
         title: 'Gaijin patch day checklist before checkout',
-        slug: 'eac-patch',
+        slug: 'gaijin-patch',
         image: '/images/blog/wt-hack-results.png',
         desc: 'War Thunder or Gaijin anti-cheat patch just dropped? Check live status, pick the right tier and buy safely—patch-day checklist for checkout and first launch.',
         date: 'Aug 13, 2026',
@@ -464,7 +464,7 @@ export const en: Translations = {
       {
         tag: 'Guides',
         title: 'Gaijin anti-cheat errors vs buying UGC recovery / HWID help',
-        slug: 'eac-error',
+        slug: 'gaijin-error',
         image: '/images/blog/wt-combat-overlay.png',
         desc: 'Gaijin launcher failed to initialize is usually not a ban. Quick checks first, then when to buy UGC appeal workflows or HWID Spoofer. Then get access to War Thunder cheats.',
         date: 'Aug 11, 2026',

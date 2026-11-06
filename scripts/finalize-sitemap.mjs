@@ -127,7 +127,9 @@ const indexLastmodXml = indexLastmod ? `\n    <lastmod>${indexLastmod}</lastmod>
 
 writeUrlset(path.join(dist, 'sitemap-pages.xml'), pageEntries);
 writeUrlset(path.join(dist, 'sitemap-blog.xml'), blogEntries);
-writeUrlset(path.join(dist, 'sitemap-forum.xml'), forumEntries);
+// Forum is noindex — do not publish a forum sitemap child.
+const forumSitemapPath = path.join(dist, 'sitemap-forum.xml');
+if (fs.existsSync(forumSitemapPath)) fs.unlinkSync(forumSitemapPath);
 
 const indexXml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="${URLSET_NS}">
@@ -136,9 +138,6 @@ const indexXml = `<?xml version="1.0" encoding="UTF-8"?>
   </sitemap>
   <sitemap>
     <loc>${siteOrigin}/sitemap-blog.xml</loc>${indexLastmodXml}
-  </sitemap>
-  <sitemap>
-    <loc>${siteOrigin}/sitemap-forum.xml</loc>${indexLastmodXml}
   </sitemap>
 </sitemapindex>
 `;
@@ -149,5 +148,5 @@ fs.writeFileSync(path.join(dist, 'sitemap.xml'), indexXml, 'utf8');
 writeUrlset(path.join(dist, 'sitemap-0.xml'), entries);
 
 console.log(
-  `Sitemap finalized: ${entries.length} unique URLs (${pageEntries.length} pages, ${blogEntries.length} blog, ${forumEntries.length} forum)`,
+  `Sitemap finalized: ${entries.length} unique URLs (${pageEntries.length} pages, ${blogEntries.length} blog; forum excluded)`,
 );

@@ -123,7 +123,7 @@ const additionalGuidePosts: ForumPost[] = [
   guideDiscussion({
     slug: 'eac-init', title: 'Gaijin anti-cheat failed to initialize—what should I try first?', upvotes: 24,
     excerpt: 'Gaijin account protection failed to initialize: verify Steam files and reinstall Gaijin anti-cheat before assuming a ban.',
-    category: 'Patch Talk', categoryTone: 'orange', sourceTitle: 'Gaijin account protection failed to initialize in War Thunder', sourcePath: '/blog/eac-error/',
+    category: 'Patch Talk', categoryTone: 'orange', sourceTitle: 'Gaijin account protection failed to initialize in War Thunder', sourcePath: '/blog/gaijin-error/',
     answer: 'The troubleshooting guide says the message can result from game-file problems or software conflicts and does not always mean an account ban. First verify game files through Steam.',
     detail: 'It also recommends fully exiting Steam, reinstalling Gaijin anti-cheat from the game install folder, restarting the PC, and checking for conflicting overlays or drivers before trying more disruptive steps.',
     tip: 'Test a normal Steam launch before starting other software so you can narrow down the cause.',
@@ -187,7 +187,7 @@ export const forumPosts: ForumPost[] = [
   {
     slug: 'f1-console', category: 'General', categoryTone: 'purple',
     title: 'How do I open the test flight console?',
-    excerpt: 'Press F1 in game. Here is the quick setup from our walkthrough, including how admin access works on your own server.',
+    excerpt: 'Open the test flight or custom battle console from your keybind. Host tools are required before spawn commands work.',
     author: 'guide_team', age: '4 hours ago', commentsCount: 2, upvotes: 86, flair: 'Guide Q&A',
     sourceTitle: 'How to use cheat codes', sourcePath: '/blog/use-codes/',
     body: ['Open the test flight or custom battle console from your keybind (often F1 in custom battles). In an Arcade test battle you host, enable mission editor tools so spawn and vehicle commands work.', 'If a command does nothing, confirm you are hosting or were granted host tools in that session and check the syntax in the mission editor reference.'],
@@ -213,7 +213,7 @@ export const forumPosts: ForumPost[] = [
     title: 'What should I check before playing after a Gaijin anti-cheat or game patch?',
     excerpt: 'The patch-day checklist recommends checking build status, updating, and testing on an Arcade test battle before a real session.',
     author: 'guide_team', age: '9 hours ago', commentsCount: 2, upvotes: 42, flair: 'Guide Q&A',
-    sourceTitle: 'Gaijin anti-cheat patch day checklist for cheat tools', sourcePath: '/blog/eac-patch/',
+    sourceTitle: 'Gaijin anti-cheat patch day checklist for cheat tools', sourcePath: '/blog/gaijin-patch/',
     body: ['Check the current build and status notice first. After a game or Gaijin anti-cheat update, wait for a compatible build, update the loader, then verify the setup on an Arcade test battle before returning to busy Arcade, Realistic or Simulator queues.', 'If anything behaves unexpectedly, stop and review the status notes rather than assuming the old setup still applies. The checklist covers the patch-day routine in more detail.'],
     comments: [
       { author: 'patch_day_vet', age: '8 hours ago', score: 12, body: 'Testing after the update before a real session is the part I used to skip. Now I check the build note and run a quick Arcade test battle.' },

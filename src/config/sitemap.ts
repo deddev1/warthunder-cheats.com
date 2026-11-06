@@ -14,7 +14,12 @@ function pathnameFromUrl(url: string): string {
 export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
   const path = pathnameFromUrl(item.url);
 
-  if (path.includes('/404') || path.startsWith('/go/') || path.includes('/rss.xml')) {
+  if (
+    path.includes('/404') ||
+    path.startsWith('/go/') ||
+    path.startsWith('/forum/') ||
+    path.includes('/rss.xml')
+  ) {
     return undefined;
   }
 
@@ -34,20 +39,8 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
   }
 
   if (path === '/blog/') {
-    item.priority = 0.9;
+    item.priority = 0.7;
     item.changefreq = 'weekly';
-    return item;
-  }
-
-  if (path === '/forum/') {
-    item.priority = 0.8;
-    item.changefreq = 'weekly';
-    return item;
-  }
-
-  if (path.startsWith('/forum/')) {
-    item.priority = 0.6;
-    item.changefreq = 'monthly';
     return item;
   }
 

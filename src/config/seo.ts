@@ -47,8 +47,14 @@ export function resolvePageSeo(pathname: string): { title: string; description: 
 export function pageTitle(keyword: string, brand = t.site.name): string {
   const suffix = ` | ${brand}`;
   const max = 60;
-  if (`${keyword}${suffix}`.length <= max) return `${keyword}${suffix}`;
-  const trimmed = keyword.slice(0, Math.max(20, max - suffix.length - 1)).trim();
+  const full = `${keyword}${suffix}`;
+  if (full.length <= max) return full;
+
+  const budget = Math.max(20, max - suffix.length);
+  let trimmed = keyword.slice(0, budget).trim();
+  const lastSpace = trimmed.lastIndexOf(' ');
+  // Never mid-cut a word when appending the brand suffix.
+  if (lastSpace > 12) trimmed = trimmed.slice(0, lastSpace).trim();
   return `${trimmed}${suffix}`;
 }
 

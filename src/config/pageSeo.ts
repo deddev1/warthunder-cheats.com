@@ -10,14 +10,14 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'ESP Aimbot Soft Aim for War Thunder PC Cheats 2026',
+    title: 'Buy War Thunder Cheats 2026 | Undetected ESP & Aimbot',
     description:
-      'Shop undetected War Thunder cheats with ESP aimbot, vehicle ESP, radar and stream-proof overlays on Windows. Compare Lite, Pro, Elite.',
+      'Shop War Thunder cheats for Windows—vehicle ESP, player ESP, aimbot, radar and stream-proof overlays. Compare Lite, Pro and Elite at warthunder-cheats.com.',
   },
   '/products/warthunder-cheats/': {
-    title: 'All War Thunder Cheat Products | Lite, Pro, Elite',
+    title: 'War Thunder Cheats | Lite, Pro, Elite',
     description:
-      'Products hub for War Thunder on Steam or Gaijin Launcher—compare Lite, Pro and Elite plus HWID, UGC and utilities. Module lists, buy guides and checkout.',
+      'Compare War Thunder cheats on Steam or Gaijin Launcher—Lite, Pro and Elite plus HWID, UGC and utilities. Module lists, buy guides and checkout.',
   },
   '/products/warthunder-cheats/lite/': {
     title: 'War Thunder Lite Cheats | ESP, Radar & FOV',
@@ -55,9 +55,9 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Utility comparison for War Thunder—HWID Spoofer vs UGC recovery use cases, feature lists and product pages. Camouflage unlock details on Unlock All.',
   },
   '/blog/': {
-    title: 'Checkout – ESP and aimbot modules | War Thunder Cheats',
+    title: 'Module Guides | ESP, Aimbot & Setup Tips',
     description:
-      'Step-by-step buy guides and checkout tips—tier picks, ESP and aimbot modules, HWID recovery after bans, and secure payment at warthunder-cheats.com.',
+      'Tier comparison and module explainers—ESP, aimbot, FOV, HWID recovery after bans, and loader setup notes for Windows Steam or Gaijin Launcher.',
   },
   '/forum/': {
     title: 'Buyer Forum Q&A | ESP, Radar & Spoofer Help',
@@ -65,9 +65,9 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'War Thunder buyer forum: ESP and radar setup Q&A from our guides—overlay tuning, HWID tools, patch readiness and tier picks before checkout.',
   },
   '/reviews/': {
-    title: 'War Thunder Cheats Reviews | Buyer Feedback',
+    title: 'Buyer Feedback | Tier Notes & Loader Tips',
     description:
-      'Read verified War Thunder Cheats reviews for Elite ESP and aimbot, HWID Spoofer, UGC recovery and camouflage unlock—real ratings before checkout.',
+      'Read buyer feedback on Elite ESP and aimbot, HWID Spoofer, UGC recovery and camouflage unlock—ratings shared by customers before checkout.',
   },
   '/faq/': {
     title: 'Faq – Tiers, Checkout & Ban Risk | War Thunder Cheats',

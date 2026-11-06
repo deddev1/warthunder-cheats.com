@@ -59,7 +59,7 @@ export interface ProductPage {
 
 /** Guides paired with each product detail page */
 export const productRelatedBlogSlugs: Record<string, string[]> = {
-  lite: ['esp', 'lite-vs-pro', 'fov', 'eac-patch'],
+  lite: ['esp', 'lite-vs-pro', 'fov', 'gaijin-patch'],
   pro: [
     'aimbot',
     'bones',
@@ -70,17 +70,17 @@ export const productRelatedBlogSlugs: Record<string, string[]> = {
     'elite',
     'features',
     'esp',
-    'eac-patch',
+    'gaijin-patch',
     'buy-guide',
   ],
   'hwid-spoofer': [
     'hwid',
-    'eac-error',
-    'eac-patch',
+    'gaijin-error',
+    'gaijin-patch',
     'external',
   ],
   ugc: [
-    'eac-error',
+    'gaijin-error',
     'hwid',
     'buy-guide',
   ],

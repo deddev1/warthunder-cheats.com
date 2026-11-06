@@ -65,11 +65,11 @@ const coverBySlug = {
   esp: 'mapRadar',
   fov: 'airEsp',
   skins: 'vehicleEsp',
-  'eac-patch': 'hackResults',
+  'gaijin-patch': 'hackResults',
   hwid: 'groundEsp',
   'buy-guide': 'espRadar',
   bones: 'aimbotFov',
-  'eac-error': 'combatOverlay',
+  'gaijin-error': 'combatOverlay',
   external: 'espRadar',
   'stream-proof': 'mapRadar',
 };

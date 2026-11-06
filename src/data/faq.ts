@@ -54,13 +54,13 @@ const guideFeatures = link('War Thunder cheats features guide', blogPostPath('fe
 const guideLiteVsPro = link('Lite vs Pro guide', blogPostPath('lite-vs-pro'));
 const guideElite = link('Elite tier guide', blogPostPath('elite'));
 const guideEsp = link('ESP and radar setup guide', blogPostPath('esp'));
-const guidePatch = link('Gaijin patch day checklist', blogPostPath('eac-patch'));
+const guidePatch = link('Gaijin patch day checklist', blogPostPath('gaijin-patch'));
 const guideBuy = link('how to buy War Thunder cheats in 2026', blogPostPath('buy-guide'));
 const guideExternal = link('external cheat guide', blogPostPath('external'));
 const guideStream = link('stream-proof setup guide', blogPostPath('stream-proof'));
 const guideAdmin = link('test flight and dev commands guide', blogPostPath('cheat-codes'));
 const guideHwid = link('HWID spoofer vs new account guide', blogPostPath('hwid'));
-const guideEacInit = link('Gaijin launcher failed to initialize troubleshooting guide', blogPostPath('eac-error'));
+const guideEacInit = link('Gaijin launcher failed to initialize troubleshooting guide', blogPostPath('gaijin-error'));
 const guideRecoil = link('aimbot and ballistic assist guide', blogPostPath('aimbot'));
 
 export const siteFaqs: SiteFaqItem[] = [

@@ -20,7 +20,8 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/404') && !page.includes('/go/'),
+      filter: (page) =>
+        !page.includes('/404') && !page.includes('/go/') && !page.includes('/forum/'),
       serialize: sitemapSerialize,
     }),
   ],

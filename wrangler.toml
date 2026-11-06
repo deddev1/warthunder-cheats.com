@@ -1,6 +1,7 @@
-# Static Astro site → Cloudflare Workers assets.
-# [build] runs before deploy so `dist/` exists when CI only runs `wrangler deploy`.
+# Static Astro site → Cloudflare Worker + assets.
+# Worker 301s www/http to https://warthunder-cheats.com; assets serve dist/.
 name = "warthunder-cheats-com"
+main = "src/worker.ts"
 compatibility_date = "2026-10-26"
 
 [build]
@@ -8,5 +9,6 @@ command = "npm run build"
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"
 not_found_handling = "404-page"
 html_handling = "force-trailing-slash"

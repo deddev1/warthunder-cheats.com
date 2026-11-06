@@ -156,6 +156,7 @@ for (const file of srcFiles) {
       // allow legacy redirect sources / URL rewrite helpers
       if (
         file.includes('redirects.mjs') ||
+        file.includes('path-redirects.mjs') ||
         file.includes('checkout.ts') ||
         file.includes(`blog${path.sep}[slug].astro`)
       ) {
@@ -284,6 +285,62 @@ for (const file of astroFiles) {
 }
 if (emptyAlt) fail('Images compressed + alt', `${emptyAlt} ResponsiveImage empty alt(s)`);
 else ok('No empty ResponsiveImage alt attributes detected');
+
+// 8) Critical warthunder cheats SEO guards
+const homeHtml = path.join(dist, 'index.html');
+if (fs.existsSync(homeHtml)) {
+  const home = read(homeHtml);
+  const title = (home.match(/<title[^>]*>([^<]*)<\/title>/i) || [, ''])[1];
+  const h1 = (home.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [, ''])[1].replace(/<[^>]+>/g, '').trim();
+  if (!title.includes('War Thunder Cheats')) fail('Head query SEO', `homepage title missing phrase: ${title}`);
+  else if (!h1.includes('War Thunder Cheats')) fail('Head query SEO', `homepage H1 missing phrase: ${h1}`);
+  else ok('Homepage title + H1 contain War Thunder Cheats');
+}
+const hubHtml = path.join(dist, 'products', 'warthunder-cheats', 'index.html');
+if (fs.existsSync(hubHtml)) {
+  const hub = read(hubHtml);
+  const title = (hub.match(/<title[^>]*>([^<]*)<\/title>/i) || [, ''])[1];
+  const h1 = (hub.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [, ''])[1].replace(/<[^>]+>/g, '').trim();
+  if (!title.includes('War Thunder Cheats')) fail('Head query SEO', `products hub title missing phrase: ${title}`);
+  else if (!h1.includes('War Thunder Cheats')) fail('Head query SEO', `products hub H1 missing phrase: ${h1}`);
+  else ok('Products hub title + H1 contain War Thunder Cheats');
+}
+const sitemap0 = path.join(dist, 'sitemap-0.xml');
+if (fs.existsSync(sitemap0)) {
+  const sm = read(sitemap0);
+  if (/\/forum\//.test(sm)) fail('Forum de-index', 'sitemap-0 still lists /forum/ URLs');
+  else ok('Sitemap excludes /forum/');
+}
+if (fs.existsSync(path.join(dist, 'sitemap-forum.xml'))) {
+  fail('Forum de-index', 'sitemap-forum.xml should not be published');
+} else {
+  ok('No sitemap-forum.xml in dist');
+}
+const forumIndex = path.join(dist, 'forum', 'index.html');
+if (fs.existsSync(forumIndex)) {
+  const forum = read(forumIndex);
+  if (!/noindex/i.test(forum)) fail('Forum de-index', 'forum index missing noindex');
+  else ok('Forum index is noindex');
+}
+const reviewsHtml = path.join(dist, 'reviews', 'index.html');
+if (fs.existsSync(reviewsHtml)) {
+  const rev = read(reviewsHtml);
+  if (/AggregateRating/i.test(rev)) fail('Reviews schema', 'AggregateRating still present');
+  else if (/"@type"\s*:\s*"Review"/i.test(rev) || /"@type":"Review"/i.test(rev)) {
+    fail('Reviews schema', 'self-serving Review JSON-LD still present');
+  } else ok('Reviews page has no AggregateRating / Review schema');
+}
+const workerFile = path.join(src, 'worker.ts');
+const wranglerFile = path.join(root, 'wrangler.toml');
+if (!fs.existsSync(workerFile)) fail('Host 301 worker', 'src/worker.ts missing');
+else if (!read(wranglerFile).includes('main = "src/worker.ts"')) fail('Host 301 worker', 'wrangler.toml missing worker main');
+else ok('Cloudflare Worker host redirect entry wired');
+if (fs.existsSync(path.join(dist, 'blog', 'gaijin-patch', 'index.html')) &&
+    fs.existsSync(path.join(dist, 'blog', 'gaijin-error', 'index.html'))) {
+  ok('gaijin-patch and gaijin-error blog pages built');
+} else {
+  fail('Slug rename', 'gaijin-patch / gaijin-error pages missing from dist');
+}
 
 // Summary
 console.log('\n—— QA checklist summary ——');

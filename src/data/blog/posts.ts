@@ -45,7 +45,7 @@ export const blogPosts: BlogPostFull[] = [
       },
       { type: 'p', text: "The full walkthrough is in [How to buy War Thunder cheats in 2026](/blog/buy-guide/)." },
       { type: 'h2', text: "Risk and status" },
-      { type: 'p', text: "No third-party software is ban-proof. Gaijin account protection and Gaijin Entertainment checks evolve, so read the live status banner before every session and follow the [Gaijin patch day checklist](/blog/eac-patch/) after updates." },
+      { type: 'p', text: "No third-party software is ban-proof. Gaijin account protection and Gaijin Entertainment checks evolve, so read the live status banner before every session and follow the [Gaijin patch day checklist](/blog/gaijin-patch/) after updates." },
       {
         type: 'cta',
         title: "Skip the console list—get access",
@@ -138,7 +138,7 @@ export const blogPosts: BlogPostFull[] = [
       ] },
       { type: 'p', text: "Compare plans at [War Thunder Cheats](/products/warthunder-cheats/) and upgrade through the portal when ready." },
       { type: 'h2', text: "When something goes wrong" },
-      { type: 'p', text: "Startup error? Read the [Gaijin anti-cheat errors guide](/blog/eac-error/). Update day? Run the [Gaijin patch day checklist](/blog/eac-patch/). Still stuck? Contact Discord support with your order email, Windows version and War Thunder client build." },
+      { type: 'p', text: "Startup error? Read the [Gaijin anti-cheat errors guide](/blog/gaijin-error/). Update day? Run the [Gaijin patch day checklist](/blog/gaijin-patch/). Still stuck? Contact Discord support with your order email, Windows version and War Thunder client build." },
       {
         type: 'cta',
         title: "Not purchased yet?",
@@ -209,7 +209,7 @@ export const blogPosts: BlogPostFull[] = [
         "Log into the operator portal and download the loader.",
         "Load a conservative preset and test on an Arcade test battle.",
       ] },
-      { type: 'p', text: "More detail: [How to buy War Thunder cheats in 2026](/blog/buy-guide/). After updates, run the [Gaijin patch day checklist](/blog/eac-patch/)." },
+      { type: 'p', text: "More detail: [How to buy War Thunder cheats in 2026](/blog/buy-guide/). After updates, run the [Gaijin patch day checklist](/blog/gaijin-patch/)." },
       {
         type: 'cta',
         title: "Pick your tier today",
@@ -301,7 +301,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: 'h2', text: "Price and upgrade path" },
       { type: 'p', text: "Live pricing is shown on the [War Thunder Cheats](/products/warthunder-cheats/) page before checkout. Starting on Lite and upgrading to Pro through the portal is a common route; if you already know you want aim assist, buy Pro directly. Want the whole suite? See the [Elite tier guide](/blog/elite/)." },
       { type: 'h2', text: "Risk" },
-      { type: 'p', text: "Neither tier is ban-proof. Read the status banner before each session and follow the [Gaijin patch day checklist](/blog/eac-patch/) after updates." },
+      { type: 'p', text: "Neither tier is ban-proof. Read the status banner before each session and follow the [Gaijin patch day checklist](/blog/gaijin-patch/) after updates." },
       {
         type: 'cta',
         title: "Compare Lite and Pro",
@@ -362,7 +362,7 @@ export const blogPosts: BlogPostFull[] = [
         text: "Full suite, farm helpers and priority patches through secure checkout.",
         href: "/go/warthunder/",
       },
-      { type: 'p', text: "Still deciding? [Review Elite slot availability](/products/warthunder-cheats/) and [upgrade through Elite checkout](/go/warthunder/). Every tier carries ban risk; follow the [Gaijin patch day checklist](/blog/eac-patch/)." },
+      { type: 'p', text: "Still deciding? [Review Elite slot availability](/products/warthunder-cheats/) and [upgrade through Elite checkout](/go/warthunder/). Every tier carries ban risk; follow the [Gaijin patch day checklist](/blog/gaijin-patch/)." },
     ],
   },
   {
@@ -401,7 +401,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: 'h2', text: "Is Pro or Elite right for you?" },
       { type: 'p', text: "Pro covers every combat module. Elite adds farm helpers, Camouflage unlock and priority patches. Compare in the [Lite vs Pro guide](/blog/lite-vs-pro/) and the [Elite tier guide](/blog/elite/)." },
       { type: 'h2', text: "After you buy" },
-      { type: 'p', text: "Test on an Arcade test battle and run the [Gaijin patch day checklist](/blog/eac-patch/) after every update. If the status banner is yellow, wait." },
+      { type: 'p', text: "Test on an Arcade test battle and run the [Gaijin patch day checklist](/blog/gaijin-patch/) after every update. If the status banner is yellow, wait." },
       {
         type: 'cta',
         title: "Get Pro aim assist",
@@ -455,7 +455,7 @@ export const blogPosts: BlogPostFull[] = [
         text: "Lite includes player ESP, vehicle ESP, radar and FOV—secure checkout at warthunder-cheats.com.",
         href: "/go/warthunder/",
       },
-      { type: 'p', text: "[Browse Lite ESP radar packages](/products/warthunder-cheats/) → [Checkout for Lite ESP tools](/go/warthunder/). Overlays are third-party software; follow the [Gaijin patch day checklist](/blog/eac-patch/) after updates." },
+      { type: 'p', text: "[Browse Lite ESP radar packages](/products/warthunder-cheats/) → [Checkout for Lite ESP tools](/go/warthunder/). Overlays are third-party software; follow the [Gaijin patch day checklist](/blog/gaijin-patch/) after updates." },
     ],
   },
   {
@@ -537,7 +537,7 @@ export const blogPosts: BlogPostFull[] = [
   {
     tag: "Guides",
     title: "Gaijin patch day checklist before checkout",
-    slug: "eac-patch",
+    slug: 'gaijin-patch',
     image: "/images/blog/wt-hack-results.png",
     imageAlt: "War Thunder biplane over snow with red ESP name tags, aircraft models, kilometer distances and a circular lead/radar assist overlay",
     desc: "War Thunder or Gaijin patch just dropped? Check live status, pick the right tier and buy safely—patch-day checklist for checkout and first launch.",
@@ -566,7 +566,7 @@ export const blogPosts: BlogPostFull[] = [
         "Loosen settings only after several clean sessions.",
       ] },
       { type: 'h2', text: "Error vs ban" },
-      { type: 'p', text: "A startup message is usually a file or service problem; see [Gaijin anti-cheat errors vs recovery help](/blog/eac-error/). If you are actually banned, read about [HWID Spoofer](/blog/hwid/)." },
+      { type: 'p', text: "A startup message is usually a file or service problem; see [Gaijin anti-cheat errors vs recovery help](/blog/gaijin-error/). If you are actually banned, read about [HWID Spoofer](/blog/hwid/)." },
       { type: 'h2', text: "Compare and buy" },
       { type: 'p', text: "[Confirm green-status tier options](/products/warthunder-cheats/) when status is green and [checkout after patch verification](/go/warthunder/) through secure checkout. The [buying guide](/blog/buy-guide/) walks through each step." },
       {
@@ -606,7 +606,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: 'h2', text: "UGC for appeals" },
       { type: 'p', text: "UGC is a workspace for appeals and case tracking. It does not guarantee an unban; read the product page for realistic outcomes." },
       { type: 'h2', text: "After recovery" },
-      { type: 'p', text: "Return with a conservative preset and run the [Gaijin patch day checklist](/blog/eac-patch/). Pick a tier at [the War Thunder products hub](/products/warthunder-cheats/) and [resume with a fresh checkout](/go/warthunder/). Startup errors are covered in the [Gaijin anti-cheat errors guide](/blog/eac-error/)." },
+      { type: 'p', text: "Return with a conservative preset and run the [Gaijin patch day checklist](/blog/gaijin-patch/). Pick a tier at [the War Thunder products hub](/products/warthunder-cheats/) and [resume with a fresh checkout](/go/warthunder/). Startup errors are covered in the [Gaijin anti-cheat errors guide](/blog/gaijin-error/)." },
       {
         type: 'cta',
         title: "Buy HWID Spoofer",
@@ -704,7 +704,7 @@ export const blogPosts: BlogPostFull[] = [
   {
     tag: "Guides",
     title: "Gaijin anti-cheat errors guide vs War Thunder cheats UGC recovery / HWID help",
-    slug: "eac-error",
+    slug: 'gaijin-error',
     seoTitle: "Gaijin Anti-Cheat Errors Guide | War Thunder Cheats",
     image: "/images/blog/wt-combat-overlay.png",
     imageAlt: "War Thunder cheat gameplay combat overlay highlighting enemy vehicles with ESP boxes and distance tags during a live battle",
@@ -729,7 +729,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: 'h2', text: "If you are banned" },
       { type: 'p', text: "File repairs will not help. Choose a path in [HWID Spoofer vs new account](/blog/hwid/): [HWID Spoofer](/products/warthunder-cheats/hwid-spoofer/) for hardware flags, or [UGC](/products/warthunder-cheats/ugc/) for appeal workflows. Outcomes are never guaranteed." },
       { type: 'h2', text: "Returning with War Thunder cheats" },
-      { type: 'p', text: "Once War Thunder starts with no cheat software running, follow the portal launch order and check the status banner. Read the [Gaijin patch day checklist](/blog/eac-patch/) and the [external cheat guide](/blog/external/)." },
+      { type: 'p', text: "Once War Thunder starts with no cheat software running, follow the portal launch order and check the status banner. Read the [Gaijin patch day checklist](/blog/gaijin-patch/) and the [external cheat guide](/blog/external/)." },
       { type: 'h2', text: "Pick a tier" },
       { type: 'p', text: "[Return via the products hub](/products/warthunder-cheats/) and [unlock loader access after payment](/go/warthunder/) when you are ready to return." },
       {
@@ -774,7 +774,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: 'h2', text: "Tier choice" },
       { type: 'p', text: "All tiers share the loader. [Lite](/products/warthunder-cheats/) is ESP and radar, Pro adds aim assist, and [Elite](/products/warthunder-cheats/elite/) adds farm helpers and Camouflage unlock. Read [Lite vs Pro](/blog/lite-vs-pro/)." },
       { type: 'h2', text: "Launch order and safety" },
-      { type: 'p', text: "Follow the portal guide, check the status banner and test on an Arcade test battle. After updates run the [Gaijin patch day checklist](/blog/eac-patch/). For startup errors use the [Gaijin anti-cheat errors guide](/blog/eac-error/)." },
+      { type: 'p', text: "Follow the portal guide, check the status banner and test on an Arcade test battle. After updates run the [Gaijin patch day checklist](/blog/gaijin-patch/). For startup errors use the [Gaijin anti-cheat errors guide](/blog/gaijin-error/)." },
       {
         type: 'cta',
         title: "Get the external suite",

@@ -18,10 +18,15 @@ const sourceTimestamp = (path?: string) => {
 };
 ---
 
-<BaseLayout title={seo.title} description={seo.description} jsonLd={[
-  collectionPageSchema({ name: 'War Thunder buyer forum', description: seo.description, url: '/forum/' }),
-  breadcrumbSchema(breadcrumbs),
-]}>
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  noindex={true}
+  jsonLd={[
+    collectionPageSchema({ name: 'War Thunder buyer forum', description: seo.description, url: '/forum/' }),
+    breadcrumbSchema(breadcrumbs),
+  ]}
+>
   <section class="forum-page py-8 md:py-12">
     <div class="mx-auto max-w-6xl px-5">
       <Breadcrumbs items={breadcrumbs} />
