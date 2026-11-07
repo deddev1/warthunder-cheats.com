@@ -334,7 +334,9 @@ const workerFile = path.join(src, 'worker.ts');
 const wranglerFile = path.join(root, 'wrangler.toml');
 if (!fs.existsSync(workerFile)) fail('Host 301 worker', 'src/worker.ts missing');
 else if (!read(wranglerFile).includes('main = "src/worker.ts"')) fail('Host 301 worker', 'wrangler.toml missing worker main');
-else ok('Cloudflare Worker host redirect entry wired');
+else if (!/run_worker_first\s*=\s*true/.test(read(wranglerFile))) {
+  fail('Host 301 worker', 'wrangler.toml must set assets.run_worker_first = true');
+} else ok('Cloudflare Worker host redirect entry wired');
 if (fs.existsSync(path.join(dist, 'blog', 'gaijin-patch', 'index.html')) &&
     fs.existsSync(path.join(dist, 'blog', 'gaijin-error', 'index.html'))) {
   ok('gaijin-patch and gaijin-error blog pages built');
