@@ -26,3 +26,14 @@ pnpm-debug.log*
 # wrangler local state
 .wrangler/
 .dev.vars*
+
+# Agentic SEO skill vendor copy + generated audit artifacts
+.cursor/skills/
+seo-audit/
+/FULL-AUDIT-REPORT.md
+/ACTION-PLAN.md
+/SEO-REPORT.html
+/audit-results.json
+scripts/_local-seo-scan.mjs
+scripts/_orphan-check.mjs
+scripts/_ready-check.mjs

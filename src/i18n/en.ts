@@ -10,7 +10,7 @@ export const en: Translations = {
     domain: 'fc27-cheats.net',
     title: 'Buy Undetected FC 27 Cheats 2026 | ESP Soft Aim & UT',
     description:
-      'Buy undetected FC 27 cheats for Ultimate Team, Rivals and Pro Clubs—player ESP, soft aim, shot assist and stream-proof overlays. Compare Lite, Pro and Elite at fc27-cheats.net.',
+      'Buy undetected FC 27 cheats for Ultimate Team, Rivals and Pro Clubs—player ESP, soft aim, shot assist and stream-proof overlays. Shop cheats, HWID Spoofer and UGC at fc27-cheats.net.',
     discord: PRIMARY_CHECKOUT_PATH,
   },
   nav: [
@@ -26,7 +26,7 @@ export const en: Translations = {
     eyebrow: 'FC27 Cheats · check live status',
     title: 'Buy Undetected FC 27 Cheats for Ultimate Team & Clubs',
     subtitle:
-      'Shop EA FC 27 cheats for Steam and EA App PC—player ESP, soft aim, shot assist and UT tools for Rivals, Champions and Pro Clubs. Undetected means the current status banner—re-check after every EA patch, then compare Lite, Pro and Elite.',
+      'Shop EA FC 27 cheats for Steam and EA App PC—player ESP, soft aim, shot assist and UT tools for Rivals, Champions and Pro Clubs. Re-check status after every EA patch, then pick Cheats, HWID Spoofer or UGC.',
     ctaPrimary: 'Get access',
     ctaPrimaryHref: productBase,
     ctaDiscord: 'Shop products',
@@ -35,7 +35,7 @@ export const en: Translations = {
     metrics: [
       { label: 'Stream-safe', strong: 'Yes' },
       { label: 'Patch speed', strong: '<24h' },
-      { label: 'Tiers', strong: 'Lite · Pro · Elite' },
+      { label: 'Products', strong: 'Cheats · Spoofer · UGC' },
       { label: 'Discord support', strong: '24/7' },
     ],
   },
@@ -332,7 +332,7 @@ export const en: Translations = {
         title: 'What Are FC27 Cheats? Private Tools for Rivals & Champs',
         slug: 'what-are-fc27-cheats',
         image: '/images/blog/fc27-fut-overlay.webp',
-        desc: 'FC27 cheats are private game-enhancement tools for EA FC 27—aimbot, player and ball ESP, finishing helpers and a stealth loader built for Division Rivals and Weekend League.',
+        desc: 'FC27 cheats are private tools for EA FC 27—aimbot, player ESP, finishing helpers and a stealth loader built for Division Rivals and Weekend League.',
         date: 'Nov 9, 2026',
         readTime: '8 min read',
       },
@@ -368,7 +368,7 @@ export const en: Translations = {
         title: 'Are FC27 Cheats Safe? Honest Ban Risk Before You Buy',
         slug: 'are-fc27-cheats-safe',
         image: '/images/blog/fc27-match-purple-esp-overlay.webp',
-        desc: 'Are FC27 cheats safe? Any third-party tool carries risk. How our stealth loader, daily monitoring and fast pauses reduce exposure — and why we never claim unbannable.',
+        desc: 'Are FC27 cheats safe? Any third-party tool carries risk. How our stealth loader, daily monitoring and fast pauses reduce exposure—without unbannable claims.',
         date: 'Nov 7, 2026',
         readTime: '6 min read',
       },
