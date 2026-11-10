@@ -24,7 +24,7 @@ export const en: Translations = {
   hero: {
     status: 'FC 27 — EA build online',
     eyebrow: 'FC27 Cheats · check live status',
-    title: 'Buy Undetected FC 27 Cheats for Ultimate Team & Clubs',
+    title: 'Buy Undetected FC 27 Cheats, Spoofer & UGC',
     subtitle:
       'Shop EA FC 27 cheats for Steam and EA App PC—player ESP, soft aim, shot assist and UT tools for Rivals, Champions and Pro Clubs. Re-check status after every EA patch, then pick Cheats, HWID Spoofer or UGC.',
     ctaPrimary: 'Get access',

@@ -5,14 +5,16 @@ import ImageSlider from './ImageSlider.astro';
 interface Props {
   images: ProductSlide[];
   id?: string;
+  variant?: 'default' | 'hero';
 }
 
-const { images, id = 'product-screenshots' } = Astro.props;
+const { images, id = 'product-screenshots', variant = 'default' } = Astro.props;
 ---
 
 <div class="product-shots" id={`${id}-wrap`}>
   <ImageSlider
     id={id}
+    variant={variant}
     images={images.map((img) => ({
       src: img.src,
       alt: img.alt,

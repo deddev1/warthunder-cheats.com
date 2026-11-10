@@ -34,16 +34,17 @@ const showDescToggle = descriptionBlocks.length > 2;
 ---
 
 <div class="product-detail">
-<section class="product-detail-hero py-8 md:py-12">
-  <div class="mx-auto max-w-6xl px-5">
+<section class="product-detail-hero relative overflow-hidden border-b border-border py-8 md:py-12">
+  <div
+    class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--primary)_0%,transparent_55%)] opacity-15"
+    aria-hidden="true"
+  />
+  <div class="relative mx-auto max-w-6xl px-5">
     {breadcrumbs && <Breadcrumbs items={breadcrumbs} class="product-detail__breadcrumbs" />}
 
-    <div class="mt-6">
+    <div class="product-detail-hero__grid mt-8">
       <ProductDetailHeader product={product} />
-    </div>
-
-    <div class="product-detail-hero__grid mt-10">
-      <ProductScreenshotGallery images={product.images} id={`gallery-${product.slug}`} />
+      <ProductScreenshotGallery images={product.images} id={`gallery-${product.slug}`} variant="hero" />
     </div>
   </div>
 </section>

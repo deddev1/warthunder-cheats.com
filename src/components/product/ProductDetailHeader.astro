@@ -1,25 +1,40 @@
 ---
 import type { ProductPage } from '../../data/products';
-import { Badge } from '@/components/starwind/badge';
+import Icon from '../icons/Icon.astro';
+import { Button } from '@/components/starwind/button';
+import { externalLinkProps } from '../../utils/externalLink';
 
 interface Props {
   product: ProductPage;
 }
 
 const { product } = Astro.props;
+const buyLink = externalLinkProps(product.buyUrl);
+const kicker =
+  product.slug === 'elite'
+    ? 'FC 27 Cheats'
+    : product.slug === 'hwid-spoofer'
+      ? 'HWID Spoofer'
+      : product.slug === 'ugc'
+        ? 'UGC recovery'
+        : product.tier ?? product.category ?? 'FC 27';
 ---
 
-<header class="product-detail-header space-y-4">
-  <div class="flex flex-wrap items-center gap-2">
-    <Badge variant="secondary">{product.badge}</Badge>
-    {product.variant === 'popular' && <Badge>Popular</Badge>}
-    {product.variant === 'limited' && <Badge variant="warning">Limited</Badge>}
-    <Badge variant="outline">FC 27</Badge>
-  </div>
-  <h1 class="max-w-3xl text-3xl font-bold normal-case leading-tight md:text-4xl">{product.title}</h1>
-  <p class="max-w-2xl text-lg leading-relaxed text-muted-foreground">{product.subtitle || product.desc}</p>
-  <p class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
-    <a href="/products/fc27-cheats/" class="text-primary hover:underline">All FC 27 products</a>
-    <a href="/blog/buy-guide/" class="text-primary hover:underline">How to buy &amp; activate</a>
+<header class="product-detail-header space-y-5">
+  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-primary">{kicker}</p>
+  <h1 class="max-w-xl text-3xl font-bold normal-case leading-[1.15] tracking-tight md:text-4xl">
+    {product.title}
+  </h1>
+  <p class="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+    {product.subtitle || product.desc}
   </p>
+  <div class="flex flex-wrap items-center gap-3">
+    <Button as="a" href={product.buyUrl} variant="primary" class="rounded-full" {...buyLink}>
+      Get access
+      <Icon name="arrowRight" size={16} />
+    </Button>
+    <Button as="a" href="/blog/buy-guide/" variant="outline" class="rounded-full">
+      How to buy
+    </Button>
+  </div>
 </header>
