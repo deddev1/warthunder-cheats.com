@@ -2,8 +2,7 @@
 import '../../../styles/product-cheat-page.css';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { t } from '../../../i18n';
-import { productHub, productPages } from '../../../data/products';
-import { cheatTierIcons, productCategoryIcons } from '../../../data/sectionIcons';
+import { catalogProducts, productHub } from '../../../data/products';
 import { resolvePageSeo } from '../../../config/seo';
 import { breadcrumbSchema, collectionPageSchema, itemListSchema } from '../../../utils/schema';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
@@ -19,29 +18,12 @@ const breadcrumbs = [
   { name: 'Products', path: productHub.path },
 ];
 
-function cardIcon(product: (typeof productPages)[number]) {
-  if (product.kind === 'tier') {
-    return cheatTierIcons[product.name] ?? 'crosshair';
-  }
-  return productCategoryIcons[product.category ?? ''] ?? 'package';
-}
-
-function cardLabel(product: (typeof productPages)[number]) {
-  if (product.kind === 'tier') {
-    return product.tier ?? product.name;
-  }
-  return product.category ?? 'Utility';
-}
-
-function actionName(product: (typeof productPages)[number]) {
-  if (product.kind === 'tier') return product.name;
+function actionName(product: (typeof catalogProducts)[number]) {
+  if (product.slug === 'elite') return 'Cheats';
   if (product.slug === 'hwid-spoofer') return 'HWID';
   if (product.slug === 'ugc') return 'UGC';
-  if (product.slug === 'unlock-all') return 'Unlock All';
   return product.category ?? product.slug;
 }
-
-const catalogProducts = productPages;
 ---
 
 <BaseLayout
@@ -72,33 +54,21 @@ const catalogProducts = productPages;
       </div>
 
       <Prose class="mt-8 max-w-none text-muted-foreground">
-        <h2>Compare products before checkout</h2>
+        <h2>Pick the product that matches your goal</h2>
         <p>
-          Elite bundles player ESP, opponent radar, soft aim, shot assist and coin/SBC helpers for players who want the full suite. Utilities cover
-          hardware resets after bans, UGC appeal workflows, and local kit unlock previews. Read the{' '}
-          <a href="/blog/lite-vs-pro/">Lite vs Pro guide</a>, <a href="/blog/buy-guide/">checkout walkthrough</a>, or{' '}
-          <a href={ROUTES.faq}>FAQ</a> if you are deciding between plans.
-        </p>
-        <h3>What to compare before checkout</h3>
-        <p>
-          Each card below links to a product page with screenshots, system requirements, and module lists. When you are
-          ready, use Get access for secure checkout. Check the homepage status banner before every session—especially
-          after an EA patch or client update.
+          FC 27 Cheats covers player ESP, soft aim, shot assist and Ultimate Team helpers. HWID Spoofer is for hardware
+          flags after an EA ban. UGC organizes account appeal workflows. Read the{' '}
+          <a href="/blog/buy-guide/">checkout walkthrough</a> or <a href={ROUTES.faq}>FAQ</a> if you need setup help.
         </p>
       </Prose>
 
       <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {catalogProducts.map((product) => (
           <CatalogCard
-            label={cardLabel(product)}
             title={product.title}
             href={productPath(product.slug)}
             buyUrl={product.buyUrl}
-            features={product.features}
-            more={product.more}
-            icon={cardIcon(product)}
-            badge={product.badge}
-            variant={product.variant}
+            desc={product.desc}
             buyLabel={`Checkout ${actionName(product)}`}
             viewLabel="View details"
           />

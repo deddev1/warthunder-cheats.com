@@ -11,7 +11,7 @@ Before finishing any site, content, SEO, product, or checkout change on this pro
 
 1. **Whole build clean** — `npm run build` succeeds; no build errors, no broken pages in the route list.
 2. **sitemap.xml and robots.txt** — live in `dist/` (and `public/robots.txt`); sitemap lists every public indexable page; robots points at the sitemap and does not block important pages.
-3. **Store / affiliate links** — Buy / Get access CTAs go to `https://zadeyo.com/go/QRH?to=%2Fproducts%2Ffc-27`; HWID Spoofer buy goes to `...%2Fproducts%2Fhwid-spoofer`; no wrong-game checkout destinations.
+3. **Store / affiliate links** — Buy / Get access CTAs go to `https://zadeyo.com/go/QRH?to=%2Fproducts%2Fea-sports-fc-27`; HWID Spoofer buy goes to `...%2Fproducts%2Fhwid-spoofer`; no wrong-game checkout destinations.
 4. **Original copy** — no placeholder text (`lorem`, `TODO`, `FIXME`, `placeholder`, `Coming soon` as fake content); no leftover Rust / Facepunch / Dota / wrong-domain user-facing copy.
 5. **Pages load desktop + mobile** — layouts remain usable; no hero/nav/footer broken at common breakpoints; video/player controls remain usable.
 6. **Unique SEO per page** — every route has its own title, meta description, and exactly one `h1` (via `pageSeo` / product / blog data).

@@ -1,6 +1,5 @@
 ---
 import type { ProductPage } from '../../data/products';
-import Icon from '../icons/Icon.astro';
 import { Badge } from '@/components/starwind/badge';
 
 interface Props {
@@ -16,11 +15,11 @@ const { product } = Astro.props;
     {product.variant === 'popular' && <Badge>Popular</Badge>}
     {product.variant === 'limited' && <Badge variant="warning">Limited</Badge>}
     <Badge variant="outline">FC 27</Badge>
-    <Badge variant="outline" class="gap-1.5">
-      <Icon name="shieldCheck" size={13} class="icon-app--primary" />
-      Undetected
-    </Badge>
   </div>
   <h1 class="max-w-3xl text-3xl font-bold normal-case leading-tight md:text-4xl">{product.title}</h1>
   <p class="max-w-2xl text-lg leading-relaxed text-muted-foreground">{product.subtitle || product.desc}</p>
+  <p class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+    <a href="/products/fc27-cheats/" class="text-primary hover:underline">All FC 27 products</a>
+    <a href="/blog/buy-guide/" class="text-primary hover:underline">How to buy &amp; activate</a>
+  </p>
 </header>

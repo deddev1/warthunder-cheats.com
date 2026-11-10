@@ -1,6 +1,6 @@
 import { CHECKOUT_URLS } from './checkout-redirects.mjs';
 
-/** Zadeyo affiliate checkout destinations. */
+/** Affiliate checkout destinations. */
 export const CHECKOUT = CHECKOUT_URLS;
 
 export type CheckoutProduct = keyof typeof CHECKOUT;
@@ -17,17 +17,17 @@ export const CHECKOUT_SLUG_TO_PRODUCT = Object.fromEntries(
   Object.entries(CHECKOUT_SLUGS).map(([product, slug]) => [slug, product as CheckoutProduct]),
 ) as Record<string, CheckoutProduct>;
 
-/** Zadeyo affiliate URL for visible “Get access” / buy CTAs (same tab — no target=_blank). */
+/** Affiliate URL for visible “Get access” / buy CTAs (same tab — no target=_blank). */
 export function checkoutPath(product: CheckoutProduct = 'fc27'): string {
   return CHECKOUT[product];
 }
 
-/** Internal /go/* path (blog links, bookmarks); real 302 to Zadeyo via _redirects / serve / middleware. */
+/** Internal /go/* path (blog links, bookmarks); real 302 via _redirects / serve / middleware. */
 export function checkoutRedirectPath(product: CheckoutProduct = 'fc27'): string {
   return `/go/${CHECKOUT_SLUGS[product]}/`;
 }
 
-/** External Zadeyo affiliate URL (302 target for /go/*). */
+/** External affiliate URL (302 target for /go/*). */
 export function checkoutExternalUrl(product: CheckoutProduct = 'fc27'): string {
   return CHECKOUT[product];
 }

@@ -1,7 +1,5 @@
 ---
-import type { IconName } from './icons/types';
 import Icon from './icons/Icon.astro';
-import { Badge } from '@/components/starwind/badge';
 import { Button } from '@/components/starwind/button';
 import {
   Card,
@@ -13,45 +11,26 @@ import {
 import { externalLinkProps } from '../utils/externalLink';
 
 interface Props {
-  label: string;
   title: string;
   href: string;
   buyUrl: string;
-  features: string[];
-  more?: number;
-  icon?: IconName;
-  badge?: string;
-  variant?: 'essential' | 'popular' | 'limited';
+  desc?: string;
   buyLabel?: string;
   viewLabel?: string;
-  maxFeatures?: number;
   class?: string;
 }
 
 const {
-  label,
   title,
   href,
   buyUrl,
-  features,
-  more = 0,
-  icon = 'package',
-  badge,
-  variant,
+  desc,
   buyLabel = 'Get access',
   viewLabel = 'View details',
-  maxFeatures = 10,
   class: className,
 } = Astro.props;
 
 const buyLink = externalLinkProps(buyUrl);
-const displayFeatures = features.slice(0, maxFeatures);
-
-const statusBadgeIcon = (text: string): IconName => {
-  if (/limited/i.test(text)) return 'alert';
-  if (/private/i.test(label)) return 'shieldCheck';
-  return 'circleCheck';
-};
 ---
 
 <Card class:list={['group flex h-full flex-col transition-shadow hover:shadow-md', className]}>
@@ -59,57 +38,14 @@ const statusBadgeIcon = (text: string): IconName => {
     <CardTitle class="text-lg normal-case leading-snug">
       <a href={href} class="hover:text-primary">{title}</a>
     </CardTitle>
-    <div class="catalog-card__badges flex flex-wrap items-center gap-1.5">
-      <Badge tone="primary" appearance="outline" size="sm" class="catalog-card__badge gap-1">
-        <Icon name={icon} size={12} class="shrink-0" />
-        {label}
-      </Badge>
-      {
-        badge && (
-          <Badge
-            tone={/limited/i.test(badge) ? 'warning' : 'success'}
-            appearance="soft"
-            size="sm"
-            class="catalog-card__badge gap-1"
-          >
-            <Icon name={statusBadgeIcon(badge)} size={12} class="shrink-0" />
-            {badge}
-          </Badge>
-        )
-      }
-      {variant === 'popular' && (
-        <Badge tone="primary" appearance="solid" size="sm" class="catalog-card__badge gap-1">
-          <Icon name="zap" size={12} class="shrink-0" />
-          Popular
-        </Badge>
-      )}
-      {
-        variant === 'limited' && !badge?.toLowerCase().includes('limited') && (
-          <Badge tone="warning" appearance="outline" size="sm" class="catalog-card__badge gap-1">
-            <Icon name="alert" size={12} class="shrink-0" />
-            Limited
-          </Badge>
-        )
-      }
-    </div>
   </CardHeader>
-  <CardContent class="flex-1">
-    <ul class="catalog-card__features">
-      {displayFeatures.map((feature) => (
-        <li class="catalog-card__feature">
-          <span class="catalog-card__feature-icon" aria-hidden="true">
-            <Icon name="check" size={13} class="icon-app--primary" />
-          </span>
-          <span class="catalog-card__feature-text">{feature}</span>
-        </li>
-      ))}
-      {more > 0 && (
-        <li class="catalog-card__feature catalog-card__feature--more">
-          +{more} more features
-        </li>
-      )}
-    </ul>
-  </CardContent>
+  {
+    desc && (
+      <CardContent class="flex-1">
+        <p class="text-sm leading-relaxed text-muted-foreground">{desc}</p>
+      </CardContent>
+    )
+  }
   <CardFooter class="mt-auto !flex !flex-col !items-stretch gap-2">
     <Button
       as="a"

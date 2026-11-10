@@ -1,8 +1,7 @@
 ---
 import '../styles/product-cheat-page.css';
 import { t } from '../i18n';
-import { productPages } from '../data/products';
-import { cheatTierIcons, productCategoryIcons } from '../data/sectionIcons';
+import { catalogProducts } from '../data/products';
 import SectionHeader from './SectionHeader.astro';
 import CatalogCard from './CatalogCard.astro';
 import { productPath } from '../utils/path';
@@ -16,26 +15,11 @@ import {
 
 const s = t.products;
 
-function cardIcon(product: (typeof productPages)[number]) {
-  if (product.kind === 'tier') {
-    return cheatTierIcons[product.name] ?? 'crosshair';
-  }
-  return productCategoryIcons[product.category ?? ''] ?? 'package';
-}
-
-function cardLabel(product: (typeof productPages)[number]) {
-  if (product.kind === 'tier') {
-    return product.tier ?? product.name;
-  }
-  return product.category ?? 'Utility';
-}
-
 /** Short CTA labels that fit narrow carousel cards without overflow. */
-function actionName(product: (typeof productPages)[number]) {
-  if (product.kind === 'tier') return product.name;
+function actionName(product: (typeof catalogProducts)[number]) {
+  if (product.slug === 'elite') return 'Cheats';
   if (product.slug === 'hwid-spoofer') return 'HWID';
   if (product.slug === 'ugc') return 'UGC';
-  if (product.slug === 'unlock-all') return 'Unlock All';
   return product.category ?? product.slug;
 }
 ---
@@ -56,22 +40,16 @@ function actionName(product: (typeof productPages)[number]) {
           <div class="products-carousel__viewport">
             <CarouselContent class="products-carousel__track">
               {
-                productPages.map((product) => (
+                catalogProducts.map((product) => (
                   <CarouselItem class="products-carousel__slide">
                     <CatalogCard
                       class="catalog-card--carousel"
-                      label={cardLabel(product)}
                       title={product.title}
                       href={productPath(product.slug)}
                       buyUrl={product.buyUrl}
-                      features={product.features}
-                      more={product.more}
-                      icon={cardIcon(product)}
-                      badge={product.badge}
-                      variant={product.variant}
+                      desc={product.desc}
                       buyLabel={`Checkout ${actionName(product)}`}
                       viewLabel="View details"
-                      maxFeatures={5}
                     />
                   </CarouselItem>
                 ))

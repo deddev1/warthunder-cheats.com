@@ -1,7 +1,6 @@
 ---
 import { t } from '../i18n';
 import { cheatPages } from '../data/products';
-import { cheatTierIcons } from '../data/sectionIcons';
 import SectionHeader from './SectionHeader.astro';
 import CatalogCard from './CatalogCard.astro';
 import { cheatPath } from '../utils/path';
@@ -14,17 +13,12 @@ const s = t.cheats;
     <SectionHeader eyebrow={s.eyebrow} title={s.title} desc={s.subtitle} titleId="cheats-title" headingLevel="h2" centered />
 
     <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {cheatPages.map((cheat, i) => (
+      {cheatPages.map((cheat) => (
         <CatalogCard
-          label={cheat.tier ?? cheat.name}
           title={cheat.title}
           href={cheatPath(cheat.slug)}
           buyUrl={cheat.buyUrl}
-          features={cheat.features}
-          more={cheat.more}
-          icon={cheatTierIcons[cheat.name] ?? 'crosshair'}
-          badge={cheat.badge}
-          variant={cheat.variant}
+          desc={cheat.desc}
           buyLabel={`Checkout ${cheat.name}`}
           viewLabel="View details"
         />

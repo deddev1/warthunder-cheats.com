@@ -1,4 +1,4 @@
-/** Checkout destinations keyed by internal product id (Zadeyo affiliate go links). */
+/** Checkout destinations keyed by internal product id (affiliate go links). */
 export const CHECKOUT_URLS = {
   fc27: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fea-sports-fc-27',
   skinChanger: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fskin-changer',

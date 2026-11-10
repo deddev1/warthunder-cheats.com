@@ -28,7 +28,7 @@ export function websiteSchema() {
     url: `${SITE_ORIGIN}/`,
     inLanguage: 'en-US',
     description:
-      'Shop undetected FC 27 cheats for Windows—player ESP, opponent radar, soft aim, shot assist and stream-proof overlays at fc27-cheats.net.',
+      'Shop FC 27 cheats for Windows—player ESP, opponent radar, soft aim, shot assist and stream-proof overlays. Always check the live status banner after EA patches at fc27-cheats.net.',
   };
 }
 
@@ -88,16 +88,36 @@ export function webPageSchema(input: { name: string; description: string; url: s
   };
 }
 
-export function faqPageSchema(items: FaqItem[]) {
+function plainTextAnswer(html: string): string {
+  return html
+    .replace(/<a\b[^>]*>([\s\S]*?)<\/a>/gi, '$1')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** Cap FAQ rich-result entities — Google recommends a focused set, not every UI FAQ. */
+export const FAQ_SCHEMA_LIMIT = 8;
+
+export function faqPageSchema(
+  items: Array<Pick<FaqItem, 'q' | 'a'>>,
+  options: { limit?: number } = {},
+) {
+  const limit = options.limit ?? FAQ_SCHEMA_LIMIT;
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: items.map((item) => ({
+    mainEntity: items.slice(0, limit).map((item) => ({
       '@type': 'Question',
       name: item.q,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: item.a,
+        text: plainTextAnswer(item.a),
       },
     })),
   };
@@ -151,28 +171,41 @@ export function productSchema(input: {
   offerUrl: string;
   image?: string;
   sku?: string;
+  /** USD starting price — required for Product rich results; omit Offer when unknown. */
+  priceUsd?: number;
+  priceCurrency?: string;
 }) {
+  const productUrl = canonicalUrl(input.url);
+  const hasPrice = typeof input.priceUsd === 'number' && Number.isFinite(input.priceUsd);
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: input.name,
     description: input.description,
+    url: productUrl,
     sku: input.sku ?? input.url.replace(/\//g, '-'),
     brand: {
       '@type': 'Brand',
       name: 'FC27 Cheats',
     },
     ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
-    // Offer URL only — never invent price/plan; checkout decides what is sold.
-    offers: {
-      '@type': 'Offer',
-      url: offerUrl(input.offerUrl),
-      availability: 'https://schema.org/InStock',
-      seller: {
-        '@type': 'Organization',
-        name: 'FC27 Cheats',
-      },
-    },
+    // Only emit Offer when we have a real price — priceless Offers fail Product rich-result eligibility.
+    ...(hasPrice
+      ? {
+          offers: {
+            '@type': 'Offer',
+            url: offerUrl(input.offerUrl),
+            priceCurrency: input.priceCurrency ?? 'USD',
+            price: input.priceUsd!.toFixed(2),
+            availability: 'https://schema.org/InStock',
+            seller: {
+              '@type': 'Organization',
+              name: 'FC27 Cheats',
+            },
+          },
+        }
+      : {}),
   };
 }
 

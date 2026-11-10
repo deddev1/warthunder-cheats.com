@@ -1,9 +1,15 @@
 import type { SitemapItem } from '@astrojs/sitemap';
 import { blogPosts } from '../data/blog';
+import { CATALOG_SLUGS } from '../data/products';
+import { PRODUCT_BASE } from './site';
 import { parseBlogDate } from '../utils/schema';
 
 const blogLastmod = new Map(
   blogPosts.map((post) => [`/blog/${post.slug}/`, parseBlogDate(post.date)] as const),
+);
+
+const catalogProductPaths = new Set(
+  CATALOG_SLUGS.map((slug) => `${PRODUCT_BASE}${slug}/`),
 );
 
 function pathnameFromUrl(url: string): string {
@@ -19,6 +25,16 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
     path.startsWith('/go/') ||
     path.startsWith('/forum/') ||
     path.includes('/rss.xml')
+  ) {
+    return undefined;
+  }
+
+  // Keep hub + catalog products; drop legacy Lite / Pro / Unlock All detail URLs.
+  if (
+    path.startsWith(PRODUCT_BASE) &&
+    path !== PRODUCT_BASE &&
+    path !== `${PRODUCT_BASE}utilities/` &&
+    !catalogProductPaths.has(path)
   ) {
     return undefined;
   }

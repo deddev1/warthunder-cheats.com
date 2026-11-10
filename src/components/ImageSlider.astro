@@ -76,8 +76,8 @@ const imageWidths = isHero ? HERO_IMAGE_WIDTHS : undefined;
     </CarouselContent>
     {!isHero && images.length > 1 && (
       <>
-        <CarouselPrevious class="left-2" />
-        <CarouselNext class="right-2" />
+        <CarouselPrevious class="!left-2 !top-1/2 z-10 bg-card/90 shadow-sm" />
+        <CarouselNext class="!right-2 !top-1/2 z-10 bg-card/90 shadow-sm" />
       </>
     )}
   </Carousel>

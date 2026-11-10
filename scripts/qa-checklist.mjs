@@ -100,14 +100,14 @@ if (!sitemapFile) {
 // 3) Affiliate / store links
 const checkoutFile = path.join(src, 'config/checkout-redirects.mjs');
 const redirectsFile = path.join(root, 'public/_redirects');
-const expectedCheats = 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Ffc-27';
+const expectedCheats = 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fea-sports-fc-27';
 const expectedHwid = 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fhwid-spoofer';
 if (fs.existsSync(checkoutFile)) {
   const c = read(checkoutFile);
   if (!c.includes(expectedCheats)) fail('Store/affiliate links', 'fc27 checkout URL wrong');
   else if (!c.includes(expectedHwid)) fail('Store/affiliate links', 'hwid checkout URL wrong');
   else if (!c.includes("'/go/warthunder'")) fail('Store/affiliate links', 'missing /go/warthunder legacy checkout');
-  else ok('Checkout redirect config targets fc-27 + hwid-spoofer + /go/warthunder');
+  else ok('Checkout redirect config targets ea-sports-fc-27 + hwid-spoofer + /go/warthunder');
 } else {
   fail('Store/affiliate links', 'checkout-redirects.mjs missing');
 }
@@ -118,7 +118,7 @@ if (fs.existsSync(redirectsFile)) {
     fail('Store/affiliate links', '_redirects must not use absolute source URLs (CF Workers)');
   } else if (ruleLines.length > 100) {
     fail('Store/affiliate links', `_redirects has ${ruleLines.length} rules (CF max 100)`);
-  } else if (!r.includes('%2Fproducts%2Ffc-27')) fail('Store/affiliate links', '_redirects missing fc-27');
+  } else if (!r.includes('%2Fproducts%2Fea-sports-fc-27')) fail('Store/affiliate links', '_redirects missing ea-sports-fc-27');
   else if (!r.includes('%2Fproducts%2Fhwid-spoofer')) fail('Store/affiliate links', '_redirects missing hwid');
   else if (!r.includes('/cheats/lite/ /products/fc27-cheats/lite/ 301')) {
     fail('Store/affiliate links', '_redirects lite must 301 to tier page');
@@ -293,18 +293,20 @@ if (fs.existsSync(homeHtml)) {
   const home = read(homeHtml);
   const title = (home.match(/<title[^>]*>([^<]*)<\/title>/i) || [, ''])[1];
   const h1 = (home.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [, ''])[1].replace(/<[^>]+>/g, '').trim();
-  if (!title.includes('FC27 Cheats')) fail('Head query SEO', `homepage title missing phrase: ${title}`);
-  else if (!h1.includes('FC27 Cheats')) fail('Head query SEO', `homepage H1 missing phrase: ${h1}`);
-  else ok('Homepage title + H1 contain FC27 Cheats');
+  const hasBrand = (s) => /FC\s?27\s+Cheats/i.test(s);
+  if (!hasBrand(title)) fail('Head query SEO', `homepage title missing FC 27 Cheats brand: ${title}`);
+  else if (!hasBrand(h1)) fail('Head query SEO', `homepage H1 missing FC 27 Cheats brand: ${h1}`);
+  else ok('Homepage title + H1 contain FC 27 Cheats');
 }
 const hubHtml = path.join(dist, 'products', 'fc27-cheats', 'index.html');
 if (fs.existsSync(hubHtml)) {
   const hub = read(hubHtml);
   const title = (hub.match(/<title[^>]*>([^<]*)<\/title>/i) || [, ''])[1];
   const h1 = (hub.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [, ''])[1].replace(/<[^>]+>/g, '').trim();
-  if (!title.includes('FC27 Cheats')) fail('Head query SEO', `products hub title missing phrase: ${title}`);
-  else if (!h1.includes('FC27 Cheats')) fail('Head query SEO', `products hub H1 missing phrase: ${h1}`);
-  else ok('Products hub title + H1 contain FC27 Cheats');
+  const hasBrand = (s) => /FC\s?27\s+Cheats/i.test(s);
+  if (!hasBrand(title)) fail('Head query SEO', `products hub title missing FC 27 Cheats brand: ${title}`);
+  else if (!hasBrand(h1)) fail('Head query SEO', `products hub H1 missing FC 27 Cheats brand: ${h1}`);
+  else ok('Products hub title + H1 contain FC 27 Cheats');
 }
 const sitemap0 = path.join(dist, 'sitemap-0.xml');
 if (fs.existsSync(sitemap0)) {

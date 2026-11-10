@@ -21,7 +21,9 @@ import {
   TableRow,
 } from '@/components/starwind/table';
 
-const utilities = productPages.filter((p) => p.kind === 'utility');
+const utilities = productPages.filter(
+  (p) => p.kind === 'utility' && (p.slug === 'hwid-spoofer' || p.slug === 'ugc'),
+);
 const seo = resolvePageSeo('/products/fc27-cheats/utilities/');
 const breadcrumbs = [
   { name: 'Home', path: '/' },
@@ -65,18 +67,15 @@ const utilityUseCases: Record<string, string> = {
         <h1 class="text-3xl font-bold normal-case md:text-4xl">Buy FC 27 Cheat Utilities — HWID Spoofer & UGC</h1>
         <p class="text-lg text-muted-foreground">
           Cheat utility comparison for FC 27 on Windows—match HWID Spoofer or UGC recovery to your ban or appeal goal before checkout.
-          For kit unlock and Unlock All, see the{' '}
-          <a href="/products/fc27-cheats/unlock-all/" class="text-primary underline-offset-2 hover:underline">Unlock All product page</a>.
         </p>
       </header>
 
       <Prose class="mt-8 max-w-none text-muted-foreground">
-        <h2>When to buy HWID Spoofer or UGC instead of a tier</h2>
+        <h2>When to buy HWID Spoofer or UGC instead of cheats</h2>
         <p>
           HWID Spoofer helps when EA anti-cheat flagged your machine. UGC tools organize appeals when Steam, EA App or
-          account access is restricted. Cosmetic previews live on the{' '}
-          <a href="/products/fc27-cheats/unlock-all/">Unlock All / kit unlock</a> page. Combat tiers (Lite, Pro, Elite)
-          are on the <a href={productHub.path}>products hub</a> when you need player ESP, opponent radar or soft aim.
+          account access is restricted. FC 27 Cheats (ESP, soft aim, UT helpers) live on the{' '}
+          <a href={productHub.path}>products hub</a>.
         </p>
         <h3>How checkout works</h3>
         <p>

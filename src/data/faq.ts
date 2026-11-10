@@ -104,7 +104,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqProductsPage',
     q: 'Where are products and utilities listed?',
-    a: `${productsHub} lists cheat tiers, ${link('HWID Spoofer in the catalog', productPath('hwid-spoofer'))}, ${link('UGC in the catalog', productPath('ugc'))}, and ${link('Kit unlock in the catalog', productPath('unlock-all'))} with feature lists and checkout via our partner.`,
+    a: `${productsHub} lists ${link('FC 27 Cheats in the catalog', productPath('elite'))}, ${link('HWID Spoofer in the catalog', productPath('hwid-spoofer'))}, and ${link('UGC in the catalog', productPath('ugc'))} with feature lists and checkout via our partner.`,
   },
   {
     id: 'what-is-esp',
@@ -180,7 +180,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'safety',
     icon: 'faqUndetected',
     q: 'Are undetected FC 27 cheats guaranteed?',
-    a: a('No. Undetected is the current status on the product page—not a permanent guarantee. Stop if the build shows updating, testing or detected, and never play on your main account while a status is unclear.'),
+    a: a('No. Undetected is a point-in-time label on the homepage status banner—not a permanent guarantee. Re-check after every EA or FC 27 patch. Stop if status shows updating, testing or detected, and never play on your main account while status is unclear.'),
   },
   {
     id: 'esp-safer',
@@ -415,7 +415,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       topic: 'blog',
       icon: 'faqBlogGuideStart',
       q: 'Should I use practice-mode commands in live Ultimate Team or Clubs?',
-      a: a('No. Test flight and custom-battle console tools only work when you host or have host tools in a Kick-Off with friends. Live matchmaking needs separate FC 27 cheats from fc27-cheats.net tiers—and carries ban risk.'),
+      a: a('No. Practice-mode and offline trainer tools only work when you host Kick-Off or Career offline. Live Ultimate Team, Rivals and Clubs need separate FC 27 cheats from fc27-cheats.net tiers—and carries ban risk.'),
     },
     {
       id: 'blog-guide-tier',

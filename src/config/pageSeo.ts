@@ -15,9 +15,9 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Buy undetected FC 27 cheats for Ultimate Team, Rivals and Pro Clubs—player ESP, soft aim, shot assist and stream-proof overlays. Compare Lite, Pro and Elite.',
   },
   '/products/fc27-cheats/': {
-    title: 'Buy FC 27 Cheats | Undetected Lite Pro Elite',
+    title: 'Buy FC 27 Cheats, Spoofer & UGC',
     description:
-      'Buy undetected FC 27 cheats for Steam or EA App—compare Lite, Pro and Elite plus HWID, UGC and Unlock All. Module lists, buy guides and secure checkout.',
+      'Shop FC 27 cheats, HWID Spoofer and UGC recovery for Steam or EA App PC—three products with module lists, buy guides and secure checkout.',
   },
   '/products/fc27-cheats/lite/': {
     title: 'Buy FC 27 Lite Cheats | Undetected ESP & Radar',
@@ -90,7 +90,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'FC 27 cheats Discord support for loader errors, HWID Spoofer setup and checkout help. Open a ticket with your order ID, issue type and screenshots.',
   },
   '/privacy/': {
-    title: 'Privacy Policy | Data, Cookies & Your Rights',
+    title: 'FC27 Cheats Privacy Policy | Data & Cookies',
     description:
       'Privacy policy for fc27-cheats.net—cookies, analytics, Discord ticket data, checkout partners, retention and your rights when browsing or purchasing.',
   },

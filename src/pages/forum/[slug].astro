@@ -22,7 +22,7 @@ const relatedPosts = [
 ---
 
 <BaseLayout
-  title={pageTitle(post.title)}
+  title={pageTitle(`Forum: ${post.title}`)}
   description={post.excerpt}
   noindex={true}
   jsonLd={[breadcrumbSchema(breadcrumbs)]}

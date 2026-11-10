@@ -1,9 +1,16 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getAllProductSlugs, getProductPage, productHub } from '../../../data/products';
+import {
+  getAllProductSlugs,
+  getProductPage,
+  isCatalogProductSlug,
+  productHub,
+} from '../../../data/products';
 import { pageTitle } from '../../../config/seo';
 import { getPageSeoEntry } from '../../../config/pageSeo';
-import { breadcrumbSchema, productSchema } from '../../../utils/schema';
+import { breadcrumbSchema, faqPageSchema, productSchema } from '../../../utils/schema';
+import { getProductFaqs } from '../../../data/faq';
+import { getProductFromPriceUsd } from '../../../data/productPricing';
 import ProductDetail from '../../../components/ProductDetail.astro';
 
 export function getStaticPaths() {
@@ -21,6 +28,8 @@ const pagePath = `${productHub.path}${product.slug}/`;
 const seoEntry = getPageSeoEntry(pagePath);
 const metaTitle = seoEntry?.title ?? pageTitle(product.title);
 const metaDescription = seoEntry?.description ?? product.desc;
+const inCatalog = isCatalogProductSlug(product.slug);
+const productFaqs = inCatalog ? getProductFaqs(product.slug, product.kind) : [];
 const breadcrumbs = [
   { name: 'Home', path: '/' },
   { name: 'Products', path: productHub.path },
@@ -31,17 +40,28 @@ const breadcrumbs = [
 <BaseLayout
   title={metaTitle}
   description={metaDescription}
-  jsonLd={[
-    productSchema({
-      name: product.title,
-      description: product.desc,
-      url: pagePath,
-      offerUrl: product.buyUrl,
-      image: product.images[0]?.src,
-      sku: product.slug,
-    }),
-    breadcrumbSchema(breadcrumbs),
-  ]}
+  noindex={!inCatalog}
+  ogImage={product.images[0]?.src}
+  ogImageAlt={product.images[0]?.alt ?? product.title}
+  ogImageWidth={960}
+  ogImageHeight={540}
+  jsonLd={
+    inCatalog
+      ? [
+          productSchema({
+            name: product.title,
+            description: product.desc,
+            url: pagePath,
+            offerUrl: product.buyUrl,
+            image: product.images[0]?.src,
+            sku: product.slug,
+            priceUsd: getProductFromPriceUsd(product.slug),
+          }),
+          breadcrumbSchema(breadcrumbs),
+          ...(productFaqs.length > 0 ? [faqPageSchema(productFaqs, { limit: 8 })] : []),
+        ]
+      : [breadcrumbSchema(breadcrumbs)]
+  }
 >
   <ProductDetail product={product} breadcrumbs={breadcrumbs} />
 </BaseLayout>

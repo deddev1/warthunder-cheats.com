@@ -596,6 +596,22 @@ export const productPages: ProductPage[] = [...buildTierPages(), ...buildUtility
 
 export const cheatPages = productPages.filter((p) => p.kind === 'tier');
 
+/** Homepage + hub cards only — one cheat, one spoofer, one UGC. */
+export const CATALOG_SLUGS = ['elite', 'hwid-spoofer', 'ugc'] as const;
+
+export type CatalogSlug = (typeof CATALOG_SLUGS)[number];
+
+export const catalogProducts: ProductPage[] = CATALOG_SLUGS.map((slug) => {
+  const page = productPages.find((p) => p.slug === slug);
+  if (!page) throw new Error(`Missing catalog product: ${slug}`);
+  return page;
+});
+
+/** Legacy detail pages kept for redirects/deep links — noindex + out of sitemap. */
+export function isCatalogProductSlug(slug: string): slug is CatalogSlug {
+  return (CATALOG_SLUGS as readonly string[]).includes(slug);
+}
+
 export function getProductPage(slug: string) {
   return productPages.find((p) => p.slug === slug);
 }
@@ -634,6 +650,6 @@ export const productHub = {
   title: t.products.title,
   subtitle: t.products.subtitle,
   description:
-    'Products hub for EA App or Steam PC—compare Lite, Pro and Elite tiers plus HWID Spoofer, UGC and Unlock All utilities with secure checkout.',
+    'Shop FC 27 cheats, HWID Spoofer and UGC recovery for EA App or Steam PC—three clear products with module lists and secure checkout.',
   buyUrl: checkoutPath('fc27'),
 };

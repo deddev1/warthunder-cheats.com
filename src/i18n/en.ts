@@ -23,10 +23,10 @@ export const en: Translations = {
   ],
   hero: {
     status: 'FC 27 — EA build online',
-    eyebrow: 'Undetected FC27 Cheats',
+    eyebrow: 'FC27 Cheats · check live status',
     title: 'Buy Undetected FC 27 Cheats for Ultimate Team & Clubs',
     subtitle:
-      'Shop undetected EA FC 27 cheats for Steam and EA App PC—player ESP, soft aim, shot assist and UT tools for Rivals, Champions and Pro Clubs. Compare Lite, Pro and Elite, then checkout for instant loader access.',
+      'Shop EA FC 27 cheats for Steam and EA App PC—player ESP, soft aim, shot assist and UT tools for Rivals, Champions and Pro Clubs. Undetected means the current status banner—re-check after every EA patch, then compare Lite, Pro and Elite.',
     ctaPrimary: 'Get access',
     ctaPrimaryHref: productBase,
     ctaDiscord: 'Shop products',
@@ -209,7 +209,7 @@ export const en: Translations = {
       {
         step: '02',
         title: 'Run the loader',
-        desc: 'Download the encrypted loader, paste your key, and let the guided installer verify your environment. Built to stay clean and undetected.',
+        desc: 'Download the encrypted loader, paste your key, and let the guided installer verify your environment. Confirm the live status banner after every EA patch.',
         linkLabel: 'Guided, 60-second install',
         href: '/blog/use-codes/',
       },
@@ -231,7 +231,7 @@ export const en: Translations = {
   cheats: {
     eyebrow: 'Cheat tiers',
     title: 'Buy Undetected FC 27 Cheats — Lite, Pro & Elite',
-    subtitle: 'Compare Lite ESP, Pro soft aim, and Elite UT farm helpers—same undetected loader, priced by module set for Ultimate Team and Clubs.',
+    subtitle: 'Compare Lite ESP, Pro soft aim, and Elite UT farm helpers—same loader stack for Ultimate Team and Clubs. Confirm the live status banner before every session.',
     viewAll: 'Compare all tiers',
     explore: 'Get access',
     items: [
@@ -258,11 +258,11 @@ export const en: Translations = {
         variant: 'popular',
       },
       {
-        badge: 'Limited slots',
-        tier: 'Private',
+        badge: 'FC 27 Cheats',
+        tier: 'Cheats',
         name: 'Elite',
-        title: 'Buy Undetected FC 27 Elite Cheats — Full UT Suite',
-        desc: 'Elite tier is the full private suite—shot assist, player ESP, opponent radar, coin/SBC farm helpers, kit unlock and priority EA patch delivery for Windows PC.',
+        title: 'Buy Undetected FC 27 Cheats — ESP Soft Aim & UT',
+        desc: 'The full FC 27 cheat suite—shot assist, player ESP, opponent radar, coin/SBC farm helpers, kit unlock and priority EA patch delivery for Windows PC.',
         features: ['Shot assist / Soft Aim', 'Finishing tuning', 'Player & opponent ESP', 'Coin/SBC farm helpers', 'Kit unlock', 'Priority patch queue'],
         more: 42,
         href: `${productBase}elite/`,
@@ -272,9 +272,9 @@ export const en: Translations = {
   },
   products: {
     eyebrow: 'Products',
-    title: 'Buy FC 27 Cheats — Undetected Lite, Pro & Elite',
+    title: 'Buy FC 27 Cheats, Spoofer & UGC',
     subtitle:
-      'Shop undetected FC 27 cheats for Windows 10/11—browse Lite, Pro and Elite plus HWID Spoofer, UGC and Unlock All with module lists and secure checkout.',
+      'Three products for Windows PC—undetected FC 27 cheats, HWID Spoofer after hardware flags, and UGC account recovery. Module lists and secure checkout on each page.',
     viewAll: 'Shop all products',
     get: 'Get access',
     explore: 'Get access',
@@ -315,7 +315,7 @@ export const en: Translations = {
     eyebrow: 'Blog',
     title: 'FC 27 Cheat Guides — Buy Undetected ESP & Soft Aim',
     subtitle: 'High-intent buy guides for undetected FC 27 cheats—tier picks, ESP, soft aim, HWID recovery and checkout walkthroughs.',
-    latestTitle: 'Buy Undetected FC 27 Cheats — Guides & Setup',
+    latestTitle: 'FC 27 Cheat Guides — Buy ESP Soft Aim & Setup',
     latestSubtitle: 'Module explainers and tier comparisons to help you pick Lite, Pro or Elite and set up ESP, soft aim and utilities.',
     filterAll: 'All articles',
     sortLabel: 'Sort by',
@@ -736,7 +736,7 @@ export const en: Translations = {
     ],
     ticketTitle: 'Include in your Discord ticket',
     ticketItems: [
-      { title: 'Order ID', desc: 'Your Zadeyo / checkout order ID from the purchase confirmation.' },
+      { title: 'Order ID', desc: 'Your checkout order ID from the purchase confirmation.' },
       { title: 'Issue type', desc: 'Loader, HWID Spoofer, kit unlock, or account access—say which one.' },
       { title: 'Error screenshot', desc: 'Exact error text or a screenshot from the loader or game.' },
     ],
@@ -774,7 +774,7 @@ export const en: Translations = {
       {
         num: '06',
         q: 'Where are products and utilities listed?',
-        a: 'Cheat tiers, HWID Spoofer, UGC and kit unlock live at fc27-cheats.net/products/fc27-cheats with feature lists and checkout via our partner.',
+        a: 'FC 27 Cheats, HWID Spoofer and UGC live at fc27-cheats.net/products/fc27-cheats with feature lists and checkout via our partner.',
       },
     ],
   },
@@ -783,7 +783,7 @@ export const en: Translations = {
     explore: 'Shop',
     exploreLinks: [
       { href: '/', label: 'What you can buy', ariaLabel: 'Features', scrollTarget: 'features' },
-      { href: '/products/fc27-cheats/elite/', label: 'Buy Elite FC 27 cheats', ariaLabel: 'Elite cheats' },
+      { href: '/products/fc27-cheats/elite/', label: 'Buy FC 27 cheats', ariaLabel: 'FC 27 cheats' },
       { href: '/products/fc27-cheats/', label: 'Shop all products', ariaLabel: 'Products' },
       { href: '/reviews/', label: 'Buyer reviews', ariaLabel: 'Reviews' },
       { href: '/blog/', label: 'Buy guides & tier tips', ariaLabel: 'Blog' },
@@ -871,7 +871,7 @@ export const en: Translations = {
         {
           heading: 'Information we do not sell',
           paragraphs: [
-            'We do not sell your personal information to data brokers. Affiliate checkout links (for example through our Zadeyo partner URLs) may use their own tracking when you complete a purchase on their domain—that processing is governed by the checkout provider’s policy, not this page.',
+            'We do not sell your personal information to data brokers. Affiliate checkout links may use their own tracking when you complete a purchase on the checkout domain—that processing is governed by the checkout provider’s policy, not this page.',
           ],
         },
         {
@@ -892,7 +892,7 @@ export const en: Translations = {
         {
           heading: 'Checkout and delivery partners',
           paragraphs: [
-            'Clicking Get access opens our partner checkout (Zadeyo) in the same browser tab to pay and receive portal credentials. Name, email, payment method, and fraud-prevention signals are handled by that provider.',
+            'Clicking Get access opens our secure checkout partner in the same browser tab to pay and receive portal credentials. Name, email, payment method, and fraud-prevention signals are handled by that provider.',
             'We may receive confirmation that a purchase completed (for example order ID and product tier) through support workflows you initiate—we do not host the payment form itself.',
           ],
         },

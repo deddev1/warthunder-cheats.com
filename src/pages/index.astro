@@ -7,7 +7,6 @@ import WhySetupSection from '../components/WhySetupSection.astro';
 import ProductsSection from '../components/ProductsSection.astro';
 import ContentSections from '../components/ContentSections.astro';
 import SeoRelatedLinks from '../components/SeoRelatedLinks.astro';
-import { t } from '../i18n';
 import { resolvePageSeo } from '../config/seo';
 import { faqPageSchema, organizationSchema, websiteSchema } from '../utils/schema';
 import { getLandingFaqs } from '../data/faq';
@@ -18,7 +17,18 @@ const homeFaqs = getLandingFaqs();
 <BaseLayout
   title={seo.title}
   description={seo.description}
-  jsonLd={[websiteSchema(), organizationSchema(), faqPageSchema(homeFaqs.map((f, i) => ({ num: String(i + 1).padStart(2, '0'), q: f.q, a: f.a.replace(/<[^>]+>/g, '') })))]}
+  jsonLd={[
+    websiteSchema(),
+    organizationSchema(),
+    faqPageSchema(
+      homeFaqs.map((f, i) => ({
+        num: String(i + 1).padStart(2, '0'),
+        q: f.q,
+        a: f.a,
+      })),
+      { limit: 8 },
+    ),
+  ]}
 >
   <link
     slot="head"
