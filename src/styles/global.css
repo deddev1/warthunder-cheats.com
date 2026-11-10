@@ -243,7 +243,7 @@ html.dark #why-us .why-compare-other-card :hover .icon-app {
   top: 1rem;
 }
 
-/* Navbar brand: gun icon → expands to “War Thunder Cheats” on hover */
+/* Navbar brand: gun icon → expands to “FC27 Cheats” on hover */
 .nav-brand {
   display: inline-flex;
   min-width: 0;
@@ -285,11 +285,12 @@ html.dark #why-us .why-compare-other-card :hover .icon-app {
   transform: rotate(-8deg);
 }
 
-.nav-brand__gun {
-  width: 3.15rem;
-  height: 1.65rem;
-  object-fit: contain;
+.nav-brand__football {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
   display: block;
+  border-radius: 999px;
 }
 
 .nav-brand__text {

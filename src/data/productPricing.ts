@@ -1,31 +1,27 @@
-export type ProductPlanId = 'monthly' | 'lifetime' | 'onetime';
+export type ProductPlanId = 'access';
 
 export interface ProductPlan {
   id: ProductPlanId;
   label: string;
-  priceUsd: number;
+  priceUsd?: number;
   priceNote: string;
 }
 
-const standardPlans: ProductPlan[] = [
-  { id: 'monthly', label: 'Monthly', priceUsd: 35, priceNote: 'USD / month' },
-  { id: 'lifetime', label: 'Lifetime', priceUsd: 150, priceNote: 'USD · one-time' },
-];
+/** Single checkout CTA — durations and prices live on Zadeyo, not on this site. */
+const accessPlan: ProductPlan = {
+  id: 'access',
+  label: 'Get access',
+  priceNote: 'Secure checkout · instant key delivery',
+};
 
-const ugcPlans: ProductPlan[] = [
-  { id: 'onetime', label: 'One-time access', priceUsd: 50, priceNote: 'USD · one-time' },
-];
-
-export function getProductPlans(productSlug: string): ProductPlan[] {
-  if (productSlug === 'ugc') return ugcPlans;
-  return standardPlans;
+export function getProductPlans(_productSlug: string): ProductPlan[] {
+  return [accessPlan];
 }
 
 export function formatPlanPrice(usd: number): string {
   return `$${usd}`;
 }
 
-export function checkoutUrlWithPlan(baseUrl: string, planId: ProductPlanId): string {
-  const separator = baseUrl.includes('?') ? '&' : '?';
-  return `${baseUrl}${separator}plan=${planId}`;
+export function checkoutUrlWithPlan(baseUrl: string, _planId?: ProductPlanId): string {
+  return baseUrl;
 }

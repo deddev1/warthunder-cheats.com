@@ -1,8 +1,6 @@
 ---
 import { t } from "../i18n";
-import { setupStepIcons } from "../data/sectionIcons";
 import Icon from "./icons/Icon.astro";
-import { Button } from "@/components/starwind/button";
 import {
   Card,
   CardContent,
@@ -27,7 +25,7 @@ const lastRowIndex = why.rows.length - 1;
     <div
       class="mt-14 hidden justify-center lg:flex"
       role="table"
-      aria-label="War Thunder Cheats compared with typical providers"
+      aria-label="FC27 Cheats compared with typical providers"
     >
       <div
         class="why-compare-layout grid w-full max-w-4xl grid-cols-[minmax(0,1fr)_9.25rem_9.25rem] items-stretch gap-x-10 xl:max-w-5xl xl:gap-x-14"
@@ -177,80 +175,6 @@ const lastRowIndex = why.rows.length - 1;
           </div>
         ))
       }
-    </div>
-  </div>
-</section>
-
-<section
-  id="setup-guide"
-  class="deployment-section border-y border-border py-14 md:py-16 lg:py-20"
-  aria-labelledby="setup-title"
->
-  <div class="mx-auto max-w-6xl px-5 md:px-6">
-    <header class="section-header section-header--wide section-header--center deployment-header">
-      <p class="section-header__eyebrow">{t.setup.eyebrow}</p>
-      <h2 id="setup-title" class="section-header__title">
-        {t.setup.titleLead}{" "}
-        <span
-          class="deployment-title-highlight relative inline-block whitespace-nowrap"
-        >
-          {t.setup.titleHighlight}
-          <span class="deployment-title-underline" aria-hidden="true"></span>
-        </span>
-      </h2>
-      <p class="section-header__subtitle">{t.setup.intro}</p>
-    </header>
-
-    <div class="deployment-steps mx-auto mt-10 max-w-5xl lg:mt-12">
-      <div class="deployment-steps-track" aria-hidden="true">
-        <div class="deployment-steps-line deployment-steps-line--base"></div>
-        <div class="deployment-steps-line deployment-steps-line--progress">
-        </div>
-      </div>
-      <ol class="deployment-steps-list list-none p-0">
-        {
-          t.setup.steps.map((step, i) => (
-            <li class="deployment-step">
-              <div
-                class="deployment-step-marker"
-                style={`--step-col: ${i + 1}`}
-              >
-                <Icon
-                  name={setupStepIcons[i] ?? "acqCheck"}
-                  size={20}
-                  class="deployment-step-marker-icon"
-                />
-              </div>
-              <h3 class="deployment-step-title" style={`--step-col: ${i + 1}`}>
-                {step.title}
-              </h3>
-            </li>
-          ))
-        }
-      </ol>
-    </div>
-
-    <div
-      class="deployment-footer mt-8 flex flex-col items-stretch gap-3 border-t border-border/80 pt-8 sm:flex-row sm:justify-start sm:gap-4 md:mt-10 lg:justify-center"
-    >
-      <Button
-        as="a"
-        href={t.setup.ctaPrimaryHref}
-        variant="primary"
-        size="lg"
-        class="deployment-cta-primary w-full rounded-xl sm:w-auto"
-      >
-        {t.setup.ctaPrimary}
-      </Button>
-      <Button
-        as="a"
-        href={t.setup.ctaSecondaryHref}
-        variant="secondary"
-        size="lg"
-        class="deployment-cta-secondary w-full rounded-xl sm:w-auto"
-      >
-        {t.setup.ctaSecondary}
-      </Button>
     </div>
   </div>
 </section>

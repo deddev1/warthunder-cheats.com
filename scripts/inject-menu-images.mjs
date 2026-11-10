@@ -8,23 +8,23 @@ const productsPath = path.join(root, 'src/data/products.ts');
 
 const menus = {
   menuVisuals: {
-    src: '/images/blog/wt-menu-visuals.png',
-    alt: 'War Thunder cheats Visuals menu showing tank ESP toggles for bounding box, fill box, name, distance slider to 200m, vehicle name and teammate filters',
-    caption: 'Visuals menu — tank ESP toggles',
+    src: '/images/blog/fc27-pro-clubs-menu-matchday.webp',
+    alt: 'FC 27 cheats Visuals menu showing player ESP toggles for bounding box, fill box, name, distance slider and teammate filters',
+    caption: 'Visuals menu — player ESP toggles',
   },
   menuWorld: {
-    src: '/images/blog/wt-menu-world.png',
-    alt: 'War Thunder cheats World menu with World ESP and Show Distance toggles on and World Distance slider set to 150m',
+    src: '/images/blog/fc27-utils-menu.webp',
+    alt: 'FC 27 cheats World menu with World ESP and Show Distance toggles on and World Distance slider set to 150m',
     caption: 'World menu — world ESP distance',
   },
   menuAimbot: {
-    src: '/images/blog/wt-menu-aimbot.png',
-    alt: 'War Thunder cheats Aimbot menu with enable on, RMB and Mouse 4 binds, prediction on, FOV size 12 degrees and smoothness 48',
+    src: '/images/blog/fc27-pro-clubs-menu-matchday.webp',
+    alt: 'FC 27 cheats Aimbot menu with enable on, RMB and Mouse 4 binds, prediction on, FOV size 12 degrees and smoothness 48',
     caption: 'Aimbot menu — FOV and smoothing',
   },
   menuMisc: {
-    src: '/images/blog/wt-menu-misc.png',
-    alt: 'War Thunder cheats Misc menu with Insert menu key, stream-proof on, panic key End, config save/load and cloud DMA connected status',
+    src: '/images/blog/fc27-utils-menu.webp',
+    alt: 'FC 27 cheats Misc menu with Insert menu key, stream-proof on, panic key End, config save/load and cloud DMA connected status',
     caption: 'Misc menu — stream-proof and binds',
   },
 };

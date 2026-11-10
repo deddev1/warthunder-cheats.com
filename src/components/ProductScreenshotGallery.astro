@@ -3,6 +3,7 @@ import type { ProductSlide } from '../data/products';
 import ResponsiveImage from './ResponsiveImage.astro';
 import { THUMB_IMAGE_WIDTHS } from '../utils/responsiveImage';
 import { Badge } from '@/components/starwind/badge';
+import Icon from './icons/Icon.astro';
 
 interface Props {
   images: ProductSlide[];
@@ -18,9 +19,10 @@ const first = images[0];
   class:list={['product-gallery', !hasThumbs && 'product-gallery--single']}
   id={id}
   data-product-gallery
+  data-gallery-count={images.length}
 >
-  <div class="relative min-w-0 overflow-hidden rounded-xl border border-border bg-muted/20">
-    <div class="product-gallery__main cursor-zoom-in overflow-hidden">
+  <div class="product-gallery__stage relative min-w-0 overflow-hidden rounded-xl border border-border bg-muted/20">
+    <div class="product-gallery__main overflow-hidden">
       {
         first && (
           <ResponsiveImage
@@ -36,20 +38,44 @@ const first = images[0];
         )
       }
     </div>
-    <Badge
-      tone="neutral"
-      appearance="frosted"
-      size="sm"
-      class="pointer-events-none absolute bottom-3 left-3 shadow-sm"
-    >
-      War Thunder cheats gameplay
-    </Badge>
+
+    {
+      hasThumbs && (
+        <div class="product-gallery__nav" aria-hidden="false">
+          <button
+            type="button"
+            class="product-gallery__nav-btn product-gallery__nav-btn--prev"
+            data-gallery-prev
+            aria-label="Previous screenshot"
+          >
+            <Icon name="chevronLeft" size={18} />
+          </button>
+          <button
+            type="button"
+            class="product-gallery__nav-btn product-gallery__nav-btn--next"
+            data-gallery-next
+            aria-label="Next screenshot"
+          >
+            <Icon name="chevronRight" size={18} />
+          </button>
+        </div>
+      )
+    }
+
+    <div class="product-gallery__meta pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 bg-gradient-to-t from-black/55 to-transparent px-3 pb-3 pt-10">
+      <Badge tone="neutral" appearance="frosted" size="sm" class="shadow-sm">
+        <span data-gallery-counter>1 / {images.length}</span>
+      </Badge>
+    </div>
   </div>
+
   {
-    first && (first.caption || first.captionDesc) && (
-      <p class="mt-2 text-sm text-muted-foreground">
-        <strong class="text-foreground">{first.caption}</strong>
-        {first.captionDesc && ` — ${first.captionDesc}`}
+    first && (
+      <p class="product-gallery__caption mt-2 text-sm text-muted-foreground" data-gallery-caption>
+        <strong class="text-foreground" data-gallery-caption-title>{first.caption}</strong>
+        {first.captionDesc && (
+          <span data-gallery-caption-desc>{` — ${first.captionDesc}`}</span>
+        )}
       </p>
     )
   }
@@ -63,11 +89,13 @@ const first = images[0];
             class:list={['product-gallery__thumb', i === 0 && 'is-active']}
             role="tab"
             aria-selected={i === 0 ? 'true' : 'false'}
-            aria-label={`Screenshot ${i + 1}`}
+            aria-label={`Screenshot ${i + 1}: ${img.caption}`}
             data-product-gallery-thumb
             data-index={i}
             data-src={img.src}
             data-alt={img.alt}
+            data-caption={img.caption}
+            data-caption-desc={img.captionDesc ?? ''}
           >
             <ResponsiveImage
               src={img.src}
@@ -88,29 +116,64 @@ const first = images[0];
 
 <script>
   const initProductGalleries = () => {
-    document.querySelectorAll('[data-product-gallery]').forEach((root) => {
+    document.querySelectorAll<HTMLElement>('[data-product-gallery]').forEach((root) => {
       if (root.hasAttribute('data-gallery-bound')) return;
       root.setAttribute('data-gallery-bound', '');
 
       const main = root.querySelector<HTMLImageElement>('.product-gallery__image');
-      const thumbs = root.querySelectorAll<HTMLButtonElement>('[data-product-gallery-thumb]');
+      const thumbs = [...root.querySelectorAll<HTMLButtonElement>('[data-product-gallery-thumb]')];
+      const counter = root.querySelector('[data-gallery-counter]');
+      const captionTitle = root.querySelector('[data-gallery-caption-title]');
+      const captionDesc = root.querySelector('[data-gallery-caption-desc]');
+      const prevBtn = root.querySelector<HTMLButtonElement>('[data-gallery-prev]');
+      const nextBtn = root.querySelector<HTMLButtonElement>('[data-gallery-next]');
       if (!main || !thumbs.length) return;
 
-      thumbs.forEach((thumb) => {
-        thumb.addEventListener('click', () => {
-          const alt = thumb.getAttribute('data-alt');
-          const thumbImg = thumb.querySelector('img');
-          if (thumbImg?.src) {
-            main.src = thumbImg.src;
-            if (thumbImg.srcset) main.srcset = thumbImg.srcset;
-          }
-          if (alt) main.alt = alt;
-          thumbs.forEach((t) => {
-            const active = t === thumb;
-            t.classList.toggle('is-active', active);
-            t.setAttribute('aria-selected', active ? 'true' : 'false');
-          });
+      let index = 0;
+
+      const show = (nextIndex: number) => {
+        index = (nextIndex + thumbs.length) % thumbs.length;
+        const thumb = thumbs[index];
+        if (!thumb) return;
+
+        const thumbImg = thumb.querySelector('img');
+        if (thumbImg?.src) {
+          main.src = thumbImg.src;
+          if (thumbImg.srcset) main.srcset = thumbImg.srcset;
+        }
+        const alt = thumb.getAttribute('data-alt');
+        if (alt) main.alt = alt;
+
+        const caption = thumb.getAttribute('data-caption') ?? '';
+        const desc = thumb.getAttribute('data-caption-desc') ?? '';
+        if (captionTitle) captionTitle.textContent = caption;
+        if (captionDesc) captionDesc.textContent = desc ? ` — ${desc}` : '';
+        if (counter) counter.textContent = `${index + 1} / ${thumbs.length}`;
+
+        thumbs.forEach((t, i) => {
+          const active = i === index;
+          t.classList.toggle('is-active', active);
+          t.setAttribute('aria-selected', active ? 'true' : 'false');
         });
+
+        thumb.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+      };
+
+      thumbs.forEach((thumb, i) => {
+        thumb.addEventListener('click', () => show(i));
+      });
+      prevBtn?.addEventListener('click', () => show(index - 1));
+      nextBtn?.addEventListener('click', () => show(index + 1));
+
+      root.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') {
+          event.preventDefault();
+          show(index - 1);
+        }
+        if (event.key === 'ArrowRight') {
+          event.preventDefault();
+          show(index + 1);
+        }
       });
     });
   };

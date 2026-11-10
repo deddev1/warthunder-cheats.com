@@ -4,7 +4,7 @@ import path from 'node:path';
 const root = process.cwd();
 const dist = path.join(root, 'dist');
 const source = path.join(dist, 'sitemap-0.xml');
-const siteOrigin = 'https://warthunder-cheats.com';
+const siteOrigin = 'https://fc27-cheats.net';
 const URLSET_NS = 'http://www.sitemaps.org/schemas/sitemap/0.9';
 
 if (!fs.existsSync(source)) {
@@ -51,7 +51,7 @@ function parseUrlBlock(block) {
 function canonicalLoc(loc) {
   const url = new URL(loc);
   url.protocol = 'https:';
-  url.hostname = 'warthunder-cheats.com';
+  url.hostname = 'fc27-cheats.net';
   url.search = '';
   url.hash = '';
   let pathname = url.pathname;

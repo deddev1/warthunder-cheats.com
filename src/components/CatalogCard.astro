@@ -94,14 +94,20 @@ const statusBadgeIcon = (text: string): IconName => {
     </div>
   </CardHeader>
   <CardContent class="flex-1">
-    <ul class="space-y-2 text-sm text-muted-foreground">
+    <ul class="catalog-card__features">
       {displayFeatures.map((feature) => (
-        <li class="flex items-start gap-2">
-          <Icon name="check" size={14} class="mt-0.5 shrink-0" />
-          <span>{feature}</span>
+        <li class="catalog-card__feature">
+          <span class="catalog-card__feature-icon" aria-hidden="true">
+            <Icon name="check" size={13} class="icon-app--primary" />
+          </span>
+          <span class="catalog-card__feature-text">{feature}</span>
         </li>
       ))}
-      {more > 0 && <li class="text-xs text-muted-foreground">+{more} more features</li>}
+      {more > 0 && (
+        <li class="catalog-card__feature catalog-card__feature--more">
+          +{more} more features
+        </li>
+      )}
     </ul>
   </CardContent>
   <CardFooter class="mt-auto !flex !flex-col !items-stretch gap-2">

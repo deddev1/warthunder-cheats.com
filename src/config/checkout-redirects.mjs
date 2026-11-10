@@ -1,6 +1,6 @@
 /** Checkout destinations keyed by internal product id (Zadeyo affiliate go links). */
 export const CHECKOUT_URLS = {
-  warthunder: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fwar-thunder',
+  fc27: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fea-sports-fc-27',
   skinChanger: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fskin-changer',
   hwidSpoofer: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fhwid-spoofer',
   ugc: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fugc',
@@ -8,10 +8,12 @@ export const CHECKOUT_URLS = {
 
 /** Checkout paths → external product URLs (Node serve, CF _redirects, Astro middleware). */
 export const CHECKOUT_PATH_REDIRECTS = new Map([
-  ['/go/warthunder', CHECKOUT_URLS.warthunder],
-  ['/go/warthunder/', CHECKOUT_URLS.warthunder],
-  ['/go/rust', CHECKOUT_URLS.warthunder],
-  ['/go/rust/', CHECKOUT_URLS.warthunder],
+  ['/go/fc27', CHECKOUT_URLS.fc27],
+  ['/go/fc27/', CHECKOUT_URLS.fc27],
+  ['/go/rust', CHECKOUT_URLS.fc27],
+  ['/go/rust/', CHECKOUT_URLS.fc27],
+  ['/go/warthunder', CHECKOUT_URLS.fc27],
+  ['/go/warthunder/', CHECKOUT_URLS.fc27],
   ['/go/skin-changer', CHECKOUT_URLS.skinChanger],
   ['/go/skin-changer/', CHECKOUT_URLS.skinChanger],
   ['/go/hwid-spoofer', CHECKOUT_URLS.hwidSpoofer],

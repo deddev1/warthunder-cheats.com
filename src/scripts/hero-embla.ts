@@ -1,5 +1,4 @@
 export const HERO_AUTOPLAY_MS = 4800;
-const DESKTOP_MQ = '(min-width: 1024px)';
 
 type EmblaApi = {
   selectedScrollSnap: () => number;
@@ -66,8 +65,6 @@ function bindHeroDots(wrapper: HTMLElement, api: EmblaApi, autoplay: AutoplayPlu
 }
 
 async function initHeroCarousels(root: ParentNode = document) {
-  if (!window.matchMedia(DESKTOP_MQ).matches) return;
-
   const nodes = [...root.querySelectorAll<HTMLElement>('[data-hero-embla]')].filter(
     (node) => node.dataset.heroEmblaReady !== 'true',
   );
@@ -121,10 +118,5 @@ export function setupHeroEmbla() {
   };
 
   run();
-
-  window.matchMedia(DESKTOP_MQ).addEventListener('change', (event) => {
-    if (event.matches) run();
-  });
-
   document.addEventListener('astro:page-load', run);
 }

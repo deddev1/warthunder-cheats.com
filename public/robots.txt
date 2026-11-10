@@ -4,6 +4,6 @@ Allow: /
 Disallow: /go/
 Disallow: /forum/
 
-Sitemap: https://warthunder-cheats.com/sitemap-index.xml
+Sitemap: https://fc27-cheats.net/sitemap-index.xml
 
-# RSS: https://warthunder-cheats.com/rss.xml
+# RSS: https://fc27-cheats.net/rss.xml

@@ -1,11 +1,11 @@
-# Search Console workflow (warthunder-cheats.com)
+# Search Console workflow (fc27-cheats.net)
 
 Use this checklist after each content or SEO deploy.
 
 ## Property & sitemap
 
-1. Open [Google Search Console](https://search.google.com/search-console) and add the **domain** property for `warthunder-cheats.com` if it is not already there.
-2. Under **Sitemaps**, submit: `https://warthunder-cheats.com/sitemap-index.xml`
+1. Open [Google Search Console](https://search.google.com/search-console) and add the **domain** property for `fc27-cheats.net` if it is not already there.
+2. Under **Sitemaps**, submit: `https://fc27-cheats.net/sitemap-index.xml`
 3. Confirm the sitemap reports success (no “couldn’t fetch” errors).
 
 ## After deploy
@@ -18,9 +18,9 @@ Use this checklist after each content or SEO deploy.
 
 | Intent | Primary URL |
 |--------|-------------|
-| war thunder cheats, war thunder hacks | `/` |
-| elite suite | `/products/warthunder-cheats/elite/` |
-| hwid, camouflage unlock | `/products/warthunder-cheats/utilities/` |
+| fc 27 cheats, fc 27 hacks | `/` |
+| elite suite | `/products/fc27-cheats/elite/` |
+| hwid, kit unlock | `/products/fc27-cheats/utilities/` |
 | setup / patch day | `/blog/` |
 | FAQ | `/faq/` |
 

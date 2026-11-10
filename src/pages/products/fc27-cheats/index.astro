@@ -8,11 +8,12 @@ import { resolvePageSeo } from '../../../config/seo';
 import { breadcrumbSchema, collectionPageSchema, itemListSchema } from '../../../utils/schema';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import CatalogCard from '../../../components/CatalogCard.astro';
+import FullToolkitSection from '../../../components/FullToolkitSection.astro';
 import { productPath, ROUTES } from '../../../utils/path';
 import { Prose } from '@/components/starwind/prose';
 import SeoRelatedLinks from '../../../components/SeoRelatedLinks.astro';
 
-const seo = resolvePageSeo('/products/warthunder-cheats/');
+const seo = resolvePageSeo('/products/fc27-cheats/');
 const breadcrumbs = [
   { name: 'Home', path: '/' },
   { name: 'Products', path: productHub.path },
@@ -39,6 +40,8 @@ function actionName(product: (typeof productPages)[number]) {
   if (product.slug === 'unlock-all') return 'Unlock All';
   return product.category ?? product.slug;
 }
+
+const catalogProducts = productPages;
 ---
 
 <BaseLayout
@@ -52,7 +55,7 @@ function actionName(product: (typeof productPages)[number]) {
     }),
     breadcrumbSchema(breadcrumbs),
     itemListSchema(
-      productPages.map((product) => ({
+      catalogProducts.map((product) => ({
         name: product.title,
         url: productPath(product.slug),
       })),
@@ -64,15 +67,15 @@ function actionName(product: (typeof productPages)[number]) {
       <Breadcrumbs items={breadcrumbs} />
 
       <div class="mt-6 max-w-3xl space-y-3">
-        <h1 class="text-3xl font-bold uppercase md:text-4xl">{t.products.title}</h1>
+        <h1 class="text-3xl font-bold normal-case md:text-4xl">{t.products.title}</h1>
         <p class="text-lg text-muted-foreground">{t.products.subtitle}</p>
       </div>
 
       <Prose class="mt-8 max-w-none text-muted-foreground">
         <h2>Compare products before checkout</h2>
         <p>
-          Elite bundles ESP, aimbot, ballistic assist and SL/RP farm helpers for players who want the full suite. Utilities cover
-          hardware resets after bans, UGC appeal workflows, and local camouflage unlock previews. Read the{' '}
+          Elite bundles player ESP, opponent radar, soft aim, shot assist and coin/SBC helpers for players who want the full suite. Utilities cover
+          hardware resets after bans, UGC appeal workflows, and local kit unlock previews. Read the{' '}
           <a href="/blog/lite-vs-pro/">Lite vs Pro guide</a>, <a href="/blog/buy-guide/">checkout walkthrough</a>, or{' '}
           <a href={ROUTES.faq}>FAQ</a> if you are deciding between plans.
         </p>
@@ -80,12 +83,12 @@ function actionName(product: (typeof productPages)[number]) {
         <p>
           Each card below links to a product page with screenshots, system requirements, and module lists. When you are
           ready, use Get access for secure checkout. Check the homepage status banner before every session—especially
-          after a Gaijin patch or client update.
+          after an EA patch or client update.
         </p>
       </Prose>
 
       <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {productPages.map((product) => (
+        {catalogProducts.map((product) => (
           <CatalogCard
             label={cardLabel(product)}
             title={product.title}
@@ -97,12 +100,16 @@ function actionName(product: (typeof productPages)[number]) {
             badge={product.badge}
             variant={product.variant}
             buyLabel={`Checkout ${actionName(product)}`}
-            viewLabel={`View ${actionName(product)}`}
+            viewLabel="View details"
           />
         ))}
       </div>
-
-      <SeoRelatedLinks title="More War Thunder cheat resources" />
     </div>
   </section>
+
+  <FullToolkitSection />
+
+  <div class="mx-auto max-w-6xl px-5 pb-16">
+    <SeoRelatedLinks title="More FC 27 cheat resources" />
+  </div>
 </BaseLayout>

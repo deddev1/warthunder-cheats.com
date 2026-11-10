@@ -3,9 +3,9 @@ import { writeFileSync, mkdirSync, unlinkSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-/** Official War Thunder badge — keep black canvas as-is (no BG punch-out). */
+/** FC 27 soccer ball — navbar football as site favicon. */
 const src =
-  'C:/Users/3Tee System/.cursor/projects/c-Users-3Tee-System-Downloads-warthunder-cheats-com-main/assets/fa62dadb-ff18-4ec5-be9c-f031e228709a-e90f6e40-cbb9-4a0b-a5ce-ca8cd31edcf2.png';
+  'C:/Users/3Tee System/.cursor/projects/c-Users-3Tee-System-Downloads-fc27-che-ts-net-main/assets/EA_SPORTS_FC27_Soccer_Ball-50269486-81fc-40cc-b74e-1535054e5643.webp';
 const publicDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public');
 mkdirSync(path.join(publicDir, 'images'), { recursive: true });
 const outPath = (name) => path.join(publicDir, name);
@@ -27,6 +27,19 @@ const obsolete = [
   'favicon.ico.png',
   'rust-icon.jpg',
   'images/favicon-source.png',
+  'favicon-16.png',
+  'favicon-32.png',
+  'favicon.png',
+  'favicon-192.png',
+  'favicon-512.png',
+  'favicon.ico',
+  'favicon.svg',
+  'apple-touch-icon.png',
+  'android-chrome-192.png',
+  'android-chrome-512.png',
+  'logo.png',
+  'logo.svg',
+  'fc27-icon.jpg',
 ];
 for (const rel of obsolete) {
   const p = outPath(rel);
@@ -37,6 +50,7 @@ for (const rel of obsolete) {
 }
 
 await sharp(await sized(512)).toFile(outPath('images/favicon-source.png'));
+console.log('wrote images/favicon-source.png');
 
 const sizes = [
   ['favicon-16.png', 16],
@@ -48,7 +62,7 @@ const sizes = [
   ['android-chrome-192.png', 192],
   ['android-chrome-512.png', 512],
   ['logo.png', 128],
-  ['warthunder-icon.jpg', 256],
+  ['fc27-icon.jpg', 256],
 ];
 
 for (const [name, size] of sizes) {
@@ -88,7 +102,7 @@ writeFileSync(outPath('favicon.ico'), pngToIco([p16, p32, p48]));
 console.log('wrote favicon.ico');
 
 const png64 = (await sized(128)).toString('base64');
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="War Thunder Cheats">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="FC27 Cheats">
   <image href="data:image/png;base64,${png64}" width="128" height="128"/>
 </svg>
 `;

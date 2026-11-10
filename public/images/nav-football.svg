@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Football">
+  <circle cx="32" cy="32" r="30" fill="#f5f5f5" stroke="#1a1a1a" stroke-width="2"/>
+  <path fill="#1a1a1a" d="M32 18.5 37.2 22.3 35.2 28.5h-6.4l-2-6.2L32 18.5z"/>
+  <path fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round" d="M32 18.5 37.2 22.3 35.2 28.5h-6.4l-2-6.2L32 18.5z"/>
+  <path fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M35.2 28.5 42 31.2 44.5 38.5M28.8 28.5 22 31.2 19.5 38.5M35.2 28.5l3.3 8.8L32 43.5l-6.5-6.2 3.3-8.8M44.5 38.5 38.5 45.2 32 43.5M19.5 38.5 25.5 45.2 32 43.5M42 31.2 48.2 26.8M22 31.2 15.8 26.8M37.2 22.3 41.5 16.8M26.8 22.3 22.5 16.8M38.5 45.2 42.8 51.2M25.5 45.2 21.2 51.2"/>
+</svg>

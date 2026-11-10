@@ -15,11 +15,11 @@ const supportCopy = t.legalPages.support;
 const supportFaqs = [
   {
     q: 'What should I include in a Discord support ticket?',
-    a: 'Your checkout order ID, Windows version, War Thunder battle type, product tier or utility name, and a screenshot of the loader or Gaijin launcher error. Download files only from your portal—not from DMs.',
+    a: 'Your checkout order ID, Windows version, FC 27 battle type, product tier or utility name, and a screenshot of the loader or EA launcher error. Download files only from your portal—not from DMs.',
   },
   {
     q: 'Why does the homepage status banner matter?',
-    a: 'It shows whether cheat modules are online after War Thunder or Gaijin anti-cheat patches. Do not launch while status is offline; wait for the updated loader from your portal.',
+    a: 'It shows whether cheat modules are online after FC 27 or EA anti-cheat patches. Do not launch while status is offline; wait for the updated loader from your portal.',
   },
   {
     q: 'Where do I get help choosing Lite, Pro, or Elite?',
@@ -47,11 +47,11 @@ function linkifySupport(text: string): string {
     [/Reviews on \/reviews\//g, `Reviews on <a href="${ROUTES.reviews}">/reviews/</a>`],
     [/utilities comparison table/g, `<a href="${ROUTES.productsUtilities}">utilities comparison table</a>`],
     [
-      /Gaijin anti-cheat errors guide on the blog/g,
-      `<a href="/blog/gaijin-error/">Gaijin anti-cheat errors guide</a> on the blog`,
+      /EA anti-cheat errors guide on the blog/g,
+      `<a href="/blog/ea-error/">EA anti-cheat errors guide</a> on the blog`,
     ],
     [/spoofer guide/g, `<a href="/blog/hwid/">spoofer guide</a>`],
-    [/warthunder-cheats\.com/g, `<a href="${ROUTES.home}">warthunder-cheats.com</a>`],
+    [/fc27-cheats\.com/g, `<a href="${ROUTES.home}">fc27-cheats.net</a>`],
   ];
 
   let out = text;
@@ -139,7 +139,7 @@ function linkifySupport(text: string): string {
 
       <p class="support-guide__note">
         <strong>Still stuck?</strong> Join Discord from the cards above, open one ticket for the issue, and include
-        order ID, Windows version, War Thunder build, and a redacted error screenshot.
+        order ID, Windows version, FC 27 build, and a redacted error screenshot.
       </p>
 
       <SeoRelatedLinks />

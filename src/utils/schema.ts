@@ -24,11 +24,11 @@ export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'War Thunder Cheats',
+    name: 'FC27 Cheats',
     url: `${SITE_ORIGIN}/`,
     inLanguage: 'en-US',
     description:
-      'Shop undetected War Thunder cheats for Windows—vehicle ESP, player ESP, aimbot, radar and stream-proof overlays at warthunder-cheats.com.',
+      'Shop undetected FC 27 cheats for Windows—player ESP, opponent radar, soft aim, shot assist and stream-proof overlays at fc27-cheats.net.',
   };
 }
 
@@ -38,7 +38,7 @@ export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'War Thunder Cheats',
+    name: 'FC27 Cheats',
     url: `${SITE_ORIGIN}/`,
     logo: `${SITE_ORIGIN}/logo.svg`,
     email: SUPPORT_EMAIL,
@@ -66,7 +66,7 @@ export function collectionPageSchema(input: { name: string; description: string;
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'War Thunder Cheats',
+      name: 'FC27 Cheats',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -82,7 +82,7 @@ export function webPageSchema(input: { name: string; description: string; url: s
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'War Thunder Cheats',
+      name: 'FC27 Cheats',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -129,11 +129,11 @@ export function discussionForumPostingSchema(input: {
     url: canonicalUrl(input.url),
     author: {
       '@type': 'Organization',
-      name: 'War Thunder Cheats',
+      name: 'FC27 Cheats',
     },
     isPartOf: {
       '@type': 'CollectionPage',
-      name: 'War Thunder Cheats Community Forum',
+      name: 'FC27 Cheats Community Forum',
       url: canonicalUrl('/forum/'),
     },
   };
@@ -160,7 +160,7 @@ export function productSchema(input: {
     sku: input.sku ?? input.url.replace(/\//g, '-'),
     brand: {
       '@type': 'Brand',
-      name: 'War Thunder Cheats',
+      name: 'FC27 Cheats',
     },
     ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
     // Offer URL only — never invent price/plan; checkout decides what is sold.
@@ -170,7 +170,7 @@ export function productSchema(input: {
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
-        name: 'War Thunder Cheats',
+        name: 'FC27 Cheats',
       },
     },
   };
@@ -213,11 +213,11 @@ export function articleSchema(input: {
     inLanguage: 'en-US',
     author: {
       '@type': 'Organization',
-      name: 'War Thunder Cheats',
+      name: 'FC27 Cheats',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'War Thunder Cheats',
+      name: 'FC27 Cheats',
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_ORIGIN}/logo.svg`,

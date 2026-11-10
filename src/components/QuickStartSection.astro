@@ -1,0 +1,221 @@
+---
+import { t } from '../i18n';
+import { setupStepIcons } from '../data/sectionIcons';
+import Icon from './icons/Icon.astro';
+
+const s = t.setup;
+---
+
+<section
+  id="quick-start"
+  class="quick-start border-y border-border bg-muted/20 py-16 md:py-24"
+  aria-labelledby="quick-start-title"
+>
+  <div class="mx-auto max-w-6xl px-5 md:px-6">
+    <header class="quick-start__header">
+      <p class="quick-start__eyebrow">{s.eyebrow}</p>
+      <div class="quick-start__intro">
+        <h2 id="quick-start-title" class="quick-start__title">
+          {s.title}
+        </h2>
+        <p class="quick-start__subtitle">{s.intro}</p>
+      </div>
+    </header>
+
+    <ol class="quick-start__grid list-none p-0">
+      {
+        s.steps.map((step, i) => (
+          <li class="quick-start__card">
+            <div class="quick-start__card-top">
+              <span class="quick-start__icon" aria-hidden="true">
+                <Icon name={setupStepIcons[i] ?? 'setupPulse'} size={18} />
+              </span>
+              <span class="quick-start__num" aria-hidden="true">
+                {step.step}
+              </span>
+            </div>
+            <h3 class="quick-start__card-title">{step.title}</h3>
+            <p class="quick-start__card-desc">{step.desc}</p>
+            <a class="quick-start__link" href={step.href}>
+              {step.linkLabel}
+            </a>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
+
+<style>
+  .quick-start__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .quick-start__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 0 1.25rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+
+  .quick-start__eyebrow::before {
+    content: '';
+    display: block;
+    width: 1.75rem;
+    height: 1px;
+    background: var(--primary);
+    flex-shrink: 0;
+  }
+
+  .quick-start__intro {
+    display: grid;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  @media (min-width: 768px) {
+    .quick-start__intro {
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 2.5rem;
+      align-items: end;
+    }
+
+    .quick-start__header {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .quick-start__title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.2vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--foreground);
+  }
+
+  .quick-start__subtitle {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--muted-foreground);
+  }
+
+  @media (min-width: 768px) {
+    .quick-start__subtitle {
+      text-align: right;
+      max-width: 22rem;
+      margin-left: auto;
+      padding-bottom: 0.25rem;
+    }
+  }
+
+  .quick-start__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .quick-start__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+  }
+
+  .quick-start__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 1.5rem 1.35rem 1.35rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    background: var(--card);
+    box-shadow: 0 1px 2px color-mix(in oklch, var(--foreground) 4%, transparent);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .quick-start__card:hover {
+    border-color: color-mix(in oklch, var(--primary) 35%, var(--border));
+  }
+
+  .quick-start__card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.35rem;
+  }
+
+  .quick-start__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    background: color-mix(in oklch, var(--primary) 12%, transparent);
+    color: var(--primary);
+  }
+
+  .quick-start__icon :global(svg) {
+    color: inherit;
+  }
+
+  .quick-start__num {
+    font-family: var(--font-heading);
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: transparent;
+    -webkit-text-stroke: 1.25px color-mix(in oklch, var(--primary) 45%, transparent);
+    user-select: none;
+  }
+
+  .quick-start__card-title {
+    margin: 0 0 0.65rem;
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--foreground);
+  }
+
+  .quick-start__card-desc {
+    margin: 0 0 1.5rem;
+    flex: 1;
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: var(--muted-foreground);
+  }
+
+  .quick-start__link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: auto;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--primary);
+    transition: color 0.15s ease;
+  }
+
+  .quick-start__link:hover {
+    color: color-mix(in oklch, var(--primary) 82%, var(--foreground));
+  }
+
+  .quick-start__link:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+</style>

@@ -68,6 +68,8 @@ export interface StepItem {
   step: string;
   title: string;
   desc: string;
+  linkLabel: string;
+  href: string;
 }
 
 export interface ToolkitItem {
@@ -75,6 +77,17 @@ export interface ToolkitItem {
   label: string;
   title: string;
   desc: string;
+}
+
+export interface ToolkitFeature {
+  title: string;
+  desc: string;
+}
+
+export interface ToolkitCategory {
+  id: string;
+  title: string;
+  features: ToolkitFeature[];
 }
 
 export interface WorkflowItem {
@@ -127,13 +140,8 @@ export interface Translations {
   };
   setup: {
     eyebrow: string;
-    titleLead: string;
-    titleHighlight: string;
+    title: string;
     intro: string;
-    ctaPrimary: string;
-    ctaSecondary: string;
-    ctaPrimaryHref: string;
-    ctaSecondaryHref: string;
     steps: StepItem[];
   };
   compatibility: {
@@ -180,7 +188,7 @@ export interface Translations {
     eyebrow: string;
     title: string;
     subtitle: string;
-    items: ToolkitItem[];
+    categories: ToolkitCategory[];
   };
   workflow: {
     eyebrow: string;

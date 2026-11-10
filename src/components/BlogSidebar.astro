@@ -36,7 +36,7 @@ const toc = post.body
   }));
 
 const productLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'War Thunder products', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'FC 27 products', href: ROUTES.products, icon: 'sidebarHub' },
   { label: 'Elite suite page', href: ROUTES.productsElite, icon: 'sidebarElite' },
   { label: 'Camouflage unlock', href: productPath('unlock-all'), icon: 'sidebarSkin' },
   { label: 'HWID Spoofer page', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
@@ -121,12 +121,12 @@ const productLinks: { label: string; href: string; icon: IconName }[] = [
     </ul>
     <Button
       as="a"
-      href={checkoutPath('warthunder')}
+      href={checkoutPath('fc27')}
       variant="primary"
       size="sm"
       class="blog-sidebar__cta mt-2.5 w-full min-w-0 justify-start"
       aria-label={t.ui.checkoutAria}
-      {...externalLinkProps(checkoutPath('warthunder'))}
+      {...externalLinkProps(checkoutPath('fc27'))}
     >
       <span class="truncate">Open product checkout</span>
       <Icon name="arrowRight" size={16} class="shrink-0" />

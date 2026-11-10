@@ -4,7 +4,7 @@ export const featureIcons: Record<string, IconName> = {
   'Aimbot / Soft Aim': 'featureAimbot',
   'Player ESP': 'featureEsp',
   'Vehicle & player ESP': 'featureRadar',
-  'Ballistic assist': 'stepCrosshair',
+  'Shot Assist': 'stepCrosshair',
   'Utility Suite': 'featureUtilitySuite',
   'Auto Farm Helpers': 'compareAutoFarm',
   'Stream Proof': 'streamProof',
@@ -14,7 +14,7 @@ export const featureIcons: Record<string, IconName> = {
 
 export const whyUsIcons: IconName[] = ['whyShield', 'whyUsers', 'whyMonitor', 'whyHeadphones'];
 
-export const setupStepIcons: IconName[] = ['acqPackage', 'acqSettings', 'acqCheck'];
+export const setupStepIcons: IconName[] = ['setupPulse', 'setupDownload', 'setupPlay'];
 
 export const toolkitIcons: Record<string, IconName> = {
   Combat: 'toolkitCombat',
@@ -23,6 +23,14 @@ export const toolkitIcons: Record<string, IconName> = {
   Weapons: 'toolkitWeapons',
   Movement: 'toolkitMovement',
   Profiles: 'toolkitProfiles',
+};
+
+export const fullToolkitIcons: Record<string, IconName> = {
+  gameplay: 'toolkitCombat',
+  spoofers: 'toolkitSpoofers',
+  rage: 'toolkitRage',
+  clubs: 'setupPulse',
+  qol: 'toolkitQol',
 };
 
 export const workflowIcons: IconName[] = [
@@ -48,17 +56,17 @@ export const heroStatusPills: { icon: IconName; label: string }[] = [
   { icon: 'seasonBuild', label: 'Season Build' },
   { icon: 'undetected', label: 'Undetected' },
   { icon: 'softAim', label: 'Soft Aim Ready' },
-  { icon: 'noRecoil', label: 'Ballistic assist' },
+  { icon: 'noRecoil', label: 'Shot Assist' },
   { icon: 'streamProof', label: 'Stream Proof' },
-  { icon: 'lootEsp', label: 'Vehicle ESP' },
-  { icon: 'skeletonEsp', label: 'Skeleton ESP' },
-  { icon: 'uavRadar', label: 'UAV Radar' },
-  { icon: 'mapHack', label: 'Map Hack' },
+  { icon: 'lootEsp', label: 'Ball ESP' },
+  { icon: 'skeletonEsp', label: 'Player Outlines' },
+  { icon: 'uavRadar', label: 'Pitch Radar' },
+  { icon: 'mapHack', label: 'Opponent Map' },
   { icon: 'support247', label: '24/7 Support' },
   { icon: 'instantDelivery', label: 'Instant Delivery' },
   { icon: 'rankedSafe', label: 'Patch Ready' },
-  { icon: 'triggerBot', label: 'Trigger Bot' },
-  { icon: 'boneSelect', label: 'Bone Select' },
+  { icon: 'triggerBot', label: 'Timed Finish' },
+  { icon: 'boneSelect', label: 'Target Select' },
   { icon: 'liveStatus', label: 'Live Status' },
   { icon: 'autoUpdates', label: 'Auto Updates' },
 ];

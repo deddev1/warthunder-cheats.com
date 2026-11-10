@@ -89,13 +89,13 @@ const imageWidths = isHero ? HERO_IMAGE_WIDTHS : undefined;
       aria-label="Hero slides"
     >
       <div class="pointer-events-auto flex items-center gap-1.5 rounded-full border border-white/10 bg-black/45 px-2.5 py-1.5 backdrop-blur-sm">
-        {images.map((_, i) => (
+        {images.map((img, i) => (
           <button
             type="button"
             role="tab"
             class="hero-embla-dot relative h-2 shrink-0 overflow-hidden rounded-full bg-white/30 transition-[width] duration-300 data-[active=false]:w-2 data-[active=true]:w-9"
             data-hero-embla-dot={i}
-            aria-label={`Slide ${i + 1}`}
+            aria-label={img.alt || `Slide ${i + 1}`}
             aria-selected={i === 0 ? 'true' : 'false'}
             data-active={i === 0 ? 'true' : 'false'}
           >

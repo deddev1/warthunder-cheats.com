@@ -14,6 +14,7 @@ import ProductFeaturesSection from './product/ProductFeaturesSection.astro';
 import ProductDescriptionSection from './product/ProductDescriptionSection.astro';
 import ProductExperienceSection from './product/ProductExperienceSection.astro';
 import ProductRelatedGuidesSection from './product/ProductRelatedGuidesSection.astro';
+import FullToolkitSection from './FullToolkitSection.astro';
 
 interface Props {
   product: ProductPage;
@@ -50,6 +51,8 @@ const showDescToggle = descriptionBlocks.length > 2;
 </section>
 
 <ProductHighlightsSection product={product} />
+
+{product.kind === 'tier' && <FullToolkitSection />}
 
 <ProductDescriptionSection
   overviewTitle={product.overview.title}
