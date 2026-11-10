@@ -16,19 +16,19 @@ interface Props {
 
 const defaultLinks: LinkItem[] = [
   { href: ROUTES.products, label: 'Open products hub for all tiers' },
-  { href: '/products/deltaforce-cheats/elite/', label: 'Purchase Elite combat suite' },
-  { href: '/products/deltaforce-cheats/utilities/', label: 'HWID UGC unlock utility table' },
+  { href: '/products/warthunder-cheats/elite/', label: 'Purchase Elite combat suite' },
+  { href: '/products/warthunder-cheats/utilities/', label: 'HWID UGC unlock utility table' },
   { href: ROUTES.blog, label: 'Read checkout and tier guides' },
   { href: ROUTES.faq, label: 'Open buying FAQ answers' },
   { href: ROUTES.reviews, label: 'See product review scores' },
-  { href: '/about/', label: 'About the Delta Force Cheats store' },
+  { href: '/about/', label: 'About the War Thunder Cheats store' },
   { href: '/forum/', label: 'Browse buyer forum threads' },
   { href: '/support/', label: 'Open Discord support tickets' },
   { href: '/privacy/', label: 'Read the privacy policy' },
 ];
 
-const { title = 'Shop Delta Force cheats & guides', links = defaultLinks } = Astro.props;
-const checkout = checkoutPath('deltaforce');
+const { title = 'Shop War Thunder cheats & guides', links = defaultLinks } = Astro.props;
+const checkout = checkoutPath('warthunder');
 const checkoutAttrs = externalLinkProps(checkout);
 ---
 

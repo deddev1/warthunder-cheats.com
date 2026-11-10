@@ -8,6 +8,7 @@ import { getProductFaqs } from '../data/faq';
 import SiteFaqSection from './SiteFaqSection.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import ProductDetailHeader from './product/ProductDetailHeader.astro';
+import ProductCheckoutPanel from './product/ProductCheckoutPanel.astro';
 import ProductHighlightsSection from './product/ProductHighlightsSection.astro';
 import ProductFeaturesSection from './product/ProductFeaturesSection.astro';
 import ProductDescriptionSection from './product/ProductDescriptionSection.astro';
@@ -41,8 +42,9 @@ const showDescToggle = descriptionBlocks.length > 2;
       <ProductDetailHeader product={product} />
     </div>
 
-    <div class="product-detail-hero__grid mt-10">
+    <div class="product-detail-hero__grid mt-10 grid items-start gap-8">
       <ProductScreenshotGallery images={product.images} id={`gallery-${product.slug}`} />
+      <ProductCheckoutPanel product={product} />
     </div>
   </div>
 </section>

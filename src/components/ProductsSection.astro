@@ -69,8 +69,8 @@ function actionName(product: (typeof productPages)[number]) {
                       icon={cardIcon(product)}
                       badge={product.badge}
                       variant={product.variant}
-                      buyLabel="Get access"
-                      viewLabel="View details"
+                      buyLabel={`Checkout ${actionName(product)}`}
+                      viewLabel={`View ${actionName(product)}`}
                       maxFeatures={5}
                     />
                   </CarouselItem>

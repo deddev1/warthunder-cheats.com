@@ -33,34 +33,34 @@ function link(text: string, href: string): string {
 const elite = 'Elite';
 const lite = 'Lite';
 const pro = 'Pro';
-const productsHub = link('Delta Force cheat products hub', ROUTES.products);
-const productsHubAlt = link('main Delta Force products catalog', ROUTES.products);
+const productsHub = link('War Thunder cheat products hub', ROUTES.products);
+const productsHubAlt = link('main War Thunder products catalog', ROUTES.products);
 const productsHubGuides = link('tier pages on the products hub', ROUTES.products);
 const hwid = link('HWID Spoofer utility page', productPath('hwid-spoofer'));
 const hwidAlt = link('hardware ID spoofer listing', productPath('hwid-spoofer'));
 const ugc = link('UGC appeal workspace', productPath('ugc'));
 const ugcAlt = link('UGC ban-appeal tool page', productPath('ugc'));
 const ugcInit = link('UGC recovery options', productPath('ugc'));
-const skin = link('Skin unlock product', productPath('unlock-all'));
-const skinAlt = link('standalone Skin unlock page', productPath('unlock-all'));
+const skin = link('Camouflage unlock product', productPath('unlock-all'));
+const skinAlt = link('standalone Camouflage unlock page', productPath('unlock-all'));
 const faqPage = link('pre-purchase FAQ hub', ROUTES.faq);
 const faqPageAlt = link('complete buying FAQ index', ROUTES.faq);
-const blog = link('Delta Force buy guides archive', ROUTES.blog);
+const blog = link('War Thunder buy guides archive', ROUTES.blog);
 const litePage = link('Lite ESP and radar tier page', ROUTES.products);
 const proPage = link('Pro aimbot tier page', ROUTES.products);
 const elitePage = link('Elite full-suite product page', productPath('elite'));
 
-const guideFeatures = link('Delta Force cheats features guide', blogPostPath('features'));
+const guideFeatures = link('War Thunder cheats features guide', blogPostPath('features'));
 const guideLiteVsPro = link('Lite vs Pro guide', blogPostPath('lite-vs-pro'));
 const guideElite = link('Elite tier guide', blogPostPath('elite'));
 const guideEsp = link('ESP and radar setup guide', blogPostPath('esp'));
-const guidePatch = link('EAC patch day checklist', blogPostPath('eac-patch'));
-const guideBuy = link('how to buy Delta Force cheats in 2026', blogPostPath('buy-guide'));
+const guidePatch = link('Gaijin patch day checklist', blogPostPath('gaijin-patch'));
+const guideBuy = link('how to buy War Thunder cheats in 2026', blogPostPath('buy-guide'));
 const guideExternal = link('external cheat guide', blogPostPath('external'));
 const guideStream = link('stream-proof setup guide', blogPostPath('stream-proof'));
-const guideAdmin = link('free codes vs live loader guide', blogPostPath('cheat-codes'));
+const guideAdmin = link('test flight and dev commands guide', blogPostPath('cheat-codes'));
 const guideHwid = link('HWID spoofer vs new account guide', blogPostPath('hwid'));
-const guideEacInit = link('official launcher failed to initialize troubleshooting guide', blogPostPath('eac-error'));
+const guideEacInit = link('Gaijin launcher failed to initialize troubleshooting guide', blogPostPath('gaijin-error'));
 const guideRecoil = link('aimbot and ballistic assist guide', blogPostPath('aimbot'));
 
 export const siteFaqs: SiteFaqItem[] = [
@@ -68,29 +68,29 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'status',
     topic: 'setup',
     icon: 'faqStatus',
-    q: 'Where do I check if Delta Force cheats are online?',
-    a: a('The live status banner is on deltaforce-cheats.net and in the Discord #status channel. Always check it after a Delta Force update, a major patch, or an Easy Anti-Cheat update.'),
+    q: 'Where do I check if War Thunder cheats are online?',
+    a: a('The live status banner is on warthunder-cheats.com and in the Discord #status channel. Always check it after a War Thunder update, a major patch, or a Gaijin account protection update.'),
   },
   {
     id: 'after-buy',
     topic: 'setup',
     icon: 'faqAfterBuy',
     q: 'What happens after I buy?',
-    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Delta Force, and start the loader before the game so Easy Anti-Cheat sees a clean launch order.'),
+    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching War Thunder, and start the loader before the game so Gaijin anti-cheat sees a clean launch order.'),
   },
   {
     id: 'ban-risk',
     topic: 'safety',
     icon: 'faqBanRisk',
-    q: 'Can I get banned using Delta Force cheats?',
-    a: a('Yes—any third-party software carries risk. Easy Anti-Cheat, TiMi Studio Group server-side checks and admin reports all evolve, and Delta Force bans can follow your Steam account and hardware. Read the current status and accept the risk before use.'),
+    q: 'Can I get banned using War Thunder cheats?',
+    a: a('Yes—any third-party software carries risk. Gaijin anti-cheat, Gaijin Entertainment server-side checks and admin reports all evolve, and War Thunder bans can follow your Steam account and hardware. Read the current status and accept the risk before use.'),
   },
   {
     id: 'platforms',
     topic: 'setup',
     icon: 'faqPlatforms',
     q: 'Which platforms are supported?',
-    a: a('Delta Force on Steam or Epic Games for PC, Windows 10/11 64-bit only. Delta Force console editions, macOS and Linux are not supported.'),
+    a: a('War Thunder on Steam or Gaijin Launcher for PC, Windows 10/11 64-bit only. War Thunder console editions, macOS and Linux are not supported.'),
   },
   {
     id: 'license-move',
@@ -104,14 +104,14 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqProductsPage',
     q: 'Where are products and utilities listed?',
-    a: `${productsHub} lists cheat tiers, ${link('HWID Spoofer in the catalog', productPath('hwid-spoofer'))}, ${link('UGC in the catalog', productPath('ugc'))}, and ${link('Skin unlock in the catalog', productPath('unlock-all'))} with feature lists and checkout via our partner.`,
+    a: `${productsHub} lists cheat tiers, ${link('HWID Spoofer in the catalog', productPath('hwid-spoofer'))}, ${link('UGC in the catalog', productPath('ugc'))}, and ${link('Camouflage unlock in the catalog', productPath('unlock-all'))} with feature lists and checkout via our partner.`,
   },
   {
     id: 'what-is-esp',
     topic: 'esp',
     icon: 'faqWhatIsEsp',
-    q: 'What is Delta Force ESP and what does it show?',
-    a: `Player ESP draws boxes, names, health, distance and skeletons through walls and terrain. Loot ESP marks crates, containers, objectives, AI bots and high-value loot. ${lite} covers the full awareness overlay. ${pro} and ${elite} add aim assist on top. Setup details are in the ${guideEsp}. Browse the ${litePage} for module lists.`,
+    q: 'What is War Thunder ESP and what does it show?',
+    a: `Player ESP draws boxes, names, health, distance and skeletons through walls and terrain. Vehicle ESP marks vehicles, capture points, airfields, AI columns and ground targets. ${lite} covers the full awareness overlay. ${pro} and ${elite} add aim assist on top. Setup details are in the ${guideEsp}. Browse the ${litePage} for module lists.`,
     scopes: ['lite', 'pro', 'elite'],
   },
   {
@@ -126,7 +126,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhichTierEsp',
     q: 'Which tier do I need for ESP only?',
-    a: `${lite} is awareness only: Player ESP, Loot & player ESP, radar, FOV hack and stream-proof overlay. ${pro} adds Aimbot, Soft Aim and Ballistic assist. ${elite} adds farm helpers, Skin unlock and priority patches.`,
+    a: `${lite} is awareness only: Player ESP, Vehicle & player ESP, radar, FOV hack and stream-proof overlay. ${pro} adds Aimbot, Soft Aim and Ballistic assist. ${elite} adds farm helpers, Camouflage unlock and priority patches.`,
     scopes: ['lite'],
   },
   {
@@ -134,7 +134,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'scripts',
     icon: 'faqWhichTierScripts',
     q: 'Which tier includes Aimbot and Ballistic assist?',
-    a: `${pro} ships Aimbot, Soft Aim, Bone Select, Trigger Bot and Ballistic assist / Spread. ${elite} includes everything in Pro plus XP/currency farm helpers and Skin unlock. ${lite} has no aim assist—it is overlay only.`,
+    a: `${pro} ships Aimbot, Soft Aim, Bone Select, Trigger Bot and Ballistic assist / Spread. ${elite} includes everything in Pro plus SL/RP farm helpers and Camouflage unlock. ${lite} has no aim assist—it is overlay only.`,
     scopes: ['pro'],
   },
   {
@@ -149,8 +149,8 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'no-recoil',
     topic: 'scripts',
     icon: 'faqWhichTierScripts',
-    q: 'How does ballistic assist work in Delta Force?',
-    a: `Ballistic assist / Spread compensates for weapon recoil with per-weapon profiles—ARs, SMGs, DMRs and snipers and more. Keep compensation below 100% so bursts still look natural, and test each lineup on a firing range before risking a live Warfare or Operations queue.`,
+    q: 'How does ballistic assist work in War Thunder?',
+    a: `Ballistic assist / Spread compensates for weapon recoil with per-weapon profiles—tanks, fighters, SPAA and naval guns and more. Keep compensation below 100% so bursts still look natural, and test each lineup on an Arcade test battle before risking a live Realistic or Simulator queue.`,
     scopes: ['pro', 'elite'],
   },
   {
@@ -165,7 +165,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqEliteSlots',
     q: 'Why is Elite limited slots?',
-    a: `Elite is a private build with direct dev support and priority patch delivery. Slot caps keep patch cycles fast, especially on Delta Force update and EAC patch days. Check the status banner before checkout, or read the ${guideElite}.`,
+    a: `Elite is a private build with direct dev support and priority patch delivery. Slot caps keep patch cycles fast, especially on War Thunder update and Gaijin patch days. Check the status banner before checkout, or read the ${guideElite}.`,
     scopes: ['elite'],
   },
   {
@@ -179,7 +179,7 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'undetected',
     topic: 'safety',
     icon: 'faqUndetected',
-    q: 'Are undetected Delta Force cheats guaranteed?',
+    q: 'Are undetected War Thunder cheats guaranteed?',
     a: a('No. Undetected is the current status on the product page—not a permanent guarantee. Stop if the build shows updating, testing or detected, and never play on your main account while a status is unclear.'),
   },
   {
@@ -187,7 +187,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'safety',
     icon: 'faqEspSafer',
     q: 'Is ESP-only safer than aimbot?',
-    a: a('ESP is quieter than an obvious aimbot or no-recoil pattern in a killcam, but it is still a cheat. Admins, clips and Easy Anti-Cheat do not ignore overlays because aim assist is off. Wallbang-free play and sensible reaction timing reduce reports.'),
+    a: a('ESP is quieter than an obvious aimbot or no-recoil pattern in a killcam, but it is still a cheat. Admins, clips and Gaijin anti-cheat do not ignore overlays because aim assist is off. Wallbang-free play and sensible reaction timing reduce reports.'),
   },
   {
     id: 'hwid-when',
@@ -201,38 +201,38 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'hwid-after-ban',
     topic: 'safety',
     icon: 'faqHwidWhen',
-    q: 'Do I need a new account and a spoofer after an Easy Anti-Cheat ban?',
-    a: `Usually both: a new Steam account with Delta Force, plus ${hwidAlt} if the ban is tied to your hardware. Read the ${guideHwid} before buying anything, and never reuse the banned account on your main PC.`,
+    q: 'Do I need a new account and a spoofer after a Gaijin ban?',
+    a: `Usually both: a new Steam account with War Thunder, plus ${hwidAlt} if the ban is tied to your hardware. Read the ${guideHwid} before buying anything, and never reuse the banned account on your main PC.`,
   },
   {
     id: 'ugc-what',
     topic: 'products',
     icon: 'faqUgcWhat',
     q: 'What is UGC?',
-    a: `${ugc} (Unban & Governance Control) is an appeal workspace for TiMi Studio Group and Easy Anti-Cheat bans and Steam restrictions—custom workflows and case tracking, not a guaranteed unban service.`,
+    a: `${ugc} (Unban & Governance Control) is an appeal workspace for Gaijin Entertainment and Gaijin bans and Steam restrictions—custom workflows and case tracking, not a guaranteed unban service.`,
     scopes: ['ugc'],
   },
   {
     id: 'skin-changer',
     topic: 'products',
     icon: 'faqSkinChanger',
-    q: 'Does Skin unlock modify my Steam inventory?',
-    a: `${skin} previews operator skins, weapon skins and cosmetic packs locally on your client. Other players see your real inventory. Included with ${elite}; available standalone for cosmetic preview only.`,
+    q: 'Does Camouflage unlock modify my Steam inventory?',
+    a: `${skin} previews vehicle camouflages, decals and cosmetic packs locally on your client. Other players see your real inventory. Included with ${elite}; available standalone for cosmetic preview only.`,
     scopes: ['unlock-all'],
   },
   {
     id: 'external-loader',
     topic: 'products',
     icon: 'faqExternalLoader',
-    q: 'Is the loader injected into the Delta Force install?',
-    a: `Delta Force Cheats runs external with cloud config sync—no files are written into the Delta Force install directory. Easy Anti-Cheat risk still applies. See the ${guideExternal} and ${productsHubAlt}.`,
+    q: 'Is the loader injected into the War Thunder install?',
+    a: `War Thunder Cheats runs external with cloud config sync—no files are written into the War Thunder install directory. Gaijin anti-cheat risk still applies. See the ${guideExternal} and ${productsHubAlt}.`,
   },
   {
     id: 'blog-vs-cheats',
     topic: 'blog',
     icon: 'faqBlogVsCheats',
-    q: 'Are training commands the same as Delta Force cheats?',
-    a: `No. Built-in practice or debug commands only work in training tools you host—not in live Warfare or Operations. Paid Delta Force cheats are separate products for live matches—see the ${elitePage} and the ${guideAdmin}.`,
+    q: 'Are test flight commands the same as War Thunder cheats?',
+    a: `No. F1 console commands like test flight, invulnerability and give only work for admins on servers you own or moderate. Paid War Thunder cheats are separate products for live servers—see the ${elitePage} and the ${guideAdmin}.`,
   },
   {
     id: 'blog-setup',
@@ -253,7 +253,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhoLite',
     q: 'Who should stay on Lite?',
-    a: `Players who only want awareness—Player ESP, Loot ESP and radar—and will not touch aim assist. If you keep wanting recoil control, buy ${pro} instead.`,
+    a: `Players who only want awareness—Player ESP, Vehicle ESP and radar—and will not touch aim assist. If you keep wanting recoil control, buy ${pro} instead.`,
     scopes: ['lite'],
   },
   {
@@ -261,7 +261,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhoPro',
     q: 'Who should buy Pro?',
-    a: `PvP players who want Aimbot, Soft Aim and Ballistic assist with ESP and radar included. Pro is the most popular tier at deltaforce-cheats.net.`,
+    a: `PvP players who want Aimbot, Soft Aim and Ballistic assist with ESP and radar included. Pro is the most popular tier at warthunder-cheats.com.`,
     scopes: ['pro'],
   },
   {
@@ -269,36 +269,36 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhoElite',
     q: 'Who should buy Elite?',
-    a: `Operators who want XP/currency farm helpers, Skin unlock and priority patch delivery when slots are open.`,
+    a: `Operators who want SL/RP farm helpers, Camouflage unlock and priority patch delivery when slots are open.`,
     scopes: ['elite'],
   },
   {
     id: 'eac-update',
     topic: 'safety',
     icon: 'faqEacUpdate',
-    q: 'What should I do after an Easy Anti-Cheat or Delta Force update?',
-    a: a('Check deltaforce-cheats.net status and Discord #status. Do not launch until the banner shows online. Reload your loader, then use conservative presets and test on a firing range first. The EAC patch day checklist covers the full routine.'),
+    q: 'What should I do after a Gaijin anti-cheat or War Thunder update?',
+    a: a('Check warthunder-cheats.com status and Discord #status. Do not launch until the banner shows online. Reload your loader, then use conservative presets and test on an Arcade test battle first. The Gaijin patch day checklist covers the full routine.'),
   },
   {
     id: 'eac-init',
     topic: 'setup',
     icon: 'faqEacUpdate',
-    q: 'Easy Anti-Cheat says it failed to initialize—is that a ban?',
-    a: `Usually not. It is most often a broken Easy Anti-Cheat install, a service conflict or a blocked driver. Verify Delta Force files in Steam or Epic Games, reinstall Easy Anti-Cheat from the Delta Force install and restart before assuming a ban. See the ${guideEacInit}; if it is a real ban, check ${ugcInit}.`,
+    q: 'Gaijin anti-cheat says it failed to initialize—is that a ban?',
+    a: `Usually not. It is most often a broken Gaijin anti-cheat install, a service conflict or a blocked driver. Verify War Thunder files in Steam or Gaijin Launcher, reinstall Gaijin anti-cheat from the War Thunder install and restart before assuming a ban. See the ${guideEacInit}; if it is a real ban, check ${ugcInit}.`,
   },
   {
     id: 'discord-help',
     topic: 'setup',
     icon: 'faqDiscordHelp',
     q: 'How do I get install help?',
-    a: a('Open Discord after purchase with your order email, Windows version and Delta Force client build. Staff walk through loader setup live.'),
+    a: a('Open Discord after purchase with your order email, Windows version and War Thunder client build. Staff walk through loader setup live.'),
   },
   {
     id: 'server-types',
     topic: 'plans',
     icon: 'faqServerModes',
-    q: 'Do tiers work on Warfare and Operations matches?',
-    a: `Yes—${lite}, ${pro} and ${elite} include presets for Warfare and Operations matches in the portal. Tune ESP distance, aim FOV and smoothing before your first gunfight or objective push.`,
+    q: 'Do tiers work on Arcade, Realistic and Simulator battles?',
+    a: `Yes—${lite}, ${pro} and ${elite} include presets for Arcade, Realistic and Simulator battles in the portal. Tune ESP distance, aim FOV and smoothing before your first dogfight or capture-point push.`,
   },
   {
     id: 'zoom-hack',
@@ -312,24 +312,24 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'vehicle-esp',
     topic: 'esp',
     icon: 'faqWhatIsEsp',
-    q: 'What does Loot & player ESP highlight?',
-    a: `Enemy operators, loot crates, containers, objectives, extracts and AI bots—filtered by type and distance. All tiers include it, and the ${link('readable ESP layout tips', blogPostPath('esp'))} explains how to keep the screen readable.`,
+    q: 'What does Vehicle & player ESP highlight?',
+    a: `Enemy and friendly vehicles, capture points, airfields, AI columns and bonus objectives—filtered by type and distance. All tiers include it, and the ${link('readable ESP layout tips', blogPostPath('esp'))} explains how to keep the screen readable.`,
     scopes: ['lite', 'pro', 'elite'],
   },
   {
     id: 'auto-farm',
     topic: 'scripts',
     icon: 'faqAutoFarm',
-    q: 'Which tier includes XP/currency farm helpers?',
-    a: `XP/currency farm helpers for Silver Lions and Research Points grind routes are ${elite} only. ${pro} covers aim assist without farm automation.`,
+    q: 'Which tier includes SL/RP farm helpers?',
+    a: `SL/RP farm helpers for Silver Lions and Research Points grind routes are ${elite} only. ${pro} covers aim assist without farm automation.`,
     scopes: ['elite'],
   },
   {
     id: 'private-cheats',
     topic: 'safety',
     icon: 'faqPrivateCheats',
-    q: 'What are private Delta Force cheats?',
-    a: a('Private means per-user keys and maintained builds—not public zip packs. Delta Force Cheats ships portal delivery for ESP, aim assist and radar tiers.'),
+    q: 'What are private War Thunder cheats?',
+    a: a('Private means per-user keys and maintained builds—not public zip packs. War Thunder Cheats ships portal delivery for ESP, aim assist and radar tiers.'),
   },
   {
     id: 'faq-more',
@@ -352,9 +352,9 @@ export function getAllFaqs(): SiteFaqItem[] {
 
 /** Shared FAQ block copy + filters (home, /faq/, products, blog). */
 export const SITE_FAQ_SECTION_COPY = {
-  eyebrow: 'Delta Force topics',
-  title: 'Browse Delta Force cheat answers by category',
-  subtitle: 'Filter Delta Force plans, ESP, aimbot, products, setup and buy-guide answers.',
+  eyebrow: 'War Thunder topics',
+  title: 'Browse War Thunder cheat answers by category',
+  subtitle: 'Filter War Thunder plans, ESP, aimbot, products, setup and buy-guide answers.',
 } as const;
 
 export const SITE_FAQ_FILTER_TOPICS: FaqTopic[] = [
@@ -414,22 +414,22 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       id: 'blog-guide-start',
       topic: 'blog',
       icon: 'faqBlogGuideStart',
-      q: 'Should I use training commands in live Warfare or Operations battles?',
-      a: a('No. Training range and custom-battle console tools only work when you host or have host tools in a private match. Live matchmaking needs separate Delta Force cheats from deltaforce-cheats.net tiers—and carries ban risk.'),
+      q: 'Should I use test flight commands in live Arcade or Realistic battles?',
+      a: a('No. Test flight and custom-battle console tools only work when you host or have host tools in a custom battle. Live matchmaking needs separate War Thunder cheats from warthunder-cheats.com tiers—and carries ban risk.'),
     },
     {
       id: 'blog-guide-tier',
       topic: 'blog',
       icon: 'faqBlogGuideTier',
       q: 'Which tier matches this guide?',
-      a: `ESP and radar guides → ${lite}. Aimbot and recoil guides → ${pro}. Farm helpers and Skin unlock topics → ${elite}.`,
+      a: `ESP and radar guides → ${lite}. Aimbot and recoil guides → ${pro}. Farm helpers and Camouflage unlock topics → ${elite}.`,
     },
     {
       id: 'blog-guide-status',
       topic: 'blog',
       icon: 'faqBlogGuideStatus',
       q: 'Is this guide still valid after a patch?',
-      a: a('Check the article date and the live status banner. Patch-day articles note when modules change—Discord #status has the latest build notes after each Delta Force update or major patch.'),
+      a: a('Check the article date and the live status banner. Patch-day articles note when modules change—Discord #status has the latest build notes after each War Thunder update or major patch.'),
     },
   ],
   Setup: [
@@ -444,8 +444,8 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       id: 'blog-setup-lobby',
       topic: 'blog',
       icon: 'faqBlogSetupLobby',
-      q: 'Should I test on a firing range first?',
-      a: a('Yes. Load conservative presets on a firing range or low-pop private match before busy Warfare or Operations queues. Tune aim FOV, smoothing and ESP distance caps over several sessions.'),
+      q: 'Should I test on an Arcade test battle first?',
+      a: a('Yes. Load conservative presets on an Arcade test battle or low-pop custom battle before busy Arcade, Realistic or Simulator queues. Tune aim FOV, smoothing and ESP distance caps over several sessions.'),
     },
   ],
   Features: [
@@ -454,7 +454,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       topic: 'blog',
       icon: 'faqBlogGuideTier',
       q: 'Are all modules in this article on every tier?',
-      a: `No. Lite is ESP, radar and FOV only; ${pro} adds Aimbot, Soft Aim and Ballistic assist; ${elite} adds farm helpers and Skin unlock. Check the compare table before checkout.`,
+      a: `No. Lite is ESP, radar and FOV only; ${pro} adds Aimbot, Soft Aim and Ballistic assist; ${elite} adds farm helpers and Camouflage unlock. Check the compare table before checkout.`,
     },
   ],
   Updates: [
@@ -462,7 +462,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       id: 'blog-updates-eac',
       topic: 'blog',
       icon: 'faqBlogSecVac',
-      q: 'How fast do builds update after an EAC patch?',
+      q: 'How fast do builds update after a Gaijin patch?',
       a: `Elite gets priority delivery; Lite and Pro follow once the build is verified. Do not launch until the banner is green—see the ${guidePatch}.`,
     },
   ],
@@ -471,8 +471,8 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       id: 'blog-trouble-eac',
       topic: 'blog',
       icon: 'faqBlogSecVac',
-      q: 'Is an Easy Anti-Cheat error always a ban?',
-      a: a('No. Start with Steam file verification, an Easy Anti-Cheat reinstall and a clean restart. A ban message names the account or hardware; startup errors usually do not.'),
+      q: 'Is an Gaijin anti-cheat error always a ban?',
+      a: a('No. Start with Steam file verification, an Gaijin anti-cheat reinstall and a clean restart. A ban message names the account or hardware; startup errors usually do not.'),
     },
   ],
   Security: [
@@ -506,7 +506,7 @@ const defaultBlogFaqs: SiteFaqItem[] = [
     topic: 'blog',
     icon: 'faqBlogDefault3',
     q: 'Will settings in this article work next patch?',
-    a: a('Re-check status after every Delta Force update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
+    a: a('Re-check status after every War Thunder update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
   },
 ];
 
@@ -520,7 +520,7 @@ export function getBlogFaqs(tag: string, slug: string): SiteFaqItem[] {
       topic: 'esp',
       icon: 'faqBlogSlugEsp',
       q: 'Which tier covers ESP and radar from this article?',
-      a: `${lite} includes Player ESP, Loot & player ESP, radar and FOV hack. ${pro} adds aim assist on the same overlay stack.`,
+      a: `${lite} includes Player ESP, Vehicle & player ESP, radar and FOV hack. ${pro} adds aim assist on the same overlay stack.`,
     });
   }
   if (slug.includes('script') || slug.includes('combo') || slug.includes('recoil') || slug.includes('aim')) {
@@ -538,7 +538,7 @@ export function getBlogFaqs(tag: string, slug: string): SiteFaqItem[] {
       topic: 'products',
       icon: 'faqBlogSlugHwid',
       q: 'Does this article replace HWID or UGC products?',
-      a: `Recovery and Easy Anti-Cheat guides complement ${link('HWID recovery product details', productPath('hwid-spoofer'))} and ${link('UGC case-tracking page', productPath('ugc'))}—read product pages for workflow scope and realistic outcomes.`,
+      a: `Recovery and Gaijin anti-cheat guides complement ${link('HWID recovery product details', productPath('hwid-spoofer'))} and ${link('UGC case-tracking page', productPath('ugc'))}—read product pages for workflow scope and realistic outcomes.`,
     });
   }
   if (slug.includes('stream')) {
@@ -566,7 +566,7 @@ export function getBlogFaqs(tag: string, slug: string): SiteFaqItem[] {
 export const compareRows = [
   { feature: 'Player ESP (boxes, names, health)', icon: 'comparePlayerEsp' as const, lite: true, pro: true, elite: true },
   { feature: 'Skeleton ESP', icon: 'skeletonEsp' as const, lite: true, pro: true, elite: true },
-  { feature: 'Loot & player ESP', icon: 'lootEsp' as const, lite: true, pro: true, elite: true },
+  { feature: 'Vehicle & player ESP', icon: 'lootEsp' as const, lite: true, pro: true, elite: true },
   { feature: 'Radar overlay', icon: 'compareMinimapHack' as const, lite: true, pro: true, elite: true },
   { feature: 'FOV Hack', icon: 'compareZoomHack' as const, lite: true, pro: true, elite: true },
   { feature: 'Stream Proof overlay', icon: 'compareStreamproof' as const, lite: true, pro: true, elite: true },
@@ -576,11 +576,11 @@ export const compareRows = [
   { feature: 'Bone Select (head / chest / body)', icon: 'boneSelect' as const, lite: false, pro: true, elite: true },
   { feature: 'Aim FOV circle & target selector', icon: 'compareTargetSelector' as const, lite: false, pro: true, elite: true },
   { feature: 'Ballistic assist / Spread', icon: 'noRecoil' as const, lite: false, pro: true, elite: true },
-  { feature: 'Ballistic profiles (ARs, SMGs and DMRs)', icon: 'stepCrosshair' as const, lite: false, pro: true, elite: true },
+  { feature: 'Ballistic profiles (tanks, fighters, SPAA)', icon: 'stepCrosshair' as const, lite: false, pro: true, elite: true },
   { feature: 'Trigger Bot', icon: 'triggerBot' as const, lite: false, pro: true, elite: true },
-  { feature: 'XP/currency farm helpers', icon: 'compareAutoFarm' as const, lite: false, pro: false, elite: true },
+  { feature: 'SL/RP farm helpers', icon: 'compareAutoFarm' as const, lite: false, pro: false, elite: true },
   { feature: 'Full radar suite (UAV-style)', icon: 'uavRadar' as const, lite: false, pro: false, elite: true },
-  { feature: 'Skin unlock (Unlock All)', icon: 'compareSkinChanger' as const, lite: false, pro: false, elite: true },
+  { feature: 'Camouflage unlock (Unlock All)', icon: 'compareSkinChanger' as const, lite: false, pro: false, elite: true },
   { feature: 'Priority patch queue', icon: 'comparePriorityPatch' as const, lite: false, pro: false, elite: true },
   { feature: 'Direct dev Discord support', icon: 'compareDevSupport' as const, lite: false, pro: false, elite: true },
 ];

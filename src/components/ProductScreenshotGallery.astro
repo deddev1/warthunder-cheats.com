@@ -42,14 +42,14 @@ const first = images[0];
       size="sm"
       class="pointer-events-none absolute bottom-3 left-3 shadow-sm"
     >
-      Delta Force cheats gameplay
+      War Thunder cheats gameplay
     </Badge>
   </div>
   {
     first && (first.caption || first.captionDesc) && (
-      <p class="mt-2 text-sm text-muted-foreground" data-product-gallery-caption>
-        <strong class="text-foreground" data-product-gallery-caption-title>{first.caption}</strong>
-        <span data-product-gallery-caption-desc>{first.captionDesc ? ` — ${first.captionDesc}` : ''}</span>
+      <p class="mt-2 text-sm text-muted-foreground">
+        <strong class="text-foreground">{first.caption}</strong>
+        {first.captionDesc && ` — ${first.captionDesc}`}
       </p>
     )
   }
@@ -63,13 +63,11 @@ const first = images[0];
             class:list={['product-gallery__thumb', i === 0 && 'is-active']}
             role="tab"
             aria-selected={i === 0 ? 'true' : 'false'}
-            aria-label={img.caption || `Screenshot ${i + 1}`}
+            aria-label={`Screenshot ${i + 1}`}
             data-product-gallery-thumb
             data-index={i}
             data-src={img.src}
             data-alt={img.alt}
-            data-caption={img.caption}
-            data-caption-desc={img.captionDesc}
           >
             <ResponsiveImage
               src={img.src}
@@ -95,31 +93,18 @@ const first = images[0];
       root.setAttribute('data-gallery-bound', '');
 
       const main = root.querySelector<HTMLImageElement>('.product-gallery__image');
-      const mainSource = root.querySelector<HTMLSourceElement>('.product-gallery__main source');
-      const captionTitle = root.querySelector<HTMLElement>('[data-product-gallery-caption-title]');
-      const captionDesc = root.querySelector<HTMLElement>('[data-product-gallery-caption-desc]');
       const thumbs = root.querySelectorAll<HTMLButtonElement>('[data-product-gallery-thumb]');
       if (!main || !thumbs.length) return;
 
       thumbs.forEach((thumb) => {
         thumb.addEventListener('click', () => {
-          const alt = thumb.getAttribute('data-alt') ?? '';
-          const caption = thumb.getAttribute('data-caption') ?? '';
-          const desc = thumb.getAttribute('data-caption-desc') ?? '';
+          const alt = thumb.getAttribute('data-alt');
           const thumbImg = thumb.querySelector('img');
-          const thumbSource = thumb.querySelector('source');
-
-          if (thumbImg?.currentSrc || thumbImg?.src) {
-            main.src = thumbImg.currentSrc || thumbImg.src;
+          if (thumbImg?.src) {
+            main.src = thumbImg.src;
             if (thumbImg.srcset) main.srcset = thumbImg.srcset;
           }
-          if (thumbSource?.srcset && mainSource) {
-            mainSource.srcset = thumbSource.srcset;
-          }
           if (alt) main.alt = alt;
-          if (captionTitle) captionTitle.textContent = caption;
-          if (captionDesc) captionDesc.textContent = desc ? ` — ${desc}` : '';
-
           thumbs.forEach((t) => {
             const active = t === thumb;
             t.classList.toggle('is-active', active);

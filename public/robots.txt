@@ -4,6 +4,6 @@ Allow: /
 Disallow: /go/
 Disallow: /forum/
 
-Sitemap: https://deltaforce-cheats.net/sitemap-index.xml
+Sitemap: https://warthunder-cheats.com/sitemap-index.xml
 
-# RSS: https://deltaforce-cheats.net/rss.xml
+# RSS: https://warthunder-cheats.com/rss.xml

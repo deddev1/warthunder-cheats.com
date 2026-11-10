@@ -62,8 +62,8 @@ if (!fs.existsSync(robotsPath)) {
 } else {
   const robots = read(robotsPath);
   if (!/sitemap:/i.test(robots)) fail('sitemap.xml and robots.txt', 'robots.txt has no Sitemap: line');
-  else if (!/deltaforce-cheats\.net/i.test(robots)) fail('sitemap.xml and robots.txt', 'robots sitemap host wrong');
-  else ok('robots.txt live with Sitemap pointing at deltaforce-cheats.net');
+  else if (!/warthunder-cheats\.com/i.test(robots)) fail('sitemap.xml and robots.txt', 'robots sitemap host wrong');
+  else ok('robots.txt live with Sitemap pointing at warthunder-cheats.com');
 }
 const sitemapFile = sitemapCandidates.find((f) => fs.existsSync(f));
 if (!sitemapFile) {
@@ -71,12 +71,12 @@ if (!sitemapFile) {
 } else {
   const sm = read(sitemapFile);
   const required = [
-    'https://deltaforce-cheats.net/',
-    'https://deltaforce-cheats.net/products/deltaforce-cheats/',
-    'https://deltaforce-cheats.net/blog/',
-    'https://deltaforce-cheats.net/faq/',
-    'https://deltaforce-cheats.net/support/',
-    'https://deltaforce-cheats.net/reviews/',
+    'https://warthunder-cheats.com/',
+    'https://warthunder-cheats.com/products/warthunder-cheats/',
+    'https://warthunder-cheats.com/blog/',
+    'https://warthunder-cheats.com/faq/',
+    'https://warthunder-cheats.com/support/',
+    'https://warthunder-cheats.com/reviews/',
   ];
   const missing = required.filter((u) => !sm.includes(u) && !sm.includes(u.replace(/\/$/, '')));
   // sitemap-index may only list child sitemaps
@@ -100,13 +100,13 @@ if (!sitemapFile) {
 // 3) Affiliate / store links
 const checkoutFile = path.join(src, 'config/checkout-redirects.mjs');
 const redirectsFile = path.join(root, 'public/_redirects');
-const expectedCheats = 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fdelta-force';
+const expectedCheats = 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fwar-thunder';
 const expectedHwid = 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fhwid-spoofer';
 if (fs.existsSync(checkoutFile)) {
   const c = read(checkoutFile);
-  if (!c.includes(expectedCheats)) fail('Store/affiliate links', 'deltaforce checkout URL wrong');
+  if (!c.includes(expectedCheats)) fail('Store/affiliate links', 'warthunder checkout URL wrong');
   else if (!c.includes(expectedHwid)) fail('Store/affiliate links', 'hwid checkout URL wrong');
-  else ok('Checkout redirect config targets delta-force + hwid-spoofer');
+  else ok('Checkout redirect config targets war-thunder + hwid-spoofer');
 } else {
   fail('Store/affiliate links', 'checkout-redirects.mjs missing');
 }
@@ -117,13 +117,13 @@ if (fs.existsSync(redirectsFile)) {
     fail('Store/affiliate links', '_redirects must not use absolute source URLs (CF Workers)');
   } else if (ruleLines.length > 100) {
     fail('Store/affiliate links', `_redirects has ${ruleLines.length} rules (CF max 100)`);
-  } else if (!r.includes('%2Fproducts%2Fdelta-force')) fail('Store/affiliate links', '_redirects missing delta-force');
+  } else if (!r.includes('%2Fproducts%2Fwar-thunder')) fail('Store/affiliate links', '_redirects missing war-thunder');
   else if (!r.includes('%2Fproducts%2Fhwid-spoofer')) fail('Store/affiliate links', '_redirects missing hwid');
-  else if (!r.includes('/cheats/lite/ /products/deltaforce-cheats/lite/ 301')) {
+  else if (!r.includes('/cheats/lite/ /products/warthunder-cheats/lite/ 301')) {
     fail('Store/affiliate links', '_redirects lite must 301 to tier page');
-  } else if (!r.includes('/cheats/pro/ /products/deltaforce-cheats/pro/ 301')) {
+  } else if (!r.includes('/cheats/pro/ /products/warthunder-cheats/pro/ 301')) {
     fail('Store/affiliate links', '_redirects pro must 301 to tier page');
-  } else if (!r.includes('/go/deltaforce/ ') || !r.includes(' 302')) {
+  } else if (!r.includes('/go/warthunder/ ') || !r.includes(' 302')) {
     fail('Store/affiliate links', '_redirects /go/ must be 302-only (no HTML bridge)');
   } else ok(`public/_redirects OK (${ruleLines.length} rules, relative sources)`);
 }
@@ -139,7 +139,7 @@ const forbidden = [
   /\bFacepunch\b/,
   /\bEasy Anti-Cheat\b/,
   /\bdotacheats\.com\b/i,
-  /\bdeltaforce-cheats\.net\b/i,
+  /\brust-cheats\.net\b/i,
   /Lorem ipsum/i,
   /\bTODO:\s*replace/i,
   /\bComing soon\b/i,
@@ -172,7 +172,7 @@ else ok('No placeholder / wrong-game leftovers in user-facing src');
 // 5) Desktop/mobile structural sanity — key pages exist
 const mustExist = [
   'index.html',
-  path.join('products', 'deltaforce-cheats', 'index.html'),
+  path.join('products', 'warthunder-cheats', 'index.html'),
   path.join('blog', 'index.html'),
   path.join('faq', 'index.html'),
   path.join('support', 'index.html'),
@@ -246,7 +246,7 @@ const primary = htmlFiles.filter((f) => {
     rel === 'support/index.html' ||
     rel === 'reviews/index.html' ||
     rel === 'blog/index.html' ||
-    rel === 'products/deltaforce-cheats/index.html' ||
+    rel === 'products/warthunder-cheats/index.html' ||
     rel === 'about/index.html' ||
     rel === 'privacy/index.html' ||
     rel === 'terms/index.html'
@@ -286,24 +286,24 @@ for (const file of astroFiles) {
 if (emptyAlt) fail('Images compressed + alt', `${emptyAlt} ResponsiveImage empty alt(s)`);
 else ok('No empty ResponsiveImage alt attributes detected');
 
-// 8) Critical deltaforce cheats SEO guards
+// 8) Critical warthunder cheats SEO guards
 const homeHtml = path.join(dist, 'index.html');
 if (fs.existsSync(homeHtml)) {
   const home = read(homeHtml);
   const title = (home.match(/<title[^>]*>([^<]*)<\/title>/i) || [, ''])[1];
   const h1 = (home.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [, ''])[1].replace(/<[^>]+>/g, '').trim();
-  if (!title.includes('Delta Force Cheats')) fail('Head query SEO', `homepage title missing phrase: ${title}`);
-  else if (!h1.includes('Delta Force Cheats')) fail('Head query SEO', `homepage H1 missing phrase: ${h1}`);
-  else ok('Homepage title + H1 contain Delta Force Cheats');
+  if (!title.includes('War Thunder Cheats')) fail('Head query SEO', `homepage title missing phrase: ${title}`);
+  else if (!h1.includes('War Thunder Cheats')) fail('Head query SEO', `homepage H1 missing phrase: ${h1}`);
+  else ok('Homepage title + H1 contain War Thunder Cheats');
 }
-const hubHtml = path.join(dist, 'products', 'deltaforce-cheats', 'index.html');
+const hubHtml = path.join(dist, 'products', 'warthunder-cheats', 'index.html');
 if (fs.existsSync(hubHtml)) {
   const hub = read(hubHtml);
   const title = (hub.match(/<title[^>]*>([^<]*)<\/title>/i) || [, ''])[1];
   const h1 = (hub.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [, ''])[1].replace(/<[^>]+>/g, '').trim();
-  if (!title.includes('Delta Force Cheats')) fail('Head query SEO', `products hub title missing phrase: ${title}`);
-  else if (!h1.includes('Delta Force Cheats')) fail('Head query SEO', `products hub H1 missing phrase: ${h1}`);
-  else ok('Products hub title + H1 contain Delta Force Cheats');
+  if (!title.includes('War Thunder Cheats')) fail('Head query SEO', `products hub title missing phrase: ${title}`);
+  else if (!h1.includes('War Thunder Cheats')) fail('Head query SEO', `products hub H1 missing phrase: ${h1}`);
+  else ok('Products hub title + H1 contain War Thunder Cheats');
 }
 const sitemap0 = path.join(dist, 'sitemap-0.xml');
 if (fs.existsSync(sitemap0)) {
@@ -337,11 +337,11 @@ else if (!read(wranglerFile).includes('main = "src/worker.ts"')) fail('Host 301 
 else if (!/run_worker_first\s*=\s*true/.test(read(wranglerFile))) {
   fail('Host 301 worker', 'wrangler.toml must set assets.run_worker_first = true');
 } else ok('Cloudflare Worker host redirect entry wired');
-if (fs.existsSync(path.join(dist, 'blog', 'eac-patch', 'index.html')) &&
-    fs.existsSync(path.join(dist, 'blog', 'eac-error', 'index.html'))) {
-  ok('eac-patch and eac-error blog pages built');
+if (fs.existsSync(path.join(dist, 'blog', 'gaijin-patch', 'index.html')) &&
+    fs.existsSync(path.join(dist, 'blog', 'gaijin-error', 'index.html'))) {
+  ok('gaijin-patch and gaijin-error blog pages built');
 } else {
-  fail('Slug rename', 'eac-patch / eac-error pages missing from dist');
+  fail('Slug rename', 'gaijin-patch / gaijin-error pages missing from dist');
 }
 
 // Summary

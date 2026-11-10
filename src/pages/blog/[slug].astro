@@ -50,10 +50,10 @@ function linkify(text: string): string {
       const normalized = normalizeInternalPath(href);
       return `<a href="${normalized}">${label}</a>`;
     })
-    .replace(/(https:\/\/deltaforce-cheats\.net[^\s.,;)]*)/g, (_match, url: string) => {
-      const path = url.replace(/^https:\/\/deltaforce-cheats\.net/, '');
+    .replace(/(https:\/\/(?:warthunder-cheats\.com|rust-cheats\.net)[^\s.,;)]*)/g, (_match, url: string) => {
+      const path = url.replace(/^https:\/\/(?:warthunder-cheats\.com|rust-cheats\.net)/, '');
       const normalized = normalizeInternalPath(path);
-      const href = normalized.startsWith('http') ? normalized : `https://deltaforce-cheats.net${normalized}`;
+      const href = normalized.startsWith('http') ? normalized : `https://warthunder-cheats.com${normalized}`;
       return `<a href="${href}">${url}</a>`;
     });
 }
@@ -99,7 +99,7 @@ const published = parseBlogDate(post.date);
           <figure class="blog-article__hero">
             <ResponsiveImage
               src={post.image}
-              alt={post.imageAlt ?? `${post.title} — Delta Force cheats ESP and aimbot gameplay screenshot`}
+              alt={post.imageAlt ?? `${post.title} — War Thunder cheats ESP and aimbot gameplay screenshot`}
               width={960}
               height={540}
               loading="eager"
@@ -108,7 +108,7 @@ const published = parseBlogDate(post.date);
               class="w-full object-cover"
             />
             <figcaption class="sr-only">
-              {post.imageAlt ?? `Delta Force cheats gameplay screenshot for ${post.title}. Shop Lite, Pro or Elite at deltaforce-cheats.net.`}
+              {post.imageAlt ?? `War Thunder cheats gameplay screenshot for ${post.title}. Shop Lite, Pro or Elite at warthunder-cheats.com.`}
             </figcaption>
           </figure>
 
@@ -202,7 +202,7 @@ const published = parseBlogDate(post.date);
           </Prose>
 
           <nav class="blog-article__actions" aria-label="Continue reading">
-            <Button as="a" href={checkoutPath('deltaforce')} variant="primary" aria-label={t.ui.checkoutAria}>
+            <Button as="a" href={checkoutPath('warthunder')} variant="primary" aria-label={t.ui.checkoutAria}>
               Finish article checkout
               <Icon name="arrowRight" size={17} />
             </Button>

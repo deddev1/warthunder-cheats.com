@@ -59,7 +59,7 @@ export interface ProductPage {
 
 /** Guides paired with each product detail page */
 export const productRelatedBlogSlugs: Record<string, string[]> = {
-  lite: ['esp', 'lite-vs-pro', 'fov', 'eac-patch'],
+  lite: ['esp', 'lite-vs-pro', 'fov', 'gaijin-patch'],
   pro: [
     'aimbot',
     'bones',
@@ -70,17 +70,17 @@ export const productRelatedBlogSlugs: Record<string, string[]> = {
     'elite',
     'features',
     'esp',
-    'eac-patch',
+    'gaijin-patch',
     'buy-guide',
   ],
   'hwid-spoofer': [
     'hwid',
-    'eac-error',
-    'eac-patch',
+    'gaijin-error',
+    'gaijin-patch',
     'external',
   ],
   ugc: [
-    'eac-error',
+    'gaijin-error',
     'hwid',
     'buy-guide',
   ],
@@ -91,18 +91,18 @@ export const productRelatedBlogSlugs: Record<string, string[]> = {
   ],
 };
 
-const productBase = '/products/deltaforce-cheats/';
+const productBase = '/products/warthunder-cheats/';
 
 const defaultAcquisitionSteps: AcquisitionStep[] = [
   {
     num: '01',
     title: 'Review current status',
-    desc: 'Check the live status banner on deltaforce-cheats.net and Discord #status before purchase—especially after an EAC patch or client update.',
+    desc: 'Check the live status banner on warthunder-cheats.com and Discord #status before purchase—especially after a Gaijin patch or client update.',
   },
   {
     num: '02',
     title: 'Choose your access tier',
-    desc: 'Select Elite Delta Force cheats or the utility that matches your goal. Review the feature list before checkout via our secure checkout.',
+    desc: 'Select Elite War Thunder cheats or the utility that matches your goal. Review the feature list before checkout via our secure checkout.',
   },
   {
     num: '03',
@@ -112,7 +112,7 @@ const defaultAcquisitionSteps: AcquisitionStep[] = [
   {
     num: '04',
     title: 'Follow guided setup',
-    desc: 'Use only the operator portal, patch loader, and setup guide. Test on a firing range, load presets, then join Warfare or Operations matches.',
+    desc: 'Use only the operator portal, patch loader, and setup guide. Test on an Arcade test battle, load presets, then join Arcade, Realistic or Simulator battles.',
   },
 ];
 
@@ -124,17 +124,17 @@ function acquisitionFor(productName: string): ProductAcquisition {
 }
 
 const sharedGoodToKnow =
-  'Delta Force and Easy Anti-Cheat receive frequent updates, especially on major EAC patch and patch days. Confirm module availability on the live status panel at deltaforce-cheats.net before you purchase or launch. Overlay behavior may differ between Warfare and Operations (Warfare/Operations) servers after patches.';
+  'War Thunder and Gaijin account protection receive frequent updates, especially on major Gaijin patch and patch days. Confirm module availability on the live status panel at warthunder-cheats.com before you purchase or launch. Overlay behavior may differ between Arcade, Realistic and Simulator (Air/Ground/Naval) servers after patches.';
 
 const sharedLimitations =
-  'Third-party software in Delta Force can violate TiMi Studio Group Terms of Service and lead to Easy Anti-Cheat bans, server bans or account action. You use this software at your own risk. Compatibility and availability can change after game, Easy Anti-Cheat, or Windows updates without notice.';
+  'Third-party software in War Thunder can violate Gaijin Entertainment Terms of Service and lead to Gaijin bans, server bans or account action. You use this software at your own risk. Compatibility and availability can change after game, Gaijin anti-cheat, or Windows updates without notice.';
 
 const wtSystemRequirements: SystemRequirement[] = [
   { icon: 'reqWindows', text: 'Supported 64-bit edition of Windows 10 or Windows 11.' },
-  { icon: 'reqSteam', text: 'Delta Force via Steam or Epic Games with latest patches applied.' },
+  { icon: 'reqSteam', text: 'War Thunder via Steam or Gaijin Launcher with latest patches applied.' },
   { icon: 'reqSettings', text: 'Administrator access for loader installation and patch updates.' },
   { icon: 'reqWifi', text: 'Stable internet connection for portal access and patch delivery.' },
-  { icon: 'reqCpu', text: 'A system that meets Delta Force published hardware requirements.' },
+  { icon: 'reqCpu', text: 'A system that meets War Thunder published hardware requirements.' },
 ];
 
 type GalleryKey = keyof typeof galleryRaw;
@@ -228,14 +228,14 @@ function slide(...keys: GalleryKey[]): ProductSlide[] {
 
 function slugFromHref(href: string): string {
   const segment = href.replace(productBase, '').replace(/^\//, '').replace(/\/$/, '');
-  return segment || 'deltaforce-cheats';
+  return segment || 'warthunder-cheats';
 }
 
 const tierAbout: Record<string, ProductPage['about']> = {
   lite: [
     {
       type: 'p',
-      text: 'Delta Force Lite is built for players who want information first. In Delta Force, knowing where enemies, wrecks and objectives are before you commit wins more fights than raw aim—Lite gives you that edge without aim automation.',
+      text: 'War Thunder Lite is built for players who want information first. In War Thunder, knowing where enemies, wrecks and objectives are before you commit wins more fights than raw aim—Lite gives you that edge without aim automation.',
     },
     { type: 'h2', text: 'Low-profile by design' },
     {
@@ -246,7 +246,7 @@ const tierAbout: Record<string, ProductPage['about']> = {
   pro: [
     {
       type: 'p',
-      text: 'Delta Force Pro is the sweet spot for players who fight often. Aimbot, recoil control and Smart Aim help you win gunfights without obvious snap patterns—when you tune smoothing and FOV using our portal presets.',
+      text: 'War Thunder Pro is the sweet spot for players who fight often. Aimbot, recoil control and Smart Aim help you win gunfights without obvious snap patterns—when you tune smoothing and FOV using our portal presets.',
     },
     { type: 'h2', text: 'Combat tools + awareness combined' },
     {
@@ -257,12 +257,12 @@ const tierAbout: Record<string, ProductPage['about']> = {
   elite: [
     {
       type: 'p',
-      text: 'Delta Force Elite is the private build for players who want everything—XP/currency farm helpers, combat assist, Skin unlock, full ESP suite and direct developer support. Limited slots keep the build maintainable and patch cycles fast.',
+      text: 'War Thunder Elite is the private build for players who want everything—SL/RP farm helpers, combat assist, Camouflage unlock, full ESP suite and direct developer support. Limited slots keep the build maintainable and patch cycles fast.',
     },
     { type: 'h2', text: 'Use Elite responsibly' },
     {
       type: 'p',
-      text: 'Elite power demands disciplined profiles. Test on a firing range, start with portal conservative presets, and scale up over days—not minutes. Staff in Discord help Elite users tune before their first Warfare or Operations session.',
+      text: 'Elite power demands disciplined profiles. Test on an Arcade test battle, start with portal conservative presets, and scale up over days—not minutes. Staff in Discord help Elite users tune before their first Arcade, Realistic or Simulator session.',
     },
   ],
 };
@@ -272,7 +272,7 @@ const tierBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Included modules' },
     {
       type: 'p',
-      text: 'Player ESP with distance and name tags, loot crates, containers, AI bots and objective highlights, radar, FOV changer, and stream-safe overlay hiding. Config presets for Warfare and Operations matches ship in the portal—load before you queue.',
+      text: 'Player ESP with distance and name tags, destroyed vehicle and wreck markers, AI and capture-point highlights, radar, FOV changer, and stream-safe overlay hiding. Config presets for Arcade, Realistic and Simulator (Air/Ground/Naval) battles ship in the portal—load before you queue.',
     },
     { type: 'h2', text: 'Upgrade path' },
     {
@@ -284,19 +284,19 @@ const tierBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Combat tools and automation' },
     {
       type: 'p',
-      text: 'Aimbot, recoil control, Smart Aim with bullet-drop prediction, target selector and weapon profiles for ARs, SMGs, DMRs and snipers. Smoothing and FOV limits keep aim natural on Warfare and Operations matches. Start with portal presets, not max sliders.',
+      text: 'Aimbot, recoil control, Smart Aim with bullet-drop prediction, target selector and weapon profiles for tanks, fighters and SPAA. Smoothing and FOV limits keep aim natural on Arcade and Realistic battles. Start with portal presets, not max sliders.',
     },
     { type: 'h2', text: 'Recommended pairing' },
     {
       type: 'p',
-      text: 'Pro is the most popular tier at deltaforce-cheats.net—enough firepower for busy Warfare queues without Elite slot limits. Pair with our aimbot guide in the blog before your first session.',
+      text: 'Pro is the most popular tier at warthunder-cheats.com—enough firepower for busy Realistic queues without Elite slot limits. Pair with our aimbot guide in the blog before your first session.',
     },
   ],
   elite: [
     { type: 'h2', text: 'Full bot and finish suite' },
     {
       type: 'p',
-      text: 'XP/currency farm helpers, combat assist, Skin unlock and the full ESP suite with loot and objective alerts. Use a firing range or private match before live Warfare or Operations play—Elite power requires disciplined profiles, not rage settings.',
+      text: 'SL/RP farm helpers, combat assist, Camouflage unlock and the full ESP suite with vehicle and objective alerts. Use an Arcade test battle or custom battle before live Arcade, Realistic or Simulator play—Elite power requires disciplined profiles, not rage settings.',
     },
     { type: 'h2', text: 'Availability' },
     {
@@ -311,7 +311,7 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'When you need it' },
     {
       type: 'p',
-      text: 'Use when fresh Steam accounts fail instantly on one PC but work elsewhere—classic hardware ban enforcement after an Easy Anti-Cheat ban action. Do not use for account-only bans; see [UGC](/products/deltaforce-cheats/ugc/) instead.',
+      text: 'Use when fresh Steam accounts fail instantly on one PC but work elsewhere—classic hardware ban enforcement after a Gaijin ban action. Do not use for account-only bans; see [UGC](/products/warthunder-cheats/ugc/) instead.',
     },
     { type: 'h2', text: 'Full workflow' },
     {
@@ -323,12 +323,12 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'What UGC covers' },
     {
       type: 'p',
-      text: 'UGC (Unban & Governance Control) is an appeal workspace for Steam restrictions, Easy Anti-Cheat and server bans, trade holds and security flags. Build custom workflows, automate dispute steps and track case status from one dashboard—not a guaranteed unban service.',
+      text: 'UGC (Unban & Governance Control) is an appeal workspace for Steam restrictions, Gaijin anti-cheat and server bans, trade holds and security flags. Build custom workflows, automate dispute steps and track case status from one dashboard—not a guaranteed unban service.',
     },
     { type: 'h2', text: 'Realistic expectations' },
     {
       type: 'p',
-      text: 'Some Easy Anti-Cheat bans cannot be reversed. UGC organizes evidence and follow-ups for TiMi Studio Group and server-owner review. Pair with [HWID Spoofer](/products/deltaforce-cheats/hwid-spoofer/) when hardware is flagged, or a new account when reputation is burned.',
+      text: 'Some Gaijin bans cannot be reversed. UGC organizes evidence and follow-ups for Gaijin Entertainment and server-owner review. Pair with [HWID Spoofer](/products/warthunder-cheats/hwid-spoofer/) when hardware is flagged, or a new account when reputation is burned.',
     },
   ],
   'unlock-all': [
@@ -340,7 +340,7 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Included with Elite' },
     {
       type: 'p',
-      text: 'Skin unlock ships inside the Elite tier. Buy standalone here if you want cosmetic preview without full combat modules.',
+      text: 'Camouflage unlock ships inside the Elite tier. Buy standalone here if you want cosmetic preview without full combat modules.',
     },
   ],
 };
@@ -356,25 +356,25 @@ const productContent: Record<
     systemRequirements: wtSystemRequirements,
     fullFeatures: [
       'Player ESP & skeleton boxes',
-      'Auto-spot & downed operator tags',
-      'Loot, player & objective markers',
-      'Held-weapon & armor labels',
+      'Auto-spot & disabled vehicle tags',
+      'Vehicle, player & capture markers',
+      'Held-vehicle & armament labels',
       'Radar overlay',
       'Streamproof overlay mode',
       'Distance readouts',
       'Team color filter',
-      'Loot & operator alerts',
+      'Vehicle & helicopter alerts',
       'FOV changer',
-      'Warfare / Operations preset config',
-      'Operations / extraction preset config',
+      'Arcade / Realistic preset config',
+      'Simulator / Naval preset config',
       'Cloud config backup',
       'Patch auto-updater',
     ],
     overview: {
-      title: 'Built around a clear Delta Force awareness workflow',
+      title: 'Built around a clear War Thunder awareness workflow',
       paragraphs: [
-        'Delta Force Lite focuses on player ESP, loot tags, objective markers, radar and FOV changer—everything you need to track threats and map control without aim automation. Modules are grouped in the portal so you can tune distance, colors, and stream-proof mode before you queue a battle.',
-        'Lite is the entry path for Warfare and Operations (Warfare/Operations) players who want awareness with minimal report risk. No aimbot, no bots—just readable overlays maintained every patch at deltaforce-cheats.net.',
+        'War Thunder Lite focuses on player ESP, vehicle tags, capture markers, radar and FOV changer—everything you need to track threats and map control without aim automation. Modules are grouped in the portal so you can tune distance, colors, and stream-proof mode before you queue a battle.',
+        'Lite is the entry path for Arcade, Realistic and Simulator (Air/Ground/Naval) players who want awareness with minimal report risk. No aimbot, no bots—just readable overlays maintained every patch at warthunder-cheats.com.',
       ],
     },
   },
@@ -389,22 +389,22 @@ const productContent: Record<
       'Ballistic assist',
       'Smart Aim & lead prediction',
       'Target selector',
-      'Weapon-specific profiles',
-      'Recoil assist helper',
+      'Vehicle-specific profiles',
+      'Missile assist helper',
       'FOV circle drawing',
       'Smoothing & delay tuning',
       'Silent-safe default presets',
-      'Loot & operator alerts',
+      'Vehicle & turret alerts',
       'Test server profile',
       'Cloud config backup',
       'Patch auto-updater',
       'Discord operator support',
     ],
     overview: {
-      title: 'Built around a clear Delta Force combat workflow',
+      title: 'Built around a clear War Thunder combat workflow',
       paragraphs: [
-        'Delta Force Pro adds aimbot, ballistic assist, Smart Aim and weapon profiles on top of every Lite module. Per-weapon profiles, smoothing and activation keys live in one combat tab—tuned for Warfare and Operations matches when you start with portal presets, not max sliders.',
-        'Pro is the most popular tier: enough firepower for busy Warfare and Operations queues without Elite slot limits. Target selector and ballistic assist keep you efficient mid-fight while settings stay human at default values.',
+        'War Thunder Pro adds aimbot, ballistic assist, Smart Aim and vehicle profiles on top of every Lite module. Per-vehicle profiles, smoothing and activation keys live in one combat tab—tuned for Arcade and Realistic battles when you start with portal presets, not max sliders.',
+        'Pro is the most popular tier: enough firepower for busy Realistic and Simulator queues without Elite slot limits. Target selector and ballistic assist keep you efficient mid-fight while settings stay human at default values.',
       ],
     },
   },
@@ -415,7 +415,7 @@ const productContent: Record<
     systemRequirements: wtSystemRequirements,
     fullFeatures: [
       'All Lite + Pro modules',
-      'XP/currency farm helpers',
+      'SL/RP farm helpers',
       'Objective & SL route pathing',
       'Auto pickup & reward tracker',
       'Combat assist',
@@ -423,7 +423,7 @@ const productContent: Record<
       'Full ESP suite',
       'Event & ticket alerts',
       'Vision & proximity detector',
-      'Skin unlock (Unlock All)',
+      'Camouflage unlock (Unlock All)',
       'Priority patch queue',
       'Direct dev Discord support',
       'Elite conservative presets',
@@ -432,23 +432,23 @@ const productContent: Record<
       'Private slot access',
     ],
     overview: {
-      title: 'Built around a full Delta Force operator workflow',
+      title: 'Built around a full War Thunder operator workflow',
       paragraphs: [
-        'Elite tier is the top combat package on this site—every Lite and Pro module plus XP/currency farm helpers, Skin unlock, priority patch delivery and the full ESP suite.',
-        'Elite slots are limited so patch cycles stay fast and builds stay maintainable. Direct dev support in Discord helps you tune conservative profiles before joining Warfare matches. Check the status banner on deltaforce-cheats.net before purchase.',
+        'Elite tier is the top combat package on this site—every Lite and Pro module plus SL/RP farm helpers, Camouflage unlock, priority patch delivery and the full ESP suite.',
+        'Elite slots are limited so patch cycles stay fast and builds stay maintainable. Direct dev support in Discord helps you tune conservative profiles before joining Realistic battles. Check the status banner on warthunder-cheats.com before purchase.',
       ],
     },
   },
   'hwid-spoofer': {
     images: slide('gpMapHack', 'gpPlayerEsp', 'gpZoomHack'),
     goodToKnow:
-      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching Delta Force.',
+      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching War Thunder.',
     limitations:
       'Spoofing does not help account-only bans. Never stack two spoof tools. Shared or work PCs may not be suitable. You accept all risk from driver-level changes.',
     systemRequirements: [
       { icon: 'reqWindows', text: 'Windows 10 or 11 64-bit with administrator access.' },
       { icon: 'reqRestorePoint', text: 'Ability to create a system restore point before running.' },
-      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching Delta Force after spoofing.' },
+      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching War Thunder after spoofing.' },
       { icon: 'reqWifi', text: 'Stable connection for portal verification tools.' },
     ],
     fullFeatures: [
@@ -466,8 +466,8 @@ const productContent: Record<
     overview: {
       title: 'Built around a clear hardware recovery workflow',
       paragraphs: [
-        'This Delta Force HWID spoofer helps players recover when Easy Anti-Cheat flags PC hardware but the Steam account is still clean. Disk and MAC profile tools ship with a restore-point checklist, compatibility scan, and post-spoof verification steps.',
-        'Use this path when fresh accounts fail instantly on one machine but work elsewhere—not for account-only bans. After spoofing, load a conservative cheat profile from deltaforce-cheats.net before joining a server.',
+        'This War Thunder HWID spoofer helps players recover when Gaijin anti-cheat flags PC hardware but the Steam account is still clean. Disk and MAC profile tools ship with a restore-point checklist, compatibility scan, and post-spoof verification steps.',
+        'Use this path when fresh accounts fail instantly on one machine but work elsewhere—not for account-only bans. After spoofing, load a conservative cheat profile from warthunder-cheats.com before joining a server.',
       ],
     },
   },
@@ -476,9 +476,9 @@ const productContent: Record<
     goodToKnow:
       'Gather order email, platform account details and restriction screenshots before opening a ticket. UGC structures appeals—it does not bypass platform review.',
     limitations:
-      'UGC does not guarantee account restoration. Results vary by case type. Permanent Easy Anti-Cheat bans may require a new account path instead of appeal.',
+      'UGC does not guarantee account restoration. Results vary by case type. Permanent Gaijin bans may require a new account path instead of appeal.',
     systemRequirements: [
-      { icon: 'reqMailOrder', text: 'Order email used at checkout on deltaforce-cheats.net.' },
+      { icon: 'reqMailOrder', text: 'Order email used at checkout on warthunder-cheats.com.' },
       { icon: 'reqShieldAccount', text: 'Account details and ban or restriction notification if available.' },
       { icon: 'reqWifiPortal', text: 'Internet access for Discord support and case dashboard.' },
     ],
@@ -496,7 +496,7 @@ const productContent: Record<
     overview: {
       title: 'Built around account recovery and appeal workflows',
       paragraphs: [
-        'UGC (Unban & Governance Control) is our Delta Force account recovery workspace—structured appeal workflows for Steam holds, Easy Anti-Cheat ban actions and server restrictions, not instant unban guarantees.',
+        'UGC (Unban & Governance Control) is our War Thunder account recovery workspace—structured appeal workflows for Steam holds, Gaijin ban actions and server restrictions, not instant unban guarantees.',
         'Build custom dispute paths, track case status and rebuild your presence with smart restriction-management tools. Support walks you through each step via Discord when you need hands-on help.',
       ],
     },
@@ -506,10 +506,10 @@ const productContent: Record<
     goodToKnow:
       'Unlock All previews skins locally on your client. Other players on the server see your real inventory—not preview skins. Included with Elite tier.',
     limitations:
-      'Local preview only—does not modify Steam inventory or store state. Other players cannot see previewed operator or weapon skins.',
+      'Local preview only—does not modify Steam inventory or store state. Other players cannot see previewed vehicle camos or decals.',
     systemRequirements: wtSystemRequirements,
     fullFeatures: [
-      'Skin swap',
+      'Camouflage swap',
       'Clothing & armor skin preview',
       'Deployable & building skin preview',
       'Tool & weapon effect customizer',
@@ -522,7 +522,7 @@ const productContent: Record<
     overview: {
       title: 'Built around a local cosmetic preview workflow',
       paragraphs: [
-        'This Skin unlock / Unlock All utility lets you browse operator and weapon skins locally in Delta Force—searchable catalog, favorites, and loadout export without modifying live Steam purchases.',
+        'This Camouflage unlock / Unlock All utility lets you browse vehicle camos and decals locally in War Thunder—searchable catalog, favorites, and loadout export without modifying live Steam purchases.',
         'Skins display on your client for testing and content creation. Other players see your actual inventory, not preview skins. Included free with Elite; available standalone for cosmetic preview without combat modules.',
       ],
     },
@@ -533,7 +533,7 @@ function buildTierPages(): ProductPage[] {
   return t.cheats.items.map((cheat) => {
     const slug = slugFromHref(cheat.href);
     const content = productContent[slug];
-    const displayName = cheat.name === 'Lite' ? 'Delta Force Lite' : cheat.name === 'Pro' ? 'Delta Force Pro' : 'Delta Force Elite';
+    const displayName = cheat.name === 'Lite' ? 'War Thunder Lite' : cheat.name === 'Pro' ? 'War Thunder Pro' : 'War Thunder Elite';
     return {
       slug,
       kind: 'tier',
@@ -635,5 +635,5 @@ export const productHub = {
   subtitle: t.products.subtitle,
   description:
     'Products hub for Steam PC—compare Lite, Pro and Elite tiers plus HWID Spoofer, UGC and Unlock All utilities with secure checkout.',
-  buyUrl: checkoutPath('deltaforce'),
+  buyUrl: checkoutPath('warthunder'),
 };

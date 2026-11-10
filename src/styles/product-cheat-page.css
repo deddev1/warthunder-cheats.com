@@ -226,6 +226,15 @@
   text-align: center;
 }
 
+.product-detail .product-checkout {
+  text-align: left;
+}
+
+.product-detail .product-checkout .card-title-band {
+  justify-content: flex-start;
+  text-align: left;
+}
+
 .product-detail .description-content {
   text-align: center;
 }
@@ -250,8 +259,24 @@
 }
 
 .product-detail-hero__grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.product-detail-hero__grid .product-checkout {
   width: 100%;
-  max-width: 56rem;
+  max-width: 22rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 1024px) {
+  .product-detail-hero__grid {
+    grid-template-columns: minmax(0, 1fr) 20rem;
+  }
+
+  .product-detail-hero__grid .product-checkout {
+    max-width: none;
+    margin-inline: 0;
+  }
 }
 
 /* Compatibility — definition list rows */

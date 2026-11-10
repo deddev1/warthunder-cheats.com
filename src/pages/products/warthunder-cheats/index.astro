@@ -12,7 +12,7 @@ import { productPath, ROUTES } from '../../../utils/path';
 import { Prose } from '@/components/starwind/prose';
 import SeoRelatedLinks from '../../../components/SeoRelatedLinks.astro';
 
-const seo = resolvePageSeo('/products/deltaforce-cheats/');
+const seo = resolvePageSeo('/products/warthunder-cheats/');
 const breadcrumbs = [
   { name: 'Home', path: '/' },
   { name: 'Products', path: productHub.path },
@@ -71,8 +71,8 @@ function actionName(product: (typeof productPages)[number]) {
       <Prose class="mt-8 max-w-none text-muted-foreground">
         <h2>Compare products before checkout</h2>
         <p>
-          Elite bundles ESP, aimbot, ballistic assist and XP/currency farm helpers for players who want the full suite. Utilities cover
-          hardware resets after bans, UGC appeal workflows, and local skin unlock previews. Read the{' '}
+          Elite bundles ESP, aimbot, ballistic assist and SL/RP farm helpers for players who want the full suite. Utilities cover
+          hardware resets after bans, UGC appeal workflows, and local camouflage unlock previews. Read the{' '}
           <a href="/blog/lite-vs-pro/">Lite vs Pro guide</a>, <a href="/blog/buy-guide/">checkout walkthrough</a>, or{' '}
           <a href={ROUTES.faq}>FAQ</a> if you are deciding between plans.
         </p>
@@ -80,7 +80,7 @@ function actionName(product: (typeof productPages)[number]) {
         <p>
           Each card below links to a product page with screenshots, system requirements, and module lists. When you are
           ready, use Get access for secure checkout. Check the homepage status banner before every session—especially
-          after an EAC patch or client update.
+          after a Gaijin patch or client update.
         </p>
       </Prose>
 
@@ -96,13 +96,13 @@ function actionName(product: (typeof productPages)[number]) {
             icon={cardIcon(product)}
             badge={product.badge}
             variant={product.variant}
-            buyLabel="Get access"
-            viewLabel="View details"
+            buyLabel={`Checkout ${actionName(product)}`}
+            viewLabel={`View ${actionName(product)}`}
           />
         ))}
       </div>
 
-      <SeoRelatedLinks title="More Delta Force cheat resources" />
+      <SeoRelatedLinks title="More War Thunder cheat resources" />
     </div>
   </section>
 </BaseLayout>

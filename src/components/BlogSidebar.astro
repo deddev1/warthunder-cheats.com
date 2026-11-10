@@ -36,9 +36,9 @@ const toc = post.body
   }));
 
 const productLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'Delta Force products', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'War Thunder products', href: ROUTES.products, icon: 'sidebarHub' },
   { label: 'Elite suite page', href: ROUTES.productsElite, icon: 'sidebarElite' },
-  { label: 'Skin unlock', href: productPath('unlock-all'), icon: 'sidebarSkin' },
+  { label: 'Camouflage unlock', href: productPath('unlock-all'), icon: 'sidebarSkin' },
   { label: 'HWID Spoofer page', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
   { label: 'UGC recovery page', href: productPath('ugc'), icon: 'sidebarUgc' },
 ];
@@ -121,12 +121,12 @@ const productLinks: { label: string; href: string; icon: IconName }[] = [
     </ul>
     <Button
       as="a"
-      href={checkoutPath('deltaforce')}
+      href={checkoutPath('warthunder')}
       variant="primary"
       size="sm"
       class="blog-sidebar__cta mt-2.5 w-full min-w-0 justify-start"
       aria-label={t.ui.checkoutAria}
-      {...externalLinkProps(checkoutPath('deltaforce'))}
+      {...externalLinkProps(checkoutPath('warthunder'))}
     >
       <span class="truncate">Open product checkout</span>
       <Icon name="arrowRight" size={16} class="shrink-0" />

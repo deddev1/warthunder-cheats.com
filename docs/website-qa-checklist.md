@@ -16,5 +16,5 @@ Always verify these before shipping site changes. Automated checks: `npm run bui
 
 | CTA | URL |
 |-----|-----|
-| Buy / Get access (cheats) | `https://zadeyo.com/go/QRH?to=%2Fproducts%2Fdelta-force` |
+| Buy / Get access (cheats) | `https://zadeyo.com/go/QRH?to=%2Fproducts%2Fwar-thunder` |
 | HWID Spoofer | `https://zadeyo.com/go/QRH?to=%2Fproducts%2Fhwid-spoofer` |
