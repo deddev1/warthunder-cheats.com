@@ -22,20 +22,20 @@ import {
 } from '@/components/starwind/table';
 
 const utilities = productPages.filter((p) => p.kind === 'utility');
-const seo = resolvePageSeo('/products/warthunder-cheats/utilities/');
+const seo = resolvePageSeo('/products/deltaforce-cheats/utilities/');
 const breadcrumbs = [
   { name: 'Home', path: '/' },
   { name: 'Products', path: productHub.path },
-  { name: 'Compare utilities', path: '/products/warthunder-cheats/utilities/' },
+  { name: 'Compare utilities', path: '/products/deltaforce-cheats/utilities/' },
 ];
 
-const checkout = checkoutPath('warthunder');
+const checkout = checkoutPath('deltaforce');
 const checkoutAttrs = externalLinkProps(checkout);
 
 const utilityUseCases: Record<string, string> = {
   'hwid-spoofer': 'New PC or hardware flag after a ban—reset how your machine appears before a new account.',
   ugc: 'Structured appeal and account recovery workflows when access is restricted.',
-  'unlock-all': 'Local camouflage preview and loadouts without buying every camo on the Gaijin market.',
+  'unlock-all': 'Local skin preview and loadouts without buying every operator skin in the store.',
 };
 ---
 
@@ -44,9 +44,9 @@ const utilityUseCases: Record<string, string> = {
   description={seo.description}
   jsonLd={[
     webPageSchema({
-      name: 'Compare War Thunder utilities',
+      name: 'Compare Delta Force utilities',
       description: seo.description,
-      url: '/products/warthunder-cheats/utilities/',
+      url: '/products/deltaforce-cheats/utilities/',
     }),
     breadcrumbSchema(breadcrumbs),
     itemListSchema(
@@ -64,24 +64,24 @@ const utilityUseCases: Record<string, string> = {
       <header class="mt-6 max-w-3xl space-y-3">
         <h1 class="text-3xl font-bold uppercase md:text-4xl">Compare Cheat Utilities — HWID Spoofer & UGC</h1>
         <p class="text-lg text-muted-foreground">
-          Cheat utility comparison for War Thunder on Windows—match HWID Spoofer or UGC recovery to your ban or appeal goal before checkout.
-          For camouflage unlock and Unlock All, see the{' '}
-          <a href="/products/warthunder-cheats/unlock-all/" class="text-primary underline-offset-2 hover:underline">Unlock All product page</a>.
+          Cheat utility comparison for Delta Force on Windows—match HWID Spoofer or UGC recovery to your ban or appeal goal before checkout.
+          For skin unlock and Unlock All, see the{' '}
+          <a href="/products/deltaforce-cheats/unlock-all/" class="text-primary underline-offset-2 hover:underline">Unlock All product page</a>.
         </p>
       </header>
 
       <Prose class="mt-8 max-w-none text-muted-foreground">
         <h2>When to buy HWID Spoofer or UGC instead of a tier</h2>
         <p>
-          HWID Spoofer helps when Gaijin anti-cheat flagged your machine. UGC tools organize appeals when Steam or server
+          HWID Spoofer helps when Easy Anti-Cheat flagged your machine. UGC tools organize appeals when Steam or server
           access is restricted. Cosmetic previews live on the{' '}
-          <a href="/products/warthunder-cheats/unlock-all/">Unlock All / camouflage unlock</a> page. Combat tiers (Lite, Pro, Elite)
+          <a href="/products/deltaforce-cheats/unlock-all/">Unlock All / skin unlock</a> page. Combat tiers (Lite, Pro, Elite)
           are on the <a href={productHub.path}>products hub</a> when you need ESP or aimbot.
         </p>
         <h3>How checkout works</h3>
         <p>
           Open a utility product page for screenshots and requirements, then use Get access on that page for secure
-          checkout. Need combat modules too? Compare the <a href="/products/warthunder-cheats/elite/">Elite tier</a> or read{' '}
+          checkout. Need combat modules too? Compare the <a href="/products/deltaforce-cheats/elite/">Elite tier</a> or read{' '}
           <a href="/blog/features/">the features guide</a> before you buy.
         </p>
       </Prose>
@@ -138,7 +138,7 @@ const utilityUseCases: Record<string, string> = {
         <Button as="a" href={productHub.path} variant="outline">Back to products</Button>
       </div>
 
-      <SeoRelatedLinks title="Shop War Thunder cheats & utilities" />
+      <SeoRelatedLinks title="Shop Delta Force cheats & utilities" />
     </div>
   </section>
 </BaseLayout>

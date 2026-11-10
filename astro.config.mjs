@@ -8,7 +8,7 @@ import { sitemapSerialize } from './src/config/sitemap.ts';
 // via scripts/write-redirects.mjs. Node serve.mjs and Astro middleware use
 // the same maps for real 301/302 responses.
 export default defineConfig({
-  site: 'https://warthunder-cheats.com',
+  site: 'https://deltaforce-cheats.net',
   trailingSlash: 'always',
   compressHTML: true,
   prefetch: {

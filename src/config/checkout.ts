@@ -7,7 +7,7 @@ export type CheckoutProduct = keyof typeof CHECKOUT;
 
 /** URL slug for /go/[slug]/ checkout redirect pages. */
 export const CHECKOUT_SLUGS: Record<CheckoutProduct, string> = {
-  warthunder: 'warthunder',
+  deltaforce: 'deltaforce',
   skinChanger: 'skin-changer',
   hwidSpoofer: 'hwid-spoofer',
   ugc: 'ugc',
@@ -18,22 +18,22 @@ export const CHECKOUT_SLUG_TO_PRODUCT = Object.fromEntries(
 ) as Record<string, CheckoutProduct>;
 
 /** Zadeyo affiliate URL for visible “Get access” / buy CTAs (same tab — no target=_blank). */
-export function checkoutPath(product: CheckoutProduct = 'warthunder'): string {
+export function checkoutPath(product: CheckoutProduct = 'deltaforce'): string {
   return CHECKOUT[product];
 }
 
 /** Internal /go/* path (blog links, bookmarks); real 302 to Zadeyo via _redirects / serve / middleware. */
-export function checkoutRedirectPath(product: CheckoutProduct = 'warthunder'): string {
+export function checkoutRedirectPath(product: CheckoutProduct = 'deltaforce'): string {
   return `/go/${CHECKOUT_SLUGS[product]}/`;
 }
 
 /** External Zadeyo affiliate URL (302 target for /go/*). */
-export function checkoutExternalUrl(product: CheckoutProduct = 'warthunder'): string {
+export function checkoutExternalUrl(product: CheckoutProduct = 'deltaforce'): string {
   return CHECKOUT[product];
 }
 
 /** Default product checkout redirect (replaces legacy Discord CTAs). */
-export const PRIMARY_CHECKOUT_PATH = checkoutPath('warthunder');
+export const PRIMARY_CHECKOUT_PATH = checkoutPath('deltaforce');
 
 /** Map internal product slugs to checkout redirect paths. */
 export function checkoutForSlug(slug: string): string {
@@ -49,7 +49,7 @@ export function checkoutForSlug(slug: string): string {
     case 'pro':
     case 'elite':
     default:
-      return checkoutPath('warthunder');
+      return checkoutPath('deltaforce');
   }
 }
 
@@ -82,6 +82,10 @@ export function resolveCheckoutHref(href: string): string {
     return checkoutPath('ugc');
   }
   if (
+    href.includes('%2Fproducts%2Fdelta-force') ||
+    href.includes('/products/delta-force') ||
+    href.includes('%2Fproducts%2Fdeltaforce') ||
+    href.includes('/products/deltaforce') ||
     href.includes('%2Fproducts%2Fwar-thunder') ||
     href.includes('/products/war-thunder') ||
     href.includes('%2Fproducts%2Fwarthunder') ||
@@ -89,7 +93,7 @@ export function resolveCheckoutHref(href: string): string {
     href.includes('%2Fproducts%2Frust') ||
     href.includes('/products/rust')
   ) {
-    return checkoutPath('warthunder');
+    return checkoutPath('deltaforce');
   }
 
   return href;

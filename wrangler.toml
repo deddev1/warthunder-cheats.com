@@ -1,7 +1,7 @@
 # Static Astro site → Cloudflare Worker + assets.
-# Worker 301s www/http to https://warthunder-cheats.com; assets serve dist/.
+# Worker 301s www/http to https://deltaforce-cheats.net; assets serve dist/.
 # run_worker_first is required so host redirects run before index.html is served.
-name = "warthunder-cheats-com"
+name = "deltaforce-cheats-net"
 main = "src/worker.ts"
 compatibility_date = "2026-10-26"
 

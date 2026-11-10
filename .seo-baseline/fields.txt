@@ -1,39 +1,39 @@
 === index.html ===
-War Thunder Cheats &amp; Hacks | ESP, Aimbot &amp; Radar
-War Thunder cheats for Windows: vehicle ESP, player ESP, aimbot, radar and stream-proof overlays updated every patch at warthunder-cheats.com.
-https://warthunder-cheats.com/
+Delta Force Cheats &amp; Hacks | ESP, Aimbot &amp; Radar
+Delta Force cheats for Windows: loot ESP, player ESP, aimbot, radar and stream-proof overlays updated every patch at deltaforce-cheats.net.
+https://deltaforce-cheats.net/
 
-=== products/warthunder-cheats/index.html ===
-War Thunder Elite Cheats &amp; Utility Products
-Elite War Thunder cheats plus HWID spoofer, UGC tools, and camouflage unlock utilities on warthunder-cheats.com.
-https://warthunder-cheats.com/products/warthunder-cheats/
+=== products/deltaforce-cheats/index.html ===
+Delta Force Elite Cheats &amp; Utility Products
+Elite Delta Force cheats plus HWID spoofer, UGC tools, and skin unlock utilities on deltaforce-cheats.net.
+https://deltaforce-cheats.net/products/deltaforce-cheats/
 
-=== products/warthunder-cheats/elite/index.html ===
-War Thunder Elite Cheats | Full ESP &amp; Combat Suite
-Elite tier: vehicle ESP, player ESP, aimbot, ballistic assist, SL/RP farm helpers, and priority Gaijin patch delivery.
-https://warthunder-cheats.com/products/warthunder-cheats/elite/
+=== products/deltaforce-cheats/elite/index.html ===
+Delta Force Elite Cheats | Full ESP &amp; Combat Suite
+Elite tier: loot ESP, player ESP, aimbot, ballistic assist, XP/currency farm helpers, and priority EAC patch delivery.
+https://deltaforce-cheats.net/products/deltaforce-cheats/elite/
 
 === blog/index.html ===
-War Thunder Cheats Guides &amp; Patch Notes
-Setup guides, Lite vs Pro comparisons, Gaijin patch checklists, and PvP config tips for War Thunder cheats.
-https://warthunder-cheats.com/blog/
+Delta Force Cheats Guides &amp; Patch Notes
+Setup guides, Lite vs Pro comparisons, EAC patch checklists, and PvP config tips for Delta Force cheats.
+https://deltaforce-cheats.net/blog/
 
 === blog/features/index.html ===
-War Thunder cheats features: ESP, aimbot, radar and more | War Thunder Cheats
-Complete guide to our War Thunder cheats—vehicle ESP, player ESP, aimbot, radar, FOV and stream proof.
-https://warthunder-cheats.com/blog/features/
+Delta Force cheats features: ESP, aimbot, radar and more | Delta Force Cheats
+Complete guide to our Delta Force cheats—loot ESP, player ESP, aimbot, radar, FOV and stream proof.
+https://deltaforce-cheats.net/blog/features/
 
 === faq/index.html ===
-FAQ | War Thunder Cheats, Products &amp; Setup
-Answers on cheat tiers, ESP, aimbot, HWID tools, checkout, and blog guides at warthunder-cheats.com.
-https://warthunder-cheats.com/faq/
+FAQ | Delta Force Cheats, Products &amp; Setup
+Answers on cheat tiers, ESP, aimbot, HWID tools, checkout, and blog guides at deltaforce-cheats.net.
+https://deltaforce-cheats.net/faq/
 
 === support/index.html ===
-Support | War Thunder Cheats
-Get help with loader setup, HWID, and checkout for War Thunder cheat tiers and utilities.
-https://warthunder-cheats.com/support/
+Support | Delta Force Cheats
+Get help with loader setup, HWID, and checkout for Delta Force cheat tiers and utilities.
+https://deltaforce-cheats.net/support/
 
 === 404.html ===
-Page not found | War Thunder Cheats
-The page you requested could not be found on warthunder-cheats.com.
-https://warthunder-cheats.com/404/
+Page not found | Delta Force Cheats
+The page you requested could not be found on deltaforce-cheats.net.
+https://deltaforce-cheats.net/404/

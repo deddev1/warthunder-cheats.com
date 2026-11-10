@@ -2,7 +2,7 @@ import sharp from 'sharp';
 import { writeFileSync, readFileSync } from 'node:fs';
 
 const src =
-  'C:/Users/3Tee System/.cursor/projects/c-Users-3Tee-System-Downloads-warthunder-cheats-com-main/assets/images-f6ca1037-0801-4610-acda-965f18bd0dfe.jpg';
+  'C:/Users/3Tee System/.cursor/projects/c-Users-3Tee-System-Downloads-deltaforce-cheats-net-main/assets/images-f6ca1037-0801-4610-acda-965f18bd0dfe.jpg';
 
 const sizes = [
   ['favicon-16.png', 16],
@@ -49,7 +49,7 @@ const p48 = await sharp(src).resize(48, 48).png().toBuffer();
 writeFileSync('public/favicon.ico', pngToIco([p16, p32, p48]));
 
 const png64 = (await sharp(src).resize(128, 128).png().toBuffer()).toString('base64');
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="War Thunder Cheats">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Delta Force Cheats">
   <image href="data:image/png;base64,${png64}" width="128" height="128"/>
 </svg>
 `;

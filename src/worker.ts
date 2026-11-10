@@ -1,12 +1,12 @@
 /**
- * Cloudflare Worker: 301 www/http → https://warthunder-cheats.com, then static assets.
+ * Cloudflare Worker: 301 www/http → https://deltaforce-cheats.net, then static assets.
  * Requires assets.run_worker_first = true so this runs before index.html is served.
  */
 export interface Env {
   ASSETS: Fetcher;
 }
 
-const CANONICAL_HOST = 'warthunder-cheats.com';
+const CANONICAL_HOST = 'deltaforce-cheats.net';
 
 function needsHostRedirect(request: Request, url: URL): boolean {
   const host = url.hostname.toLowerCase();
